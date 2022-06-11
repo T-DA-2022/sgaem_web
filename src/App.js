@@ -1,9 +1,13 @@
 import React from "react";
-
+import Mainpage from "./pages/Mainpage";
+import TopBar from "./pages/TopBar";
 const App = () => {
   return (
     <>
-      <div>test</div>
+      <TopBar />
+      <Mainpage />
+      <div>bottombar</div>
+      {/* <BottomBar/> */}
     </>
   );
 };
