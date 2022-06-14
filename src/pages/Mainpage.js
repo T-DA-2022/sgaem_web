@@ -1,13 +1,14 @@
 import React from "react";
-import img1 from "../assets/car_img_1.jpeg";
+import img1 from "../assets/car_img_1_crop.png";
 import img2 from "../assets/car_img_2.jpeg";
 import img3 from "../assets/car_img_3.jpeg";
-import img4 from "../assets/car_img_4.jpeg";
+// import img4 from "../assets/car_img_4.jpeg";
 
 // style import
 import {
   MainpageContainer,
   CarouselContainer,
+  BackgroundContainer,
   VisionContainer,
   ActivityContainer,
   NewsContainer,
@@ -19,10 +20,11 @@ const Mainpage = () => {
     <>
       <MainpageContainer>
         <CarouselContainer>
-          So Gang Association of E-sports Management
+          <BackgroundContainer src={img1} />
         </CarouselContainer>
         <VisionContainer>
-          <img src="../assets/car_img_1.jpeg" alt="" />
+          <div>VISION</div>
+          <div>스겜은 대학 e스포츠 문화를 선도합니다</div>
           Vision Vision Vision Vision Vision Vision
         </VisionContainer>
         <ActivityContainer>

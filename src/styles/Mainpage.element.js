@@ -12,7 +12,9 @@ export const CarouselContainer = styled.div`
   background-color: yellowgreen;
   height: 450px;
 `;
-
+export const BackgroundContainer = styled.img`
+  height: 450px;
+`;
 export const VisionContainer = styled.div`
   background-color: blueviolet;
   height: 450px;

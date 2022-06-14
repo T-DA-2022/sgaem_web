@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const TopBarContainer = styled.div`
   height: 60px;
+  /* background-color: white; */
   background-color: skyblue;
   justify-content: space-between;
   display: flex;
@@ -16,20 +17,22 @@ export const TopBarLogo = styled.img`
   height: auto;
 `;
 export const TopBarButtonContainer = styled.span`
-  background-color: gold;
+  /* background-color: gold; */
   display: flex;
 `;
 
 export const TopBarButton = styled.span`
-  width: 100px;
+  width: max-content;
   display: flex;
   height: auto;
-  background-color: coral;
+  /* background-color: coral; */
   margin: 2px 10px;
   text-align: center;
   align-items: center;
   justify-content: center;
   font-size: 12px;
+  font-weight: bold;
+  padding: 0px 4px;
 `;
 
 export const AuthContainer = styled.span`

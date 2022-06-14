@@ -22,16 +22,64 @@ const TopBar = () => {
           >
             ABOUT US
           </TopBarButton>
-          <TopBarButton>NEWS</TopBarButton>
-          <TopBarButton>COURSES</TopBarButton>
-          <TopBarButton>COMPETITION</TopBarButton>
-          <TopBarButton>RECRUITING</TopBarButton>
-          <TopBarButton>FAQ</TopBarButton>
-          <TopBarButton>CONTACT US</TopBarButton>
+          <TopBarButton
+            onClick={() => {
+              alert("NEWS");
+            }}
+          >
+            NEWS
+          </TopBarButton>
+          <TopBarButton
+            onClick={() => {
+              alert("COURSES");
+            }}
+          >
+            COURSES
+          </TopBarButton>
+          <TopBarButton
+            onClick={() => {
+              alert("Competition");
+            }}
+          >
+            COMPETITION
+          </TopBarButton>
+          <TopBarButton
+            onClick={() => {
+              alert("Recruiting");
+            }}
+          >
+            RECRUITING
+          </TopBarButton>
+          <TopBarButton
+            onClick={() => {
+              alert("FAQ");
+            }}
+          >
+            FAQ
+          </TopBarButton>
+          <TopBarButton
+            onClick={() => {
+              alert("Contact us");
+            }}
+          >
+            CONTACT US
+          </TopBarButton>
         </TopBarButtonContainer>
         <AuthContainer>
-          <AuthButton>로그인</AuthButton>
-          <AuthButton>회원가입</AuthButton>
+          <AuthButton
+            onClick={() => {
+              alert("log in");
+            }}
+          >
+            로그인
+          </AuthButton>
+          <AuthButton
+            onClick={() => {
+              alert("register");
+            }}
+          >
+            회원가입
+          </AuthButton>
         </AuthContainer>
       </TopBarContainer>
     </>
