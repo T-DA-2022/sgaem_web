@@ -1,6 +1,7 @@
 import React from "react";
 import {
   BottomBarBox,
+  BottomBarBoxText,
   BottomBarContainer,
   BottomBarIndex,
 } from "../styles/BottomBar.element";
@@ -11,8 +12,10 @@ const BottomBar = () => {
       <BottomBarContainer>
         <BottomBarIndex>
           <BottomBarBox>
-            주소 : 서강대학교 엠마오관 000호 <br />
-            이메일 : sogangsgaem@gmail.com
+            <BottomBarBoxText>
+              주소 : 서강대학교 엠마오관 E132호 <br />
+              이메일 : sogangsgaem@gmail.com
+            </BottomBarBoxText>
           </BottomBarBox>
         </BottomBarIndex>
       </BottomBarContainer>

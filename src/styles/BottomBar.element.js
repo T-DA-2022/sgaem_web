@@ -8,14 +8,22 @@ export const BottomBarContainer = styled.div`
   display: flex;
   justify-content: center;
 `;
+
 export const BottomBarIndex = styled.div`
   width: 62.5%;
   margin-top: 60px;
 `;
-export const BottomBarBox = styled.div`
-  height: 100px;
-  width: 300px;
 
+export const BottomBarBox = styled.div`
+  height: 70px;
+  width: 300px;
   border-top: 1px solid #707070;
   border-bottom: 1px solid #707070;
+`;
+
+export const BottomBarBoxText = styled.div`
+  padding-left: 20px;
+  padding-top: 10px;
+  font-size: 16px;
+  color: #707070;
 `;
