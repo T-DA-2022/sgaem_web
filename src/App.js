@@ -1,6 +1,7 @@
 import React from "react";
 import Mainpage from "./pages/Mainpage";
 import TopBar from "./pages/TopBar";
+import BottomBar from "./pages/BottomBar";
 import styled from "styled-components";
 
 const App = () => {
@@ -9,8 +10,7 @@ const App = () => {
       <AppContainer>
         <TopBar />
         <Mainpage />
-        <div>bottombar</div>
-        {/* <BottomBar/> */}
+        <BottomBar />
       </AppContainer>
     </>
   );
