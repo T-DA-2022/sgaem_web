@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const TopBarContainer = styled.div`
+  /* background-color: skyblue; */
   height: 80px;
   width: 62.5%;
   background-color: white;
-  /* background-color: skyblue; */
   justify-content: space-between;
   display: flex;
   /* padding: 0 60px; */
@@ -14,8 +14,8 @@ export const TopBarContainer = styled.div`
   right: 0; */
 `;
 export const TopBarLogo = styled.img`
-  width: 100px;
   /* height: auto; */
+  width: 100px;
 `;
 export const TopBarButtonContainer = styled.span`
   /* background-color: gold; */
@@ -24,10 +24,10 @@ export const TopBarButtonContainer = styled.span`
 `;
 
 export const TopBarButton = styled.span`
+  /* background-color: coral; */
   width: max-content;
   display: flex;
   height: auto;
-  /* background-color: coral; */
   margin: 2px 6px;
   text-align: center;
   align-items: center;
@@ -43,10 +43,10 @@ export const AuthContainer = styled.span`
 `;
 
 export const AuthButton = styled.span`
+  /* background-color: coral; */
   width: max-content;
   display: flex;
   height: auto;
-  /* background-color: coral; */
   margin: 2px 10px;
   text-align: center;
   align-items: center;
