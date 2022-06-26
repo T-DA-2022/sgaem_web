@@ -2,14 +2,14 @@ import styled from "styled-components";
 
 export const MainpageContainer = styled.div`
   text-align: center;
-  background-color: pink;
+  /* background-color: pink; */
   height: auto;
   overflow-y: scroll;
   /* padding-top: 60px; */
 `;
 
 export const CarouselContainer = styled.div`
-  background-color: yellowgreen;
+  /* background-color: yellowgreen; */
   height: 599.6px;
 `;
 export const BackgroundContainer = styled.img`
