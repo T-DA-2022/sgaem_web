@@ -2,20 +2,18 @@ import styled from "styled-components";
 
 export const MainpageContainer = styled.div`
   text-align: center;
-  /* background-color: pink; */
   height: auto;
   overflow-y: scroll;
   /* padding-top: 60px; */
 `;
 
 export const CarouselContainer = styled.div`
-  /* background-color: yellowgreen; */
   height: 599.6px;
 `;
 export const BackgroundContainer = styled.img`
-  /* height: 450px; */
   width: 100%;
 `;
+
 export const VisionContainer = styled.div`
   background-color: #f5f5f5;
   padding-top: 100px;
@@ -29,7 +27,6 @@ export const VisionTextContainer = styled.div`
   /* margin-top: 90px; */
   margin-bottom: 8px;
   color: #707070;
-
   font-size: 32px;
   font-weight: bold;
 `;
@@ -37,7 +34,6 @@ export const VisionTextContainer = styled.div`
 export const VisionSubTextContainer = styled.div`
   font-size: 14px;
   color: #707070;
-
   margin-bottom: 20px;
 `;
 
@@ -59,14 +55,12 @@ export const ActivityContainer = styled.div`
 export const ActivityTextContainer = styled.div`
   margin-bottom: 8px;
   color: #707070;
-
   font-size: 32px;
   font-weight: bold;
 `;
 export const ActivitySubTextContainer = styled.div`
   font-size: 14px;
   color: #707070;
-
   margin-bottom: 40px;
 `;
 
@@ -78,7 +72,6 @@ export const ActivityContentContainer = styled.div`
 `;
 
 export const ActivityContent = styled.div`
-  background-color: burlywood;
   height: 330px;
   margin-bottom: 30px;
   display: flex;
@@ -94,7 +87,7 @@ export const ActivityArticle = styled.span`
 `;
 
 export const NewsContainer = styled.div`
-  background-color: goldenrod;
+  background-color: #f5f5f5;
   padding-top: 100px;
   height: 500px;
   display: flex;
@@ -105,7 +98,6 @@ export const NewsContainer = styled.div`
 export const NewsTextContainer = styled.div`
   margin-bottom: 8px;
   color: #707070;
-
   font-size: 32px;
   font-weight: bold;
 `;
@@ -113,12 +105,11 @@ export const NewsTextContainer = styled.div`
 export const NewsSubTextContainer = styled.div`
   font-size: 14px;
   color: #707070;
-
   margin-bottom: 20px;
 `;
 
 export const YoutubeContainer = styled.div`
-  background-color: saddlebrown;
+  background-color: white;
   padding-top: 100px;
   height: 500px;
   display: flex;
@@ -136,6 +127,5 @@ export const YoutubeTextContainer = styled.div`
 export const YoutubeSubTextContainer = styled.div`
   font-size: 14px;
   color: #707070;
-
   margin-bottom: 20px;
 `;
