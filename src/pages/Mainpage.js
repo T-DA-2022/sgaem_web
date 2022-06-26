@@ -71,7 +71,7 @@ const Mainpage = () => {
         <YoutubeContainer>
           <YoutubeTextContainer>Youtube</YoutubeTextContainer>
           <YoutubeSubTextContainer>
-            스겜의 최신 소식을 확인하세요
+            스겜의 활동을 직접 확인하세요
           </YoutubeSubTextContainer>
         </YoutubeContainer>
       </MainpageContainer>
