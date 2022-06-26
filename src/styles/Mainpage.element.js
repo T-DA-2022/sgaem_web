@@ -36,6 +36,8 @@ export const VisionTextContainer = styled.div`
 
 export const VisionSubTextContainer = styled.div`
   font-size: 14px;
+  color: #707070;
+
   margin-bottom: 20px;
 `;
 
@@ -63,6 +65,8 @@ export const ActivityTextContainer = styled.div`
 `;
 export const ActivitySubTextContainer = styled.div`
   font-size: 14px;
+  color: #707070;
+
   margin-bottom: 40px;
 `;
 
@@ -108,6 +112,8 @@ export const NewsTextContainer = styled.div`
 
 export const NewsSubTextContainer = styled.div`
   font-size: 14px;
+  color: #707070;
+
   margin-bottom: 20px;
 `;
 
@@ -129,5 +135,7 @@ export const YoutubeTextContainer = styled.div`
 
 export const YoutubeSubTextContainer = styled.div`
   font-size: 14px;
+  color: #707070;
+
   margin-bottom: 20px;
 `;
