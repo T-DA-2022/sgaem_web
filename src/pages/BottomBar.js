@@ -1,10 +1,21 @@
 import React from "react";
-import { BottomBarContainer } from "../styles/BottomBar.element";
+import {
+  BottomBarBox,
+  BottomBarContainer,
+  BottomBarIndex,
+} from "../styles/BottomBar.element";
 
 const BottomBar = () => {
   return (
     <>
-      <BottomBarContainer>bottombar</BottomBarContainer>
+      <BottomBarContainer>
+        <BottomBarIndex>
+          <BottomBarBox>
+            주소 : 서강대학교 엠마오관 000호 <br />
+            이메일 : sogangsgaem@gmail.com
+          </BottomBarBox>
+        </BottomBarIndex>
+      </BottomBarContainer>
     </>
   );
 };
