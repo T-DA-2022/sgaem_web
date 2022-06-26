@@ -28,6 +28,8 @@ export const VisionContainer = styled.div`
 export const VisionTextContainer = styled.div`
   /* margin-top: 90px; */
   margin-bottom: 8px;
+  color: #707070;
+
   font-size: 32px;
   font-weight: bold;
 `;
@@ -54,6 +56,8 @@ export const ActivityContainer = styled.div`
 
 export const ActivityTextContainer = styled.div`
   margin-bottom: 8px;
+  color: #707070;
+
   font-size: 32px;
   font-weight: bold;
 `;
@@ -96,6 +100,8 @@ export const NewsContainer = styled.div`
 
 export const NewsTextContainer = styled.div`
   margin-bottom: 8px;
+  color: #707070;
+
   font-size: 32px;
   font-weight: bold;
 `;
@@ -116,6 +122,7 @@ export const YoutubeContainer = styled.div`
 
 export const YoutubeTextContainer = styled.div`
   margin-bottom: 8px;
+  color: #707070;
   font-size: 32px;
   font-weight: bold;
 `;
