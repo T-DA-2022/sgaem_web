@@ -10,27 +10,117 @@ export const MainpageContainer = styled.div`
 
 export const CarouselContainer = styled.div`
   background-color: yellowgreen;
-  height: 450px;
+  height: 599.6px;
 `;
 export const BackgroundContainer = styled.img`
-  height: 450px;
+  /* height: 450px; */
+  width: 100%;
 `;
 export const VisionContainer = styled.div`
-  background-color: blueviolet;
-  height: 450px;
+  background-color: #f5f5f5;
+  padding-top: 100px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const VisionTextContainer = styled.div`
+  /* margin-top: 90px; */
+  margin-bottom: 8px;
+  font-size: 32px;
+  font-weight: bold;
+`;
+
+export const VisionSubTextContainer = styled.div`
+  font-size: 14px;
+  margin-bottom: 20px;
+`;
+
+export const VisionContentContainer = styled.div`
+  background-color: #9a4747;
+  width: 63.5%;
+  height: 360px;
 `;
 
 export const ActivityContainer = styled.div`
-  background-color: royalblue;
-  height: 1000px;
+  background-color: white;
+  padding-top: 100px;
+  height: 1248px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const ActivityTextContainer = styled.div`
+  margin-bottom: 8px;
+  font-size: 32px;
+  font-weight: bold;
+`;
+export const ActivitySubTextContainer = styled.div`
+  font-size: 14px;
+  margin-bottom: 40px;
+`;
+
+export const ActivityContentContainer = styled.div`
+  width: 63.5%;
+  height: 1110px;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const ActivityContent = styled.div`
+  background-color: burlywood;
+  height: 330px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+`;
+export const ActivityImg = styled.span`
+  background-color: pink;
+  width: 50%;
+`;
+export const ActivityArticle = styled.span`
+  background-color: blue;
+  width: 50%;
 `;
 
 export const NewsContainer = styled.div`
   background-color: goldenrod;
-  height: 450px;
+  padding-top: 100px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const NewsTextContainer = styled.div`
+  margin-bottom: 8px;
+  font-size: 32px;
+  font-weight: bold;
+`;
+
+export const NewsSubTextContainer = styled.div`
+  font-size: 14px;
+  margin-bottom: 20px;
 `;
 
 export const YoutubeContainer = styled.div`
   background-color: saddlebrown;
-  height: 450px;
+  padding-top: 100px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const YoutubeTextContainer = styled.div`
+  margin-bottom: 8px;
+  font-size: 32px;
+  font-weight: bold;
+`;
+
+export const YoutubeSubTextContainer = styled.div`
+  font-size: 14px;
+  margin-bottom: 20px;
 `;

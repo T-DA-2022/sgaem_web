@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
 export const TopBarContainer = styled.div`
-  height: 60px;
-  /* background-color: white; */
-  background-color: skyblue;
+  height: 80px;
+  width: 62.5%;
+  background-color: white;
+  /* background-color: skyblue; */
   justify-content: space-between;
   display: flex;
-  padding: 0 60px;
+  /* padding: 0 60px; */
   /* position: fixed;
   top: 0;
   left: 0;
@@ -14,11 +15,12 @@ export const TopBarContainer = styled.div`
 `;
 export const TopBarLogo = styled.img`
   width: 100px;
-  height: auto;
+  /* height: auto; */
 `;
 export const TopBarButtonContainer = styled.span`
   /* background-color: gold; */
   display: flex;
+  margin-right: 60px;
 `;
 
 export const TopBarButton = styled.span`
@@ -26,7 +28,7 @@ export const TopBarButton = styled.span`
   display: flex;
   height: auto;
   /* background-color: coral; */
-  margin: 2px 10px;
+  margin: 2px 6px;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -36,19 +38,20 @@ export const TopBarButton = styled.span`
 `;
 
 export const AuthContainer = styled.span`
-  background-color: lightgreen;
+  /* background-color: lightgreen; */
   display: flex;
 `;
 
 export const AuthButton = styled.span`
-  width: 100px;
+  width: max-content;
   display: flex;
   height: auto;
-  background-color: coral;
+  /* background-color: coral; */
   margin: 2px 10px;
   text-align: center;
   align-items: center;
   justify-content: center;
   font-size: 12px;
   color: #adadad;
+  padding: 0px 4px;
 `;
