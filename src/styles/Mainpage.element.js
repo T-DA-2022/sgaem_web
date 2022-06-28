@@ -8,10 +8,14 @@ export const MainpageContainer = styled.div`
 `;
 
 export const CarouselContainer = styled.div`
-  height: 599.6px;
+  height: 600px;
 `;
-export const BackgroundContainer = styled.img`
-  width: 100%;
+export const BackgroundContainer = styled.div`
+  background-image: url(${(props) => props.src});
+  width: 100vw;
+  height: 600px;
+  object-fit: cover;
+  background-size: cover;
 `;
 
 export const VisionContainer = styled.div`

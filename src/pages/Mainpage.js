@@ -1,5 +1,7 @@
 import React from "react";
-import img1 from "../assets/car_img_1_text_1.png";
+// import img1 from "../assets/car_img_1_text_1.png";
+// import img1 from "../assets/car_img_1.jpeg";
+import img1 from "../assets/car_img_1_crop_4.png";
 // import img2 from "../assets/car_img_2.jpeg";
 // import img3 from "../assets/car_img_3.jpeg";
 // import img4 from "../assets/car_img_4.jpeg";
