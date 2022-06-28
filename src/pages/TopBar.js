@@ -7,6 +7,7 @@ import {
   AuthContainer,
   AuthButton,
   TopBarContentContainer,
+  TopBarDivider,
 } from "../styles/TopBar.element";
 import Logosrc from "../assets/sgaem_logo_new.png";
 
@@ -15,58 +16,60 @@ const TopBar = () => {
     <>
       <TopBarContainer>
         <TopBarContentContainer>
-          <TopBarLogo src={Logosrc}></TopBarLogo>
-          <TopBarButtonContainer>
-            <TopBarButton
-              onClick={() => {
-                alert("ABOUT US");
-              }}
-            >
-              ABOUT US
-            </TopBarButton>
-            <TopBarButton
-              onClick={() => {
-                alert("NEWS");
-              }}
-            >
-              NEWS
-            </TopBarButton>
-            <TopBarButton
-              onClick={() => {
-                alert("COURSES");
-              }}
-            >
-              COURSES
-            </TopBarButton>
-            <TopBarButton
-              onClick={() => {
-                alert("Competition");
-              }}
-            >
-              COMPETITION
-            </TopBarButton>
-            <TopBarButton
-              onClick={() => {
-                alert("Recruiting");
-              }}
-            >
-              RECRUITING
-            </TopBarButton>
-            <TopBarButton
-              onClick={() => {
-                alert("FAQ");
-              }}
-            >
-              FAQ
-            </TopBarButton>
-            <TopBarButton
-              onClick={() => {
-                alert("Contact us");
-              }}
-            >
-              CONTACT US
-            </TopBarButton>
-          </TopBarButtonContainer>
+          <TopBarDivider>
+            <TopBarLogo src={Logosrc}></TopBarLogo>
+            <TopBarButtonContainer>
+              <TopBarButton
+                onClick={() => {
+                  alert("ABOUT US");
+                }}
+              >
+                ABOUT US
+              </TopBarButton>
+              <TopBarButton
+                onClick={() => {
+                  alert("NEWS");
+                }}
+              >
+                NEWS
+              </TopBarButton>
+              <TopBarButton
+                onClick={() => {
+                  alert("COURSES");
+                }}
+              >
+                COURSES
+              </TopBarButton>
+              <TopBarButton
+                onClick={() => {
+                  alert("Competition");
+                }}
+              >
+                COMPETITION
+              </TopBarButton>
+              <TopBarButton
+                onClick={() => {
+                  alert("Recruiting");
+                }}
+              >
+                RECRUITING
+              </TopBarButton>
+              <TopBarButton
+                onClick={() => {
+                  alert("FAQ");
+                }}
+              >
+                FAQ
+              </TopBarButton>
+              <TopBarButton
+                onClick={() => {
+                  alert("Contact us");
+                }}
+              >
+                CONTACT US
+              </TopBarButton>
+            </TopBarButtonContainer>
+          </TopBarDivider>
           <AuthContainer>
             <AuthButton
               onClick={() => {

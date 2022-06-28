@@ -13,6 +13,11 @@ export const TopBarContainer = styled.div`
   right: 0; */
 `;
 
+export const TopBarDivider = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
 export const TopBarContentContainer = styled.div`
   width: 62.5%;
   display: flex;
@@ -23,6 +28,7 @@ export const TopBarContentContainer = styled.div`
 export const TopBarLogo = styled.img`
   /* height: auto; */
   height: 60px;
+  margin-right: 60px;
 `;
 export const TopBarButtonContainer = styled.span`
   /* background-color: gold; */
@@ -35,12 +41,12 @@ export const TopBarButton = styled.span`
   width: max-content;
   display: flex;
   height: auto;
-  margin: 2px 6px;
+  margin: 2px 10px;
   text-align: center;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
-  /* font-weight: bold; */
+  font-size: 16px;
+  font-weight: bold;
   color: #f8f8fa;
   padding: 0px 4px;
 `;
@@ -59,7 +65,8 @@ export const AuthButton = styled.span`
   text-align: center;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
+  font-size: 16px;
+  /* font-weight: bold; */
   color: #f8f8fa;
   padding: 0px 4px;
 `;
