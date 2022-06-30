@@ -19,7 +19,7 @@ export const TopBarDivider = styled.div`
 `;
 
 export const TopBarContentContainer = styled.div`
-  width: 62.5%;
+  width: 62.5vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -49,6 +49,9 @@ export const TopBarButton = styled.span`
   font-weight: bold;
   color: #f8f8fa;
   padding: 0px 4px;
+  @media only screen and (max-width: 1440px) {
+    font-size: 12px;
+  }
 `;
 
 export const AuthContainer = styled.span`
