@@ -1,15 +1,18 @@
 import React from "react";
-import Mainpage from "./pages/Mainpage";
+import styled from "styled-components";
+
 import TopBar from "./pages/TopBar";
 import BottomBar from "./pages/BottomBar";
-import styled from "styled-components";
+import Mainpage from "./pages/Mainpage";
+import AboutUs from "./pages/AboutUs";
 
 const App = () => {
   return (
     <>
       <AppContainer>
         <TopBar />
-        <Mainpage />
+        {/* <Mainpage /> */}
+        <AboutUs />
         <BottomBar />
       </AppContainer>
     </>
