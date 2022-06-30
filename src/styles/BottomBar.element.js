@@ -9,6 +9,11 @@ export const BottomBarContainer = styled.div`
   justify-content: center;
 `;
 
+export const BottomBarDivider = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
 export const BottomBarIndex = styled.div`
   width: 62.5%;
   align-items: center;
@@ -17,11 +22,16 @@ export const BottomBarIndex = styled.div`
   justify-content: space-between;
 `;
 
+export const BottomBarLogo = styled.img`
+  height: 60px;
+  margin-right: 40px;
+`;
+
 export const BottomBarBox = styled.div`
   height: max-content;
   width: max-content;
-  border-top: 1px solid #707070;
-  border-bottom: 1px solid #707070;
+  border-top: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
 `;
 
 export const BottomBarBoxText = styled.div`
@@ -31,7 +41,26 @@ export const BottomBarBoxText = styled.div`
 `;
 
 export const BottomBarButtonContainer = styled.div`
-  background-color: pink;
-  width: 100px;
+  /* background-color: pink; */
+  width: max-content;
   height: max-content;
+  display: flex;
+  flex-direction: row;
+`;
+
+export const BottomBarButton = styled.div`
+  width: 40px;
+  height: 40px;
+  margin: 0 2px;
+  /* background-color: none; */
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+`;
+export const BottomBarButtonLogo = styled.img`
+  margin: 0 2px;
+  width: 30px;
 `;
