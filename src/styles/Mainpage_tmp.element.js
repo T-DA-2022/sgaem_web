@@ -11,10 +11,11 @@ export const BackgroundContainer = styled.div`
   background-image: url(${(props) => props.src});
   width: 100vw;
   height: 33.8vw;
-  object-fit: cover;
+  object-fit: none;
   background-size: cover;
   display: flex;
   justify-content: center;
+  background-position-y: 50%;
 `;
 
 export const BackgroundTextContainer = styled.div`

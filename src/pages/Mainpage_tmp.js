@@ -1,10 +1,13 @@
 import React from "react";
 // import img1 from "../assets/car_img_1_text_1.png";
 // import img1 from "../assets/car_img_1.jpeg";
-import img1 from "../assets/car_img_1_crop_4.png";
+// import img1 from "../assets/car_img_1_crop_4.png";
 // import img2 from "../assets/car_img_2.jpeg";
 // import img3 from "../assets/car_img_3.jpeg";
 // import img4 from "../assets/car_img_4.jpeg";
+import img1 from "../assets/main_banner_1.png";
+import img2 from "../assets/main_banner_2.png";
+import img3 from "../assets/main_banner_3.png";
 
 // style import
 import {
@@ -47,10 +50,10 @@ const MainpageTmp = () => {
       <MainpageContainer>
         <BackgroundContainer src={img1}>
           <BackgroundTextContainer>
-            <BackgroundText>WE MAKE THE RULES</BackgroundText>
+            {/* <BackgroundText>WE MAKE THE RULES</BackgroundText>
             <BackgroundSubText>
               SGAEM은 서강 e스포츠 문화를 선도합니다.
-            </BackgroundSubText>
+            </BackgroundSubText> */}
           </BackgroundTextContainer>
         </BackgroundContainer>
         <VisionContainer>
