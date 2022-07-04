@@ -4,6 +4,7 @@ import styled from "styled-components";
 import TopBar from "./pages/TopBar";
 import BottomBar from "./pages/BottomBar";
 import Mainpage from "./pages/Mainpage";
+import MainpageTmp from "./pages/Mainpage_tmp";
 import AboutUs from "./pages/AboutUs";
 
 const App = () => {
@@ -12,7 +13,8 @@ const App = () => {
       <AppContainer>
         <TopBar />
         {/* <Mainpage /> */}
-        <AboutUs />
+        <MainpageTmp />
+        {/* <AboutUs /> */}
         <BottomBar />
       </AppContainer>
     </>
