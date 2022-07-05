@@ -56,12 +56,18 @@ export const VisionTextContainer = styled.div`
   color: #707070;
   font-size: 40px;
   font-weight: bold;
+  @media only screen and (max-width: 1440px) {
+    font-size: 32px;
+  }
 `;
 
 export const VisionSubTextContainer = styled.div`
   font-size: 18px;
   color: #707070;
-  margin-bottom: 4.7vw;
+  margin-bottom: 1.56vw;
+  @media only screen and (max-width: 1440px) {
+    font-size: 14px;
+  }
 `;
 
 export const VisionContentContainer = styled.div`
@@ -84,11 +90,17 @@ export const ActivityTextContainer = styled.div`
   color: #707070;
   font-size: 40px;
   font-weight: bold;
+  @media only screen and (max-width: 1440px) {
+    font-size: 32px;
+  }
 `;
 export const ActivitySubTextContainer = styled.div`
   font-size: 18px;
   color: #707070;
   margin-bottom: 1.56vw;
+  @media only screen and (max-width: 1440px) {
+    font-size: 14px;
+  }
 `;
 
 export const ActivityContentContainer = styled.div`
@@ -152,12 +164,18 @@ export const NewsTextContainer = styled.div`
   color: #707070;
   font-size: 40px;
   font-weight: bold;
+  @media only screen and (max-width: 1440px) {
+    font-size: 32px;
+  }
 `;
 
 export const NewsSubTextContainer = styled.div`
   font-size: 18px;
   color: #707070;
-  margin-bottom: 4.7vw;
+  margin-bottom: 1.56vw;
+  @media only screen and (max-width: 1440px) {
+    font-size: 14px;
+  }
 `;
 
 export const NewsContentContainer = styled.div`
@@ -198,12 +216,18 @@ export const YoutubeTextContainer = styled.div`
   color: #707070;
   font-size: 40px;
   font-weight: bold;
+  @media only screen and (max-width: 1440px) {
+    font-size: 32px;
+  }
 `;
 
 export const YoutubeSubTextContainer = styled.div`
   font-size: 18px;
   color: #707070;
-  margin-bottom: 4.7vw;
+  margin-bottom: 1.56vw;
+  @media only screen and (max-width: 1440px) {
+    font-size: 14px;
+  }
 `;
 
 export const YoutubeContentContainer = styled.div`
