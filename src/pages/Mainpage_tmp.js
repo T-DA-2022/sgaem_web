@@ -74,25 +74,39 @@ const MainpageTmp = () => {
               <ActivityArticle>
                 <ActivityArticleText>대회 개최</ActivityArticleText>
                 <ActivityArticleSubText>
-                  내용이 들어갑니다.
+                  스겜에서 자체적으로 구축한 대회 시스템을 활용해 서강대학교의
+                  e스포츠 대회를 주최하고 운영합니다.
                 </ActivityArticleSubText>
               </ActivityArticle>
             </ActivityContent>
             <ActivityContent>
               <ActivityImg></ActivityImg>
               <ActivityArticle>
-                <ActivityArticleText>대회 개최</ActivityArticleText>
+                <ActivityArticleText>콘텐츠 제작</ActivityArticleText>
                 <ActivityArticleSubText>
-                  내용이 들어갑니다.
+                  다양한 콘텐츠를 기획하고 제작합니다. 콘텐츠를 통해 게임과
+                  e스포츠의 긍정적인 가치를 널리 알립니다.
                 </ActivityArticleSubText>
               </ActivityArticle>
             </ActivityContent>
             <ActivityContent>
               <ActivityImg></ActivityImg>
               <ActivityArticle>
-                <ActivityArticleText>대회 개최</ActivityArticleText>
+                <ActivityArticleText>대외 협업</ActivityArticleText>
                 <ActivityArticleSubText>
-                  내용이 들어갑니다.
+                  외부 기업들과 협력하여 양질의 콘텐츠를 제작하거나 각종
+                  프로그램에 참가합니다. 보다 전문적인 활동을 경험할 수
+                  있습니다.
+                </ActivityArticleSubText>
+              </ActivityArticle>
+            </ActivityContent>
+            <ActivityContent>
+              <ActivityImg></ActivityImg>
+              <ActivityArticle>
+                <ActivityArticleText>네트워킹</ActivityArticleText>
+                <ActivityArticleSubText>
+                  게임에 관심이 많은 학우들과 친목 활동을 합니다. 게임, e스포츠
+                  산업에 진출한 졸업 회원들과 교류 행사를 진행합니다.
                 </ActivityArticleSubText>
               </ActivityArticle>
             </ActivityContent>

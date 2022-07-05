@@ -70,10 +70,16 @@ export const VisionContentContainer = styled.div`
   height: 25vw;
 `;
 
+export const ActivityContentContainer = styled.div`
+  width: 63.5vw;
+  display: flex;
+  flex-direction: row;
+`;
+
 export const ActivityContainer = styled.div`
   background-color: #f1f1f5;
-  padding-top: 6.25vw;
-  padding-bottom: 6.25vw;
+  padding-top: 3.64vw;
+  padding-bottom: 3.64vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -88,18 +94,12 @@ export const ActivityTextContainer = styled.div`
 export const ActivitySubTextContainer = styled.div`
   font-size: 18px;
   color: #707070;
-  margin-bottom: 4.7vw;
-`;
-
-export const ActivityContentContainer = styled.div`
-  width: 63.5vw;
-  display: flex;
-  flex-direction: row;
+  margin-bottom: 1.56vw;
 `;
 
 export const ActivityContent = styled.div`
-  height: 24.9vw;
-  width: 384px;
+  height: 25.2vw;
+  width: 282px;
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
@@ -108,26 +108,31 @@ export const ActivityContent = styled.div`
 
 export const ActivityImg = styled.div`
   background-color: #d9d9d9;
-  height: 16.6vw;
+  height: 66%;
 `;
 
 export const ActivityArticle = styled.div`
   background-color: #ffffff;
-  height: 8.3vw;
+  height: 34%;
   display: flex;
   padding: 12px;
   flex-direction: column;
   align-items: flex-start;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 `;
 
 export const ActivityArticleText = styled.div`
   color: #707070;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
+  margin-bottom: 4px;
 `;
 export const ActivityArticleSubText = styled.div`
   color: #707070;
-  font-size: 18px;
+  font-size: 14px;
+  text-align: left;
+  font-family: "Noto Sans";
 `;
 
 export const NewsContainer = styled.div`
