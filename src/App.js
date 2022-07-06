@@ -1,22 +1,28 @@
 import React from "react";
 import styled from "styled-components";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import TopBar from "./pages/TopBar";
 import BottomBar from "./pages/BottomBar";
-import Mainpage from "./pages/Mainpage";
 import MainpageTmp from "./pages/Mainpage_tmp";
 import AboutUs from "./pages/AboutUs";
+import Notfound from "./pages/Notfound";
+// import Mainpage from "./pages/Mainpage";
 
 const App = () => {
   return (
     <>
-      <AppContainer>
-        <TopBar />
-        {/* <Mainpage /> */}
-        <MainpageTmp />
-        {/* <AboutUs /> */}
-        <BottomBar />
-      </AppContainer>
+      <BrowserRouter>
+        <AppContainer>
+          <TopBar />
+          <Routes>
+            <Route path="/" element={<MainpageTmp />} />
+            <Route path="aboutus" element={<AboutUs />} />
+            <Route path="*" element={<Notfound />} />
+          </Routes>
+          <BottomBar />
+        </AppContainer>
+      </BrowserRouter>
     </>
   );
 };
