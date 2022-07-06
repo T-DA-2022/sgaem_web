@@ -21,52 +21,66 @@ export const LoginText = styled.div`
 
 export const FormContainer = styled.div`
   /* background-color: green; */
-  width: 400px;
-  margin-top: 3.645vw;
+  /* width: 400px; */
+  margin-top: 3.8vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   @media only screen and (max-width: 1440px) {
-    width: 360px;
+    /* width: 360px; */
+    margin-top: 3.645vw;
   }
 `;
 
 export const FormText = styled.div`
   font-size: 16px;
   font-weight: bold;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   padding-left: 4px;
+  align-self: flex-start;
   @media only screen and (max-width: 1440px) {
     font-size: 12px;
+    margin-bottom: 6px;
   }
 `;
 
 export const FormInput = styled.input`
-  width: 374px;
-  height: 30px;
+  width: 454px;
+  height: 40px;
   border-radius: 10px;
   border: 1px solid #707070;
   padding: 4px 12px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   @media only screen and (max-width: 1440px) {
     width: 334px;
+    height: 30px;
+    margin-bottom: 20px;
   }
 `;
 
 export const FormButton = styled.button`
   color: #ffffff;
   background-color: #4188fe;
-  width: 400px;
-  height: 40px;
+  width: 480px;
+  height: 50px;
   border-radius: 12px;
   border: none;
   margin: 12px 0;
   @media only screen and (max-width: 1440px) {
     width: 360px;
+    height: 40px;
   }
 `;
 
 export const FormLink = styled.div`
   /* background-color: skyblue; */
-  margin-top: 16px;
-  font-size: 12px;
+  margin-top: 20px;
+  font-size: 14px;
+  @media only screen and (max-width: 1440px) {
+    width: 360px;
+    font-size: 12px;
+    margin-top: 16px;
+  }
 `;
 
 export const StyledLink = styled(Link)`
