@@ -53,7 +53,7 @@ export const VisionContainer = styled.div`
 export const VisionTextContainer = styled.div`
   /* margin-top: 90px; */
   margin-bottom: 8px;
-  color: #707070;
+  color: #000000;
   font-size: 40px;
   font-weight: bold;
   @media only screen and (max-width: 1440px) {
@@ -87,7 +87,7 @@ export const ActivityContainer = styled.div`
 
 export const ActivityTextContainer = styled.div`
   margin-bottom: 8px;
-  color: #707070;
+  color: #000000;
   font-size: 40px;
   font-weight: bold;
   @media only screen and (max-width: 1440px) {
@@ -161,7 +161,7 @@ export const NewsContainer = styled.div`
 
 export const NewsTextContainer = styled.div`
   margin-bottom: 8px;
-  color: #707070;
+  color: #000000;
   font-size: 40px;
   font-weight: bold;
   @media only screen and (max-width: 1440px) {
@@ -213,7 +213,7 @@ export const YoutubeContainer = styled.div`
 
 export const YoutubeTextContainer = styled.div`
   margin-bottom: 8px;
-  color: #707070;
+  color: #000000;
   font-size: 40px;
   font-weight: bold;
   @media only screen and (max-width: 1440px) {
