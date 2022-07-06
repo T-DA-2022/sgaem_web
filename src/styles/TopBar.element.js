@@ -28,11 +28,12 @@ export const TopBarContentContainer = styled.div`
 export const TopBarLogo = styled.img`
   /* height: auto; */
   height: 60px;
-  margin-right: 60px;
+  /* margin-right: 60px; */
 `;
 export const TopBarButtonContainer = styled.span`
   /* background-color: gold; */
   display: flex;
+  margin-left: 60px;
   margin-right: 60px;
   align-items: center;
 `;
