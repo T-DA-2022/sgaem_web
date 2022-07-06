@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const TopBarContainer = styled.div`
   height: 80px;
@@ -36,6 +37,18 @@ export const TopBarButtonContainer = styled.span`
   margin-left: 60px;
   margin-right: 60px;
   align-items: center;
+`;
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+
+  &:focus,
+  &:hover,
+  &:visited,
+  &:link,
+  &:active {
+    text-decoration: none;
+  }
 `;
 
 export const TopBarButton = styled.span`
