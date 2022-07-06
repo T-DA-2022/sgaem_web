@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import {
   TopBarButton,
   TopBarLogo,
-  TopBarLink,
+  StyledLink,
   TopBarButtonContainer,
   TopBarContainer,
   AuthContainer,
@@ -19,13 +19,13 @@ const TopBar = () => {
       <TopBarContainer>
         <TopBarContentContainer>
           <TopBarDivider>
-            <Link to="/">
+            <StyledLink to="/">
               <TopBarLogo src={Logosrc}></TopBarLogo>
-            </Link>
+            </StyledLink>
             <TopBarButtonContainer>
-              <Link to="/aboutus">
+              <StyledLink to="/aboutus">
                 <TopBarButton>ABOUT US</TopBarButton>
-              </Link>
+              </StyledLink>
 
               <TopBarButton
                 onClick={() => {
@@ -72,13 +72,9 @@ const TopBar = () => {
             </TopBarButtonContainer>
           </TopBarDivider>
           <AuthContainer>
-            <AuthButton
-              onClick={() => {
-                alert("log in");
-              }}
-            >
-              로그인
-            </AuthButton>
+            <StyledLink to="/login">
+              <AuthButton>로그인</AuthButton>
+            </StyledLink>
             <AuthButton
               onClick={() => {
                 alert("register");
