@@ -45,14 +45,15 @@ export const FormText = styled.div`
 `;
 
 export const FormInput = styled.input`
-  width: 454px;
+  width: 448px;
   height: 40px;
   border-radius: 10px;
   border: 1px solid #707070;
-  padding: 4px 12px;
+  padding: 4px 16px;
   margin-bottom: 30px;
+  font-size: 16px;
   @media only screen and (max-width: 1440px) {
-    width: 334px;
+    width: 326px;
     height: 30px;
     margin-bottom: 20px;
   }
