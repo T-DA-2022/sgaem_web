@@ -6,6 +6,7 @@ import TopBar from "./pages/TopBar";
 import BottomBar from "./pages/BottomBar";
 import MainpageTmp from "./pages/Mainpage_tmp";
 import AboutUs from "./pages/AboutUs";
+import Login from "./pages/Login";
 import Notfound from "./pages/Notfound";
 // import Mainpage from "./pages/Mainpage";
 
@@ -18,6 +19,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<MainpageTmp />} />
             <Route path="aboutus" element={<AboutUs />} />
+            <Route path="login" element={<Login />} />
             <Route path="*" element={<Notfound />} />
           </Routes>
           <BottomBar />
