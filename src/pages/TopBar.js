@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   TopBarButton,
   TopBarLogo,
+  TopBarLink,
   TopBarButtonContainer,
   TopBarContainer,
   AuthContainer,
@@ -17,15 +19,14 @@ const TopBar = () => {
       <TopBarContainer>
         <TopBarContentContainer>
           <TopBarDivider>
-            <TopBarLogo src={Logosrc}></TopBarLogo>
+            <Link to="/">
+              <TopBarLogo src={Logosrc}></TopBarLogo>
+            </Link>
             <TopBarButtonContainer>
-              <TopBarButton
-                onClick={() => {
-                  alert("ABOUT US");
-                }}
-              >
-                ABOUT US
-              </TopBarButton>
+              <Link to="/aboutus">
+                <TopBarButton>ABOUT US</TopBarButton>
+              </Link>
+
               <TopBarButton
                 onClick={() => {
                   alert("NEWS");

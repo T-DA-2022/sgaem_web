@@ -34,6 +34,7 @@ export const TopBarButtonContainer = styled.span`
   /* background-color: gold; */
   display: flex;
   margin-right: 60px;
+  align-items: center;
 `;
 
 export const TopBarButton = styled.span`
