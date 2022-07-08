@@ -77,6 +77,8 @@ export const FormLink = styled.div`
   /* background-color: skyblue; */
   margin-top: 20px;
   font-size: 14px;
+  display: flex;
+  justify-content: center;
   @media only screen and (max-width: 1440px) {
     width: 360px;
     font-size: 12px;

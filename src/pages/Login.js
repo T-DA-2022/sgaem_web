@@ -26,7 +26,7 @@ const Login = () => {
         <FormLink>
           <StyledLink to="/">아이디 찾기</StyledLink>|
           <StyledLink to="/">비밀번호 찾기</StyledLink>|
-          <StyledLink to="/">회원가입</StyledLink>
+          <StyledLink to="../register">회원가입</StyledLink>
         </FormLink>
       </LoginContainer>
     </>
