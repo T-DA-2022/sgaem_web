@@ -122,15 +122,15 @@ export const ActivityContent = styled.div`
 `;
 
 export const ActivityImg = styled.div`
-  /* background-color: #d9d9d9; */
-  height: 66%;
+  background-color: pink;
+  height: 67%;
 `;
 
 export const ActivityArticle = styled.div`
   /* background-color: #ffffff; */
-  height: 34%;
+  height: auto;
   display: flex;
-  padding: 12px;
+  padding: 11px;
   flex-direction: column;
   align-items: flex-start;
   /* border-bottom-left-radius: 10px;
@@ -139,15 +139,24 @@ export const ActivityArticle = styled.div`
 
 export const ActivityArticleText = styled.div`
   color: #4188fe;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
+  @media only screen and (max-width: 1440px) {
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
 `;
 export const ActivityArticleSubText = styled.div`
   color: #707070;
-  font-size: 14px;
+  font-size: 16px;
   text-align: left;
   font-family: "Noto Sans";
+  line-height: 26px;
+  @media only screen and (max-width: 1440px) {
+    font-size: 12px;
+    line-height: 18px;
+  }
 `;
 
 export const NewsContainer = styled.div`
