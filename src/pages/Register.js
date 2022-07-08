@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  FormCheckbox,
   FormContainer,
   FormInput,
   FormRadio,
@@ -26,7 +27,7 @@ const Register = () => {
           <FormText>이름</FormText>
           <FormInput type="text" placeholder="김서강" />
           <FormText>학번</FormText>
-          <FormInput type="text" placeholder="20181234" />
+          <FormInput type="text" placeholder="20201234" />
           <FormText>생년월일</FormText>
           <FormInput type="text" placeholder="생년월일 8자리 (ex.19980623)" />
           <FormText>성별</FormText>
@@ -48,6 +49,18 @@ const Register = () => {
           <FormInput type="text" placeholder="" />
           <FormText>휴대전화번호</FormText>
           <FormInput type="text" placeholder="010-1234-5678" />
+          <FormText>전체 동의</FormText>
+          <FormCheckbox>
+            <input
+              type="checkbox"
+              id="agree_all"
+              name="agree_all"
+              value="agree_all"
+            />
+            <label for="agree_all">
+              이용약관 및 개인정보수집 및 이용에 모두 동의합니다.
+            </label>
+          </FormCheckbox>
         </FormContainer>
       </RegisterContainer>
     </>

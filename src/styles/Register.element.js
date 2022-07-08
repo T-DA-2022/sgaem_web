@@ -72,3 +72,9 @@ export const FormRadio = styled.div`
     margin-bottom: 20px;
   }
 `;
+
+export const FormCheckbox = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
