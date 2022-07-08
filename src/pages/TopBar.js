@@ -75,13 +75,9 @@ const TopBar = () => {
             <StyledLink to="/login">
               <AuthButton>로그인</AuthButton>
             </StyledLink>
-            <AuthButton
-              onClick={() => {
-                alert("register");
-              }}
-            >
-              회원가입
-            </AuthButton>
+            <StyledLink to="/register">
+              <AuthButton>회원가입</AuthButton>
+            </StyledLink>
           </AuthContainer>
         </TopBarContentContainer>
       </TopBarContainer>
