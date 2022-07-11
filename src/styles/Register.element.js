@@ -77,4 +77,27 @@ export const FormCheckbox = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-bottom: 30px;
+`;
+
+export const InformBox = styled.div`
+  background-color: #ffffff;
+  width: 100%;
+  height: 10vw;
+  border: 1px solid black;
+  margin: 10px 2px;
+`;
+
+export const FormButton = styled.button`
+  color: #ffffff;
+  background-color: #4188fe;
+  width: 480px;
+  height: 50px;
+  border-radius: 12px;
+  border: none;
+  margin: 12px 0;
+  @media only screen and (max-width: 1440px) {
+    width: 360px;
+    height: 40px;
+  }
 `;

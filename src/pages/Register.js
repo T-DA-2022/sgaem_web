@@ -7,6 +7,8 @@ import {
   FormText,
   JoinText,
   RegisterContainer,
+  InformBox,
+  FormButton,
 } from "../styles/Register.element";
 
 const Register = () => {
@@ -61,6 +63,33 @@ const Register = () => {
               이용약관 및 개인정보수집 및 이용에 모두 동의합니다.
             </label>
           </FormCheckbox>
+          <FormText>[필수] 이용약관 동의</FormText>
+          <InformBox></InformBox>
+          <FormCheckbox>
+            <label for="agree_first">이용약관에 동의하십니까?</label>
+            <input
+              type="checkbox"
+              id="agree_first"
+              name="agree_first"
+              value="agree_first"
+            />
+            <label for="agree_first">동의함</label>
+          </FormCheckbox>
+          <FormText>[필수] 개인정보 수집 및 이용 동의</FormText>
+          <InformBox></InformBox>
+          <FormCheckbox>
+            <label for="agree_second">
+              개인정보 수집 및 이용에 동의하십니까?
+            </label>
+            <input
+              type="checkbox"
+              id="agree_second"
+              name="agree_second"
+              value="agree_second"
+            />
+            <label for="agree_second">동의함</label>
+          </FormCheckbox>
+          <FormButton>가입하기</FormButton>
         </FormContainer>
       </RegisterContainer>
     </>
