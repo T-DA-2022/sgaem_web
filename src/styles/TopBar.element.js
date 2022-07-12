@@ -17,6 +17,7 @@ export const TopBarContainer = styled.div`
 export const TopBarDivider = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: center;
 `;
 
 export const TopBarContentContainer = styled.div`
@@ -37,10 +38,14 @@ export const TopBarButtonContainer = styled.span`
   margin-left: 60px;
   margin-right: 60px;
   align-items: center;
+  height: 100%;
 `;
 
 export const StyledLink = styled(Link)`
   text-decoration: none;
+  height: 80px;
+  display: flex;
+  align-items: center;
 
   &:focus,
   &:hover,
