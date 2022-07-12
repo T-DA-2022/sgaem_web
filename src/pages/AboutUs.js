@@ -26,16 +26,16 @@ const AboutUs = () => {
         <BannerContainer>ABOUT US</BannerContainer>
         <TabArea>
           <TabBox>
-            <TabContent>VISION</TabContent>
+            <TabContent>SGAEM</TabContent>
             <TabContent>HISTORY</TabContent>
             <TabContent>ACTIVITY</TabContent>
             <TabContent>TEAM</TabContent>
           </TabBox>
         </TabArea>
         <VisionContainer>
-          <VisionTextContainer>VISION</VisionTextContainer>
+          <VisionTextContainer>SGAEM</VisionTextContainer>
           <VisionSubTextContainer>
-            스겜은 대학 e스포츠 문화를 선도합니다
+            스겜은 확실한 목표 아래에 뭉칩니다
           </VisionSubTextContainer>
         </VisionContainer>
         <HistoryContainer>
