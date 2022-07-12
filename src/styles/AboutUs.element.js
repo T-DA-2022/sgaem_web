@@ -131,7 +131,8 @@ export const VisionImageContainer = styled.div`
 `;
 
 export const VisionIamge = styled.img`
-  height: 45vw;
+  margin-top: 3vw;
+  height: 37vw;
 `;
 
 export const HistoryContainer = styled.div`

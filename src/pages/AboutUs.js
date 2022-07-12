@@ -1,5 +1,6 @@
 import React from "react";
-import img1_src from "../assets/vision_tmp.png";
+// import img1_src from "../assets/vision_tmp.png";
+import img1_src from "../assets/4E.svg";
 import { TbChevronUpLeft, TbChevronDownRight } from "react-icons/tb";
 import {
   AboutUsContainer,
@@ -84,7 +85,7 @@ const AboutUs = () => {
         <HistoryContainer>
           <HistoryTextContainer>HISTORY</HistoryTextContainer>
           <HistorySubTextContainer>
-            스겜은 대학 e스포츠 문화를 선도합니다
+            스겜만의 특별한 활동을 경험해보세요
           </HistorySubTextContainer>
         </HistoryContainer>
         <ActivityContainer>
