@@ -43,9 +43,9 @@ export const TabContent = styled.div`
 `;
 
 export const VisionContainer = styled.div`
-  background-color: #f8f8fa;
-  padding-top: 6.25vw;
-  padding-bottom: 6.25vw;
+  background-color: #ffffff;
+  padding-top: 3.645vw;
+  padding-bottom: 3.645vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,21 +54,41 @@ export const VisionContainer = styled.div`
 export const VisionTextContainer = styled.div`
   /* margin-top: 90px; */
   margin-bottom: 8px;
-  color: #707070;
+  color: #000000;
   font-size: 40px;
   font-weight: bold;
+  @media only screen and (max-width: 1440px) {
+    font-size: 32px;
+  }
 `;
 
 export const VisionSubTextContainer = styled.div`
   font-size: 18px;
   color: #707070;
-  margin-bottom: 4.7vw;
+  margin-bottom: 1.56vw;
+  @media only screen and (max-width: 1440px) {
+    font-size: 14px;
+  }
+`;
+
+export const VisionTextBox = styled.div`
+  background-color: yellow;
+  width: 52vw;
+  border: 1px solid black;
+  height: 100px;
+  border-radius: 35px;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const VisionTextLine = styled.div`
+  background-color: green;
 `;
 
 export const HistoryContainer = styled.div`
   background-color: #f1f1f5;
-  padding-top: 6.25vw;
-  padding-bottom: 6.25vw;
+  padding-top: 3.645vw;
+  padding-bottom: 3.645vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -77,21 +97,27 @@ export const HistoryContainer = styled.div`
 export const HistoryTextContainer = styled.div`
   /* margin-top: 90px; */
   margin-bottom: 8px;
-  color: #707070;
+  color: #000000;
   font-size: 40px;
   font-weight: bold;
+  @media only screen and (max-width: 1440px) {
+    font-size: 32px;
+  }
 `;
 
 export const HistorySubTextContainer = styled.div`
   font-size: 18px;
   color: #707070;
-  margin-bottom: 4.7vw;
+  margin-bottom: 1.56vw;
+  @media only screen and (max-width: 1440px) {
+    font-size: 14px;
+  }
 `;
 
 export const ActivityContainer = styled.div`
   background-color: #f8f8fa;
-  padding-top: 6.25vw;
-  padding-bottom: 6.25vw;
+  padding-top: 3.645vw;
+  padding-bottom: 3.645vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -100,21 +126,27 @@ export const ActivityContainer = styled.div`
 export const ActivityTextContainer = styled.div`
   /* margin-top: 90px; */
   margin-bottom: 8px;
-  color: #707070;
+  color: #000000;
   font-size: 40px;
   font-weight: bold;
+  @media only screen and (max-width: 1440px) {
+    font-size: 32px;
+  }
 `;
 
 export const ActivitySubTextContainer = styled.div`
   font-size: 18px;
   color: #707070;
-  margin-bottom: 4.7vw;
+  margin-bottom: 1.56vw;
+  @media only screen and (max-width: 1440px) {
+    font-size: 14px;
+  }
 `;
 
 export const TeamContainer = styled.div`
   background-color: #f1f1f5;
-  padding-top: 6.25vw;
-  padding-bottom: 6.25vw;
+  padding-top: 3.645vw;
+  padding-bottom: 3.645vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -123,13 +155,19 @@ export const TeamContainer = styled.div`
 export const TeamTextContainer = styled.div`
   /* margin-top: 90px; */
   margin-bottom: 8px;
-  color: #707070;
+  color: #000000;
   font-size: 40px;
   font-weight: bold;
+  @media only screen and (max-width: 1440px) {
+    font-size: 32px;
+  }
 `;
 
 export const TeamSubTextContainer = styled.div`
   font-size: 18px;
   color: #707070;
-  margin-bottom: 4.7vw;
+  margin-bottom: 1.56vw;
+  @media only screen and (max-width: 1440px) {
+    font-size: 14px;
+  }
 `;
