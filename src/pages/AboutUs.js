@@ -19,6 +19,8 @@ import {
   TeamSubTextContainer,
   VisionTextBox,
   VisionTextLine,
+  VisionTextBold,
+  VisionTextThin,
 } from "../styles/AboutUs.element";
 
 const AboutUs = () => {
@@ -41,12 +43,22 @@ const AboutUs = () => {
           </VisionSubTextContainer>
           <VisionTextBox>
             <VisionTextLine>
-              SGAEM은 '건전한 e스포츠 문화를 선도한다.'는 비전을 가지고 2014년
-              10월 출범했습니다.
+              <VisionTextBold>SGAEM</VisionTextBold>
+              <VisionTextThin>은 </VisionTextThin>
+              <VisionTextBold>'건전한 e스포츠 문화를 선도한다.'</VisionTextBold>
+              <VisionTextThin>는</VisionTextThin>
+              <VisionTextBold>비전</VisionTextBold>
+              <VisionTextThin>
+                을 가지고 2014년 10월 출범했습니다.
+              </VisionTextThin>
             </VisionTextLine>
             <VisionTextLine>
-              스겜인들은 이 비전을 달성하기 위해 핵심가치 4E(Energetic,
-              Exciting, Excellence, Every Sogang)를
+              <VisionTextBold>스겜인</VisionTextBold>
+              <VisionTextThin>들은 이 비전을 달성하기 위해</VisionTextThin>
+              <VisionTextBold>
+                핵심가치 4E(Energetic, Exciting, Excellence, Every Sogang)
+              </VisionTextBold>
+              <VisionTextThin>를</VisionTextThin>
             </VisionTextLine>
             <VisionTextLine>
               지금까지 변함없이 추구하고 있으며 최선의 결과를 내기 위해 항상

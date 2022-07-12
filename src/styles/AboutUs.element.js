@@ -72,17 +72,32 @@ export const VisionSubTextContainer = styled.div`
 `;
 
 export const VisionTextBox = styled.div`
-  background-color: yellow;
+  /* background-color: yellow; */
+  margin-top: 3vw;
   width: 52vw;
   border: 1px solid black;
-  height: 100px;
+  height: 7.66vw;
   border-radius: 35px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const VisionTextLine = styled.div`
-  background-color: green;
+  /* background-color: green; */
+  display: flex;
+  flex-direction: row;
+`;
+
+export const VisionTextBold = styled.span`
+  font-weight: bold;
+`;
+export const VisionTextThin = styled.span`
+  font-weight: normal;
+  @media only screen and (max-width: 1440px) {
+    margin-right: 6px;
+  }
 `;
 
 export const HistoryContainer = styled.div`
