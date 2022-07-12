@@ -42,7 +42,7 @@ export const TabContent = styled.div`
   font-size: 18px;
 `;
 
-export const VisionContainer = styled.div`
+export const SgaemContainer = styled.div`
   background-color: #ffffff;
   padding-top: 3.645vw;
   padding-bottom: 3.645vw;
@@ -51,7 +51,7 @@ export const VisionContainer = styled.div`
   align-items: center;
 `;
 
-export const VisionTextContainer = styled.div`
+export const SgaemTextContainer = styled.div`
   /* margin-top: 90px; */
   margin-bottom: 8px;
   color: #000000;
@@ -62,7 +62,7 @@ export const VisionTextContainer = styled.div`
   }
 `;
 
-export const VisionSubTextContainer = styled.div`
+export const SgaemSubTextContainer = styled.div`
   font-size: 18px;
   color: #707070;
   margin-bottom: 1.56vw;
@@ -71,9 +71,10 @@ export const VisionSubTextContainer = styled.div`
   }
 `;
 
-export const VisionTextBox = styled.div`
+export const SgaemTextBox = styled.div`
   /* background-color: yellow; */
   margin-top: 3vw;
+  margin-bottom: 5vw;
   width: 52vw;
   border: 1px solid black;
   height: 7.66vw;
@@ -84,20 +85,53 @@ export const VisionTextBox = styled.div`
   align-items: center;
 `;
 
-export const VisionTextLine = styled.div`
+export const SgaemTextLine = styled.div`
   /* background-color: green; */
   display: flex;
   flex-direction: row;
 `;
 
-export const VisionTextBold = styled.span`
+export const SgaemTextBold = styled.span`
   font-weight: bold;
 `;
-export const VisionTextThin = styled.span`
+export const SgaemTextThin = styled.span`
   font-weight: normal;
   @media only screen and (max-width: 1440px) {
     margin-right: 6px;
   }
+`;
+
+export const VisionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const VisionTextContainer = styled.div`
+  /* background-color: green; */
+  display: flex;
+  flex-direction: row;
+  height: 6vw;
+  font-size: 40px;
+  @media only screen and (max-width: 1440px) {
+    font-size: 32px;
+  }
+`;
+
+export const VisionText = styled.div`
+  /* background-color: blue; */
+  align-self: center;
+  font-weight: bold;
+  margin: 0 40px;
+`;
+
+export const VisionImageContainer = styled.div`
+  /* background-color: blue; */
+  justify-content: center;
+  display: flex;
+`;
+
+export const VisionIamge = styled.img`
+  height: 45vw;
 `;
 
 export const HistoryContainer = styled.div`
