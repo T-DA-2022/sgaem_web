@@ -2,6 +2,7 @@ import React from "react";
 // import img1_src from "../assets/vision_tmp.png";
 import img1_src from "../assets/4E.svg";
 import img_2014_src from "../assets/car_img_3.jpeg";
+import img_act_bg from "../assets/tri_pattern_long.png";
 import { TbChevronUpLeft, TbChevronDownRight } from "react-icons/tb";
 import {
   AboutUsContainer,
@@ -40,6 +41,8 @@ import {
   HistoryTimeLineContent,
   HistoryTimeLineYearRight,
   HistroyTimeLineImg,
+  ActivityContentContainer,
+  ActivityContent,
 } from "../styles/AboutUs.element";
 
 const AboutUs = () => {
@@ -334,11 +337,15 @@ const AboutUs = () => {
             </HistoryTimeLineListRight>
           </HistoryTimeLineContainer>
         </HistoryContainer>
-        <ActivityContainer>
+        <ActivityContainer src={img_act_bg}>
           <ActivityTextContainer>ACTIVITY</ActivityTextContainer>
           <ActivitySubTextContainer>
-            스겜은 대학 e스포츠 문화를 선도합니다
+            스겜의 최신 소식을 확인하세요
           </ActivitySubTextContainer>
+          <ActivityContentContainer>
+            <ActivityContent>asdf</ActivityContent>
+            <ActivityContent>qwer</ActivityContent>
+          </ActivityContentContainer>
         </ActivityContainer>
         <TeamContainer>
           <TeamTextContainer>TEAM</TeamTextContainer>

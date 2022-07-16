@@ -17,7 +17,7 @@ export const BannerContainer = styled.div`
 
 export const TabArea = styled.div`
   height: 11vw;
-  background-color: #ffffff;
+  background-color: #f8f8fa;
   display: flex;
   justify-content: center;
 `;
@@ -43,7 +43,7 @@ export const TabContent = styled.div`
 `;
 
 export const SgaemContainer = styled.div`
-  background-color: #ffffff;
+  background-color: #f8f8fa;
   padding-top: 3.645vw;
   padding-bottom: 3.645vw;
   display: flex;
@@ -136,7 +136,7 @@ export const VisionIamge = styled.img`
 `;
 
 export const HistoryContainer = styled.div`
-  background-color: #f1f1f5;
+  background-color: #ffffff;
   padding-top: 3.645vw;
   padding-bottom: 3.645vw;
   display: flex;
@@ -217,7 +217,7 @@ export const HistoryTimeLineLine = styled.div`
   display: flex;
   flex-direction: row;
   margin-bottom: 16px;
-  align-items: flex-end;
+  align-items: center;
 `;
 
 export const HistoryTimeLineMonth = styled.div`
@@ -250,7 +250,10 @@ export const HistoryTimeLineYearRight = styled.div`
 `;
 
 export const ActivityContainer = styled.div`
-  background-color: #f8f8fa;
+  /* background-color: #f8f8fa; */
+  background-image: url(${(props) => props.src});
+  background-size: cover;
+  width: 100%;
   padding-top: 3.645vw;
   padding-bottom: 3.645vw;
   display: flex;
@@ -276,6 +279,22 @@ export const ActivitySubTextContainer = styled.div`
   @media only screen and (max-width: 1440px) {
     font-size: 14px;
   }
+`;
+
+export const ActivityContentContainer = styled.div`
+  width: 72vw;
+  background-color: blue;
+  display: flex;
+  flex-direction: row;
+`;
+
+export const ActivityContent = styled.div`
+  width: 50%;
+  background-color: green;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 `;
 
 export const TeamContainer = styled.div`
