@@ -362,3 +362,17 @@ export const TeamSubTextContainer = styled.div`
     font-size: 14px;
   }
 `;
+
+export const TeamContentContainer = styled.div`
+  background-color: blue;
+`;
+
+export const TeamContentBox = styled.div`
+  background-color: pink;
+`;
+
+export const TeamContentBoxImg = styled.img``;
+
+export const TeamContentBoxArticle = styled.div`
+  width: 50%;
+`;
