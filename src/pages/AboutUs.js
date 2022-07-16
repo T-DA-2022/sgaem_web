@@ -48,6 +48,10 @@ import {
   ActivityContentArticle,
   ActivityContentArticleMainText,
   ActivityContentArticleSubText,
+  TeamContentContainer,
+  TeamContentBox,
+  TeamContentBoxImg,
+  TeamContentBoxArticle,
 } from "../styles/AboutUs.element";
 
 const AboutUs = () => {
@@ -506,6 +510,20 @@ const AboutUs = () => {
           <TeamSubTextContainer>
             스겜의 활동을 직접 확인하세요!
           </TeamSubTextContainer>
+          <TeamContentContainer>
+            <TeamContentBox>
+              <TeamContentBoxImg></TeamContentBoxImg>
+              <TeamContentBoxArticle></TeamContentBoxArticle>
+            </TeamContentBox>
+            <TeamContentBox>
+              <TeamContentBoxArticle></TeamContentBoxArticle>
+              <TeamContentBoxImg></TeamContentBoxImg>
+            </TeamContentBox>
+            <TeamContentBox>
+              <TeamContentBoxImg></TeamContentBoxImg>
+              <TeamContentBoxArticle></TeamContentBoxArticle>
+            </TeamContentBox>
+          </TeamContentContainer>
         </TeamContainer>
       </AboutUsContainer>
     </>
