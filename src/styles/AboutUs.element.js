@@ -164,6 +164,91 @@ export const HistorySubTextContainer = styled.div`
   }
 `;
 
+export const HistoryTimeLineContainer = styled.div`
+  /* background: black; */
+  margin-top: 3vw;
+  width: 72vw;
+  padding: 0 9vw;
+  color: white;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+`;
+
+export const HistoryTimeLineListLeft = styled.ul`
+  border-right: 0.5px solid #707070;
+  width: 50%;
+  padding: 0 20px;
+  box-sizing: border-box;
+`;
+export const HistoryTimeLineListRight = styled.ul`
+  border-left: 0.5px solid #707070;
+  padding: 0 20px;
+  box-sizing: border-box;
+  width: 50%;
+`;
+
+export const HistoryTimeLineBox = styled.li`
+  height: 14.5vw;
+  /* background-color: yellowgreen; */
+  list-style: none;
+  margin: 14px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: ${(props) => props.side};
+  /* justify-content: center;
+  align-items: center; */
+`;
+
+export const HistroyTimeLineImg = styled.img`
+  height: 13.5vw;
+  justify-self: center;
+  align-self: ${(props) => props.side || "flex-start"};
+`;
+
+export const HistoryTimeLineYear = styled.div`
+  font-size: 28px;
+  color: black;
+  margin-bottom: 20px;
+  font-weight: bold;
+`;
+
+export const HistoryTimeLineLine = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 16px;
+  align-items: flex-end;
+`;
+
+export const HistoryTimeLineMonth = styled.div`
+  color: #649eff;
+  font-size: 24px;
+  font-weight: 600;
+  width: 45px;
+  display: flex;
+  margin-right: ${(props) => (props.side ? "0px" : "12px")};
+  justify-content: ${(props) => props.side || "flex-end"};
+  @media only screen and (max-width: 1440px) {
+    font-size: 20px;
+  }
+`;
+
+export const HistoryTimeLineContent = styled.div`
+  color: #707070;
+  font-size: 20px;
+  @media only screen and (max-width: 1440px) {
+    font-size: 16px;
+  }
+`;
+
+export const HistoryTimeLineYearRight = styled.div`
+  font-size: 28px;
+  color: black;
+  margin-bottom: 20px;
+  font-weight: bold;
+  align-self: flex-end;
+`;
+
 export const ActivityContainer = styled.div`
   background-color: #f8f8fa;
   padding-top: 3.645vw;
