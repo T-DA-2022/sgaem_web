@@ -275,7 +275,7 @@ export const ActivityTextContainer = styled.div`
 export const ActivitySubTextContainer = styled.div`
   font-size: 18px;
   color: #707070;
-  margin-bottom: 1.56vw;
+  margin-bottom: 7.3vw;
   @media only screen and (max-width: 1440px) {
     font-size: 14px;
   }
@@ -283,18 +283,55 @@ export const ActivitySubTextContainer = styled.div`
 
 export const ActivityContentContainer = styled.div`
   width: 72vw;
-  background-color: blue;
+  /* background-color: blue; */
   display: flex;
   flex-direction: row;
 `;
 
 export const ActivityContent = styled.div`
   width: 50%;
-  background-color: green;
+  /* background-color: green; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+`;
+
+export const ActivityContentBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 26vw;
+  background-color: pink;
+  box-shadow: 0px 5px 3px #bebbbb;
+  margin: 3.65vw;
+`;
+
+export const ActivityContentImg = styled.img`
+  height: 14.5vw;
+  object-fit: cover;
+`;
+
+export const ActivityContentArticle = styled.div`
+  background-color: #ffffff;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  box-sizing: border-box;
+`;
+
+export const ActivityContentArticleMainText = styled.div`
+  font-size: 32px;
+  font-weight: bold;
+  @media only screen and (max-width: 1440px) {
+    font-size: 28px;
+  }
+`;
+export const ActivityContentArticleSubText = styled.p`
+  font-size: 16px;
+  @media only screen and (max-width: 1440px) {
+    font-size: 12px;
+  }
 `;
 
 export const TeamContainer = styled.div`

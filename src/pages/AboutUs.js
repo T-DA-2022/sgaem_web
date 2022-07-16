@@ -43,6 +43,11 @@ import {
   HistroyTimeLineImg,
   ActivityContentContainer,
   ActivityContent,
+  ActivityContentBox,
+  ActivityContentImg,
+  ActivityContentArticle,
+  ActivityContentArticleMainText,
+  ActivityContentArticleSubText,
 } from "../styles/AboutUs.element";
 
 const AboutUs = () => {
@@ -343,7 +348,82 @@ const AboutUs = () => {
             스겜의 최신 소식을 확인하세요
           </ActivitySubTextContainer>
           <ActivityContentContainer>
-            <ActivityContent>asdf</ActivityContent>
+            {/*************************** LEFTBOX **************************/}
+            <ActivityContent>
+              <ActivityContentBox>
+                <ActivityContentImg src={img_2014_src}></ActivityContentImg>
+                <ActivityContentArticle>
+                  <ActivityContentArticleMainText>
+                    최고의 대학 e스포츠 대회를 <br />
+                    개최합니다.
+                  </ActivityContentArticleMainText>
+                  <ActivityContentArticleSubText>
+                    SGAEM은 2014년부터 현재까지 총 9개 종목, 28회의 e스포츠
+                    대회를 성공적으로 주최하고 운영했습니다.
+                  </ActivityContentArticleSubText>
+                  <ActivityContentArticleSubText>
+                    2018년 노고체전 LOL 결승전 오프라인 행사에서 120명 이상의
+                    관객을 유치한 경험이 있으며 2022년 알바트로스 컵에서는
+                    대학가 최고 수준의 대회 중계 스트리밍을 외부 도움없이
+                    성공시켰습니다.
+                  </ActivityContentArticleSubText>
+                  <ActivityContentArticleSubText>
+                    SGAEM 부원들은 자체적으로 구축한 대회 운영 시스템을 활용하여
+                    대회 기획, 룰 제정, 경기 심판, 스폰서 유치, 콘텐츠 제작,
+                    스트리밍 등 대회 개최에 필요한 활동들을 경험할 수 있습니다.
+                  </ActivityContentArticleSubText>
+                  <ActivityContentArticleSubText>
+                    SGAEM은 성공적인 대회 개최를 위한 노하우를 부원들이
+                    효과적으로 학습할 수 있도록 대회 운영 커리큘럼을
+                    제작했습니다.
+                  </ActivityContentArticleSubText>
+                  <ActivityContentArticleSubText>
+                    동영상 강의와 오프라인 교육으로 이루어진 커리큘럼을 통해
+                    부원들은 개인의 성장과 서강 e스포츠 문화의 지속적인 발전을
+                    도모할 수 있습니다.
+                  </ActivityContentArticleSubText>
+                </ActivityContentArticle>
+              </ActivityContentBox>
+              <ActivityContentBox>
+                <ActivityContentImg src={img_2014_src}></ActivityContentImg>
+                <ActivityContentArticle>
+                  <ActivityContentArticleMainText>
+                    수준 높은 대외 프로그램을 통해 성장합니다.
+                  </ActivityContentArticleMainText>
+                  <ActivityContentArticleSubText>
+                    SGAEM은 교내 뿐만 아니라 외부 기업들과 수준 높은 협업을
+                    진행하고 있습니다. 다음은 주요 협업 프로그램 내용입니다.
+                    <ActivityContentArticleSubText>
+                      키노빈스 (2015~2019) : 온,오프라인 대회 중계, 게임 산업
+                      설명회, 블리자드 데이, 서강e스포츠페스티벌, 동아리 회의
+                      공간 지원 등
+                    </ActivityContentArticleSubText>
+                    <ActivityContentArticleSubText>
+                      유엔해비타트(2018) : 게임 인식 개선 프로그램 및 국회 발표
+                    </ActivityContentArticleSubText>
+                    <ActivityContentArticleSubText>
+                      블라지드 코리아 ABC클럽(2018~) : ABC클럽 프로그램 참가,
+                      서강대 오버워치 대표팀 스겜 글라이더스 운영, 오버워치
+                      대학경쟁전 참가, 오버워치 컨텐더스 콘텐츠 제작
+                    </ActivityContentArticleSubText>
+                    <ActivityContentArticleSubText>
+                      KLEVV(2018) : 2018학년도 노고체전 콘텐츠 콜라보
+                    </ActivityContentArticleSubText>
+                    <ActivityContentArticleSubText>
+                      크래프톤(2019) : 펍지 인증 대학생 대회 개최
+                    </ActivityContentArticleSubText>
+                    <ActivityContentArticleSubText>
+                      한국이스포츠아카데미(2019) : 매드라이프의 고민
+                      상담라디오(매라디오) 공동 기획 및 제작
+                    </ActivityContentArticleSubText>
+                    <ActivityContentArticleSubText>
+                      DRX(2020) : DRX Academy와 함께 하는 LOL CS 챌린지 참가
+                    </ActivityContentArticleSubText>
+                  </ActivityContentArticleSubText>
+                </ActivityContentArticle>
+              </ActivityContentBox>
+            </ActivityContent>
+            {/*************************** RIGHTBOX **************************/}
             <ActivityContent>qwer</ActivityContent>
           </ActivityContentContainer>
         </ActivityContainer>
