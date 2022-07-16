@@ -504,7 +504,7 @@ const AboutUs = () => {
         <TeamContainer>
           <TeamTextContainer>TEAM</TeamTextContainer>
           <TeamSubTextContainer>
-            스겜은 대학 e스포츠 문화를 선도합니다
+            스겜의 활동을 직접 확인하세요!
           </TeamSubTextContainer>
         </TeamContainer>
       </AboutUsContainer>
