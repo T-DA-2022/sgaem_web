@@ -365,14 +365,20 @@ export const TeamSubTextContainer = styled.div`
 
 export const TeamContentContainer = styled.div`
   background-color: blue;
+  width: 62.5vw;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const TeamContentBox = styled.div`
   background-color: pink;
+  display: flex;
+  flex-direction: row;
 `;
 
 export const TeamContentBoxImg = styled.img``;
 
 export const TeamContentBoxArticle = styled.div`
   width: 50%;
+  background-color: skyblue;
 `;

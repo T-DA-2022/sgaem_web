@@ -513,15 +513,15 @@ const AboutUs = () => {
           <TeamContentContainer>
             <TeamContentBox>
               <TeamContentBoxImg></TeamContentBoxImg>
-              <TeamContentBoxArticle></TeamContentBoxArticle>
+              <TeamContentBoxArticle>asdf</TeamContentBoxArticle>
             </TeamContentBox>
             <TeamContentBox>
-              <TeamContentBoxArticle></TeamContentBoxArticle>
+              <TeamContentBoxArticle>asdf</TeamContentBoxArticle>
               <TeamContentBoxImg></TeamContentBoxImg>
             </TeamContentBox>
             <TeamContentBox>
               <TeamContentBoxImg></TeamContentBoxImg>
-              <TeamContentBoxArticle></TeamContentBoxArticle>
+              <TeamContentBoxArticle>asdf</TeamContentBoxArticle>
             </TeamContentBox>
           </TeamContentContainer>
         </TeamContainer>
