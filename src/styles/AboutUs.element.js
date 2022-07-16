@@ -301,7 +301,7 @@ export const ActivityContentBox = styled.div`
   display: flex;
   flex-direction: column;
   width: 26vw;
-  background-color: pink;
+  /* background-color: pink; */
   box-shadow: 0px 5px 3px #bebbbb;
   margin: 3.65vw;
 `;
@@ -316,7 +316,7 @@ export const ActivityContentArticle = styled.div`
   height: auto;
   display: flex;
   flex-direction: column;
-  padding: 16px;
+  padding: 20px;
   box-sizing: border-box;
 `;
 
@@ -324,7 +324,7 @@ export const ActivityContentArticleMainText = styled.div`
   font-size: 32px;
   font-weight: bold;
   @media only screen and (max-width: 1440px) {
-    font-size: 28px;
+    font-size: 24px;
   }
 `;
 export const ActivityContentArticleSubText = styled.p`
