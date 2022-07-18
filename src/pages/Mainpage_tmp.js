@@ -12,7 +12,6 @@ import img3 from "../assets/main_banner_3.png";
 // style import
 import {
   MainpageContainer,
-  CarouselContainer,
   BackgroundContainer,
   BackgroundTextContainer,
   VisionContainer,
@@ -38,8 +37,6 @@ import {
   NewsContent,
   NewsImg,
   NewsText,
-  BackgroundText,
-  BackgroundSubText,
   ActivityArticleText,
   ActivityArticleSubText,
 } from "../styles/Mainpage_tmp.element";
