@@ -8,6 +8,7 @@ import React from "react";
 import img1 from "../assets/main_banner_1.png";
 import img2 from "../assets/main_banner_2.png";
 import img3 from "../assets/main_banner_3.png";
+import img_vis_src from "../assets/main_2nd.png";
 
 // style import
 import {
@@ -53,13 +54,7 @@ const MainpageTmp = () => {
             </BackgroundSubText> */}
           </BackgroundTextContainer>
         </BackgroundContainer>
-        <VisionContainer>
-          <VisionTextContainer>VISION</VisionTextContainer>
-          <VisionSubTextContainer>
-            스겜은 대학 e스포츠 문화를 선도합니다
-          </VisionSubTextContainer>
-          <VisionContentContainer></VisionContentContainer>
-        </VisionContainer>
+        <VisionContainer src={img_vis_src}></VisionContainer>
         <ActivityContainer>
           <ActivityTextContainer>ACTIVITIY</ActivityTextContainer>
           <ActivitySubTextContainer>

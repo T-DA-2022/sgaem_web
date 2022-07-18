@@ -4,6 +4,9 @@ export const MainpageContainer = styled.div`
   text-align: center;
   height: auto;
   overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   /* padding-top: 60px; */
 `;
 
@@ -41,13 +44,14 @@ export const BackgroundSubText = styled.div`
   font-weight: bold;
 `;
 
-export const VisionContainer = styled.div`
-  background-color: #f8f8fa;
+export const VisionContainer = styled.img`
+  width: 100%;
+  /* background-color: #f8f8fa;
   padding-top: 3.645vw;
   padding-bottom: 3.645vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
 `;
 
 export const VisionTextContainer = styled.div`
@@ -83,6 +87,7 @@ export const ActivityContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100vw;
 `;
 
 export const ActivityTextContainer = styled.div`
@@ -160,6 +165,7 @@ export const ActivityArticleSubText = styled.div`
 `;
 
 export const NewsContainer = styled.div`
+  width: 100vw;
   background-color: #f8f8fa;
   padding-top: 6.25vw;
   padding-bottom: 6.25vw;
@@ -212,6 +218,7 @@ export const NewsText = styled.div`
 `;
 
 export const YoutubeContainer = styled.div`
+  width: 100vw;
   background-color: #f1f1f5;
   padding-top: 6.25vw;
   padding-bottom: 6.25vw;
