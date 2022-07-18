@@ -16,7 +16,7 @@ export const BannerContainer = styled.div`
 `;
 
 export const TabArea = styled.div`
-  height: 11vw;
+  height: 5vw;
   background-color: #f8f8fa;
   display: flex;
   justify-content: center;
@@ -71,14 +71,24 @@ export const SgaemSubTextContainer = styled.div`
   }
 `;
 
+export const SgaemTmpBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 53.5vw;
+  justify-content: center;
+  margin-top: 3vw;
+`;
+
+export const SgaemTmpChevron = styled.div`
+  font-size: 60px;
+`;
+
 export const SgaemTextBox = styled.div`
   /* background-color: yellow; */
-  margin-top: 3vw;
-  margin-bottom: 5vw;
+  /* margin-top: 3vw; */
+  /* margin-bottom: 5vw; */
   width: 52vw;
-  border: 1px solid black;
   height: 7.66vw;
-  border-radius: 35px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -89,6 +99,7 @@ export const SgaemTextLine = styled.div`
   /* background-color: green; */
   display: flex;
   flex-direction: row;
+  font-size: 20px;
 `;
 
 export const SgaemTextBold = styled.span`
@@ -96,6 +107,8 @@ export const SgaemTextBold = styled.span`
 `;
 export const SgaemTextThin = styled.span`
   font-weight: normal;
+
+  margin-right: 8px;
   @media only screen and (max-width: 1440px) {
     margin-right: 6px;
   }
@@ -106,12 +119,20 @@ export const VisionContainer = styled.div`
   flex-direction: column;
 `;
 
+export const VisionTextDiv = styled.div`
+  background-color: #5d8bf4;
+  width: 16px;
+  height: 40px;
+  margin-right: -12px;
+`;
+
 export const VisionTextContainer = styled.div`
   /* background-color: green; */
   display: flex;
   flex-direction: row;
   height: 6vw;
   font-size: 40px;
+  align-items: center;
   @media only screen and (max-width: 1440px) {
     font-size: 32px;
   }
@@ -224,12 +245,13 @@ export const HistoryTimeLineMonth = styled.div`
   color: #649eff;
   font-size: 24px;
   font-weight: 600;
-  width: 45px;
+  width: 60px;
   display: flex;
   margin-right: ${(props) => (props.side ? "0px" : "12px")};
   justify-content: ${(props) => props.side || "flex-end"};
   @media only screen and (max-width: 1440px) {
     font-size: 20px;
+    width: 45px;
   }
 `;
 
@@ -282,10 +304,13 @@ export const ActivitySubTextContainer = styled.div`
 `;
 
 export const ActivityContentContainer = styled.div`
-  width: 72vw;
+  width: 70vw;
   /* background-color: blue; */
   display: flex;
   flex-direction: row;
+  @media only screen and (max-width: 1440px) {
+    width: 72vw;
+  }
 `;
 
 export const ActivityContent = styled.div`
@@ -323,6 +348,7 @@ export const ActivityContentArticle = styled.div`
 export const ActivityContentArticleMainText = styled.div`
   font-size: 32px;
   font-weight: bold;
+  margin-bottom: 16px;
   @media only screen and (max-width: 1440px) {
     font-size: 24px;
   }
@@ -357,14 +383,14 @@ export const TeamTextContainer = styled.div`
 export const TeamSubTextContainer = styled.div`
   font-size: 18px;
   color: #707070;
-  margin-bottom: 1.56vw;
+  margin-bottom: 7.4vw;
   @media only screen and (max-width: 1440px) {
     font-size: 14px;
   }
 `;
 
 export const TeamContentContainer = styled.div`
-  background-color: blue;
+  /* background-color: blue; */
   width: 62.5vw;
   display: flex;
   flex-direction: column;
@@ -373,12 +399,41 @@ export const TeamContentContainer = styled.div`
 export const TeamContentBox = styled.div`
   background-color: pink;
   display: flex;
+  width: 100%;
   flex-direction: row;
+  margin-bottom: 20px;
+  @media only screen and (max-width: 1440px) {
+    margin-bottom: 30px;
+  }
 `;
 
-export const TeamContentBoxImg = styled.img``;
+export const TeamContentBoxImg = styled.img`
+  width: 50%;
+  height: 22.9vw;
+`;
 
 export const TeamContentBoxArticle = styled.div`
   width: 50%;
-  background-color: skyblue;
+  background-color: #ffffff;
+  padding: 20px;
+  box-sizing: border-box;
+`;
+
+export const TeamContentBoxText = styled.div`
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  @media only screen and (max-width: 1440px) {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+`;
+
+export const TeamContentBoxSub = styled.p`
+  font-size: 18px;
+  line-height: 1.5;
+  color: #707070;
+  @media only screen and (max-width: 1440px) {
+    font-size: 14px;
+  }
 `;

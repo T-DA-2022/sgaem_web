@@ -52,6 +52,11 @@ import {
   TeamContentBox,
   TeamContentBoxImg,
   TeamContentBoxArticle,
+  TeamContentBoxText,
+  TeamContentBoxSub,
+  VisionTextDiv,
+  SgaemTmpBox,
+  SgaemTmpChevron,
 } from "../styles/AboutUs.element";
 
 const AboutUs = () => {
@@ -72,38 +77,48 @@ const AboutUs = () => {
           <SgaemSubTextContainer>
             스겜은 확실한 목표 아래에 뭉칩니다
           </SgaemSubTextContainer>
-          <SgaemTextBox>
-            <SgaemTextLine>
-              <SgaemTextBold>SGAEM</SgaemTextBold>
-              <SgaemTextThin>은 </SgaemTextThin>
-              <SgaemTextBold>'건전한 e스포츠 문화를 선도한다.'</SgaemTextBold>
-              <SgaemTextThin>는</SgaemTextThin>
-              <SgaemTextBold>비전</SgaemTextBold>
-              <SgaemTextThin>을 가지고 2014년 10월 출범했습니다.</SgaemTextThin>
-            </SgaemTextLine>
-            <SgaemTextLine>
-              <SgaemTextBold>스겜인</SgaemTextBold>
-              <SgaemTextThin>들은 이 비전을 달성하기 위해</SgaemTextThin>
-              <SgaemTextBold>
-                핵심가치 4E(Energetic, Exciting, Excellence, Every Sogang)
-              </SgaemTextBold>
-              <SgaemTextThin>를</SgaemTextThin>
-            </SgaemTextLine>
-            <SgaemTextLine>
-              지금까지 변함없이 추구하고 있으며 최선의 결과를 내기 위해 항상
-              노력하고 있습니다.
-            </SgaemTextLine>
-          </SgaemTextBox>
+
           <VisionContainer>
             <VisionTextContainer>
-              <TbChevronUpLeft />
+              <VisionTextDiv></VisionTextDiv>
               <VisionText>VISION : 건전한 e스포츠 문화를 선도한다.</VisionText>
-              <TbChevronDownRight style={{ alignSelf: "flex-end" }} />
             </VisionTextContainer>
             <VisionImageContainer>
               <VisionIamge src={img1_src} />
             </VisionImageContainer>
           </VisionContainer>
+          <SgaemTmpBox>
+            <SgaemTmpChevron>
+              <TbChevronUpLeft />
+            </SgaemTmpChevron>
+            <SgaemTextBox>
+              <SgaemTextLine>
+                <SgaemTextBold>SGAEM</SgaemTextBold>
+                <SgaemTextThin>은 </SgaemTextThin>
+                <SgaemTextBold>'건전한 e스포츠 문화를 선도한다.'</SgaemTextBold>
+                <SgaemTextThin>는</SgaemTextThin>
+                <SgaemTextBold>비전</SgaemTextBold>
+                <SgaemTextThin>
+                  을 가지고 2014년 10월 출범했습니다.
+                </SgaemTextThin>
+              </SgaemTextLine>
+              <SgaemTextLine>
+                <SgaemTextBold>스겜인</SgaemTextBold>
+                <SgaemTextThin>들은 이 비전을 달성하기 위해</SgaemTextThin>
+                <SgaemTextBold>
+                  핵심가치 4E(Energetic, Exciting, Excellence, Every Sogang)
+                </SgaemTextBold>
+                <SgaemTextThin>를</SgaemTextThin>
+              </SgaemTextLine>
+              <SgaemTextLine>
+                지금까지 변함없이 추구하고 있으며 최선의 결과를 내기 위해 항상
+                노력하고 있습니다.
+              </SgaemTextLine>
+            </SgaemTextBox>
+            <SgaemTmpChevron style={{ alignSelf: "flex-end" }}>
+              <TbChevronDownRight />
+            </SgaemTmpChevron>
+          </SgaemTmpBox>
         </SgaemContainer>
         <HistoryContainer>
           <HistoryTextContainer>HISTORY</HistoryTextContainer>
@@ -397,32 +412,32 @@ const AboutUs = () => {
                   <ActivityContentArticleSubText>
                     SGAEM은 교내 뿐만 아니라 외부 기업들과 수준 높은 협업을
                     진행하고 있습니다. 다음은 주요 협업 프로그램 내용입니다.
-                    <ActivityContentArticleSubText>
-                      키노빈스 (2015~2019) : 온,오프라인 대회 중계, 게임 산업
-                      설명회, 블리자드 데이, 서강e스포츠페스티벌, 동아리 회의
-                      공간 지원 등
-                    </ActivityContentArticleSubText>
-                    <ActivityContentArticleSubText>
-                      유엔해비타트(2018) : 게임 인식 개선 프로그램 및 국회 발표
-                    </ActivityContentArticleSubText>
-                    <ActivityContentArticleSubText>
-                      블라지드 코리아 ABC클럽(2018~) : ABC클럽 프로그램 참가,
-                      서강대 오버워치 대표팀 스겜 글라이더스 운영, 오버워치
-                      대학경쟁전 참가, 오버워치 컨텐더스 콘텐츠 제작
-                    </ActivityContentArticleSubText>
-                    <ActivityContentArticleSubText>
-                      KLEVV(2018) : 2018학년도 노고체전 콘텐츠 콜라보
-                    </ActivityContentArticleSubText>
-                    <ActivityContentArticleSubText>
-                      크래프톤(2019) : 펍지 인증 대학생 대회 개최
-                    </ActivityContentArticleSubText>
-                    <ActivityContentArticleSubText>
-                      한국이스포츠아카데미(2019) : 매드라이프의 고민
-                      상담라디오(매라디오) 공동 기획 및 제작
-                    </ActivityContentArticleSubText>
-                    <ActivityContentArticleSubText>
-                      DRX(2020) : DRX Academy와 함께 하는 LOL CS 챌린지 참가
-                    </ActivityContentArticleSubText>
+                  </ActivityContentArticleSubText>
+                  <ActivityContentArticleSubText>
+                    키노빈스 (2015~2019) : 온,오프라인 대회 중계, 게임 산업
+                    설명회, 블리자드 데이, 서강e스포츠페스티벌, 동아리 회의 공간
+                    지원 등
+                  </ActivityContentArticleSubText>
+                  <ActivityContentArticleSubText>
+                    유엔해비타트(2018) : 게임 인식 개선 프로그램 및 국회 발표
+                  </ActivityContentArticleSubText>
+                  <ActivityContentArticleSubText>
+                    블라지드 코리아 ABC클럽(2018~) : ABC클럽 프로그램 참가,
+                    서강대 오버워치 대표팀 스겜 글라이더스 운영, 오버워치
+                    대학경쟁전 참가, 오버워치 컨텐더스 콘텐츠 제작
+                  </ActivityContentArticleSubText>
+                  <ActivityContentArticleSubText>
+                    KLEVV(2018) : 2018학년도 노고체전 콘텐츠 콜라보
+                  </ActivityContentArticleSubText>
+                  <ActivityContentArticleSubText>
+                    크래프톤(2019) : 펍지 인증 대학생 대회 개최
+                  </ActivityContentArticleSubText>
+                  <ActivityContentArticleSubText>
+                    한국이스포츠아카데미(2019) : 매드라이프의 고민
+                    상담라디오(매라디오) 공동 기획 및 제작
+                  </ActivityContentArticleSubText>
+                  <ActivityContentArticleSubText>
+                    DRX(2020) : DRX Academy와 함께 하는 LOL CS 챌린지 참가
                   </ActivityContentArticleSubText>
                 </ActivityContentArticle>
               </ActivityContentBox>
@@ -512,16 +527,81 @@ const AboutUs = () => {
           </TeamSubTextContainer>
           <TeamContentContainer>
             <TeamContentBox>
-              <TeamContentBoxImg></TeamContentBoxImg>
-              <TeamContentBoxArticle>asdf</TeamContentBoxArticle>
+              <TeamContentBoxImg src={img_2014_src}></TeamContentBoxImg>
+              <TeamContentBoxArticle>
+                <TeamContentBoxText>대회운영팀</TeamContentBoxText>
+                <TeamContentBoxSub>
+                  대회운영팀은 SGAEM의 심장과 같은 팀입니다.
+                </TeamContentBoxSub>
+                <TeamContentBoxSub>
+                  교내외 e스포츠 대회의 개최부터 종료까지 직접 운영하고 관리를
+                  하며 <br />
+                  대회 기획, 대회 룰 제정, 심판 업무 등 대회를 여는데 필수적인
+                  업무 <br />를 할 수 있습니다.
+                </TeamContentBoxSub>
+                <TeamContentBoxSub>
+                  대회가 공정하고 매끄럽게 열릴 수 있도록 최선을 다하는 만큼
+                  부원들은 <br />
+                  수준 높은 문제해결 능력과 정확한 판단력 등을 익힐 수 있습니다.
+                </TeamContentBoxSub>
+                <TeamContentBoxSub>
+                  선수들과 가장 가깝게 활동을 하기 때문에 현장의 열기를 그대로
+                  느낄
+                  <br /> 수 있으며 대학 e스포츠 문화를 일선에서 만들어 갑니다.
+                </TeamContentBoxSub>
+              </TeamContentBoxArticle>
             </TeamContentBox>
             <TeamContentBox>
-              <TeamContentBoxArticle>asdf</TeamContentBoxArticle>
-              <TeamContentBoxImg></TeamContentBoxImg>
+              <TeamContentBoxArticle>
+                <TeamContentBoxText>콘텐츠팀</TeamContentBoxText>
+                <TeamContentBoxSub>
+                  콘텐츠팀은 e스포츠 대회를 완성합니다.
+                </TeamContentBoxSub>
+                <TeamContentBoxSub>
+                  더 많은 사람들이 대회에 참가하고 추억을 아름답게 남길 수
+                  있도록 포스터 <br />
+                  대회 하이라이트, 선수 인터뷰 각종 대회 관련 이미지 등을 직접
+                  제작하고 <br />
+                  페이스북, 인스타그램, 유튜브 등에 업로드합니다.
+                </TeamContentBoxSub>
+                <TeamContentBoxSub>
+                  뿐만 아니라 게임의 긍정적인 가치를 널리 알리기 위해 스겜
+                  Youtube를
+                  <br /> 운영하고 있습니다. 단순히 부원들이 게임하는 모습만
+                  올리는 것이 아니고, <br /> '스겜 숏터뷰', '스겜 쇼츠',
+                  '얼어붙은 스겜의 기사들' 등 다양한 기획물을
+                  <br /> 제작하고 있습니다.
+                </TeamContentBoxSub>
+              </TeamContentBoxArticle>
+              <TeamContentBoxImg src={img_2014_src}></TeamContentBoxImg>
             </TeamContentBox>
             <TeamContentBox>
-              <TeamContentBoxImg></TeamContentBoxImg>
-              <TeamContentBoxArticle>asdf</TeamContentBoxArticle>
+              <TeamContentBoxImg src={img_2014_src}></TeamContentBoxImg>
+              <TeamContentBoxArticle>
+                <TeamContentBoxText>방송사업팀</TeamContentBoxText>
+                <TeamContentBoxSub>
+                  방송사업팀은 e스포츠 대회의 미래를 개척합니다.
+                </TeamContentBoxSub>
+                <TeamContentBoxSub>
+                  모든 서강인들을 위해 활동하는 스겜은 더 많은 사람들이
+                  e스포츠를 경험
+                  <br /> 할 수 있도록 스트리밍 사업을 추진하고 있습니다.
+                </TeamContentBoxSub>
+                <TeamContentBoxSub>
+                  OBS 프로그램을 비롯한 각종 기기를 활용하여 수준 높은 방송
+                  기술을
+                  <br /> 부원들이 자체적으로 스터디하고 실전에 적용합니다.
+                </TeamContentBoxSub>
+                <TeamContentBoxSub>
+                  2022년 대회에서는 외부 도움 없이 스겜 부원들이 자체적으로
+                  연구하여
+                  <br /> 게임사 API키를 활용한 플러그인을 도입하였고 실시간
+                  밴픽, 리플레이 &<br /> Live 동시 송출, 경기 결과 그래프를
+                  성공적으로 스트리밍에 구현해내며
+                  <br /> 아마추어 최고 수준의 대회 스트리밍 송출이라는 쾌거를
+                  이뤄냈습니다.
+                </TeamContentBoxSub>
+              </TeamContentBoxArticle>
             </TeamContentBox>
           </TeamContentContainer>
         </TeamContainer>
