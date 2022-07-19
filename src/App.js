@@ -6,6 +6,7 @@ import TopBar from "./pages/TopBar";
 import BottomBar from "./pages/BottomBar";
 import MainpageTmp from "./pages/Mainpage_tmp";
 import AboutUs from "./pages/AboutUs";
+import FAQ from "./pages/FAQ";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Notfound from "./pages/Notfound";
@@ -20,6 +21,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<MainpageTmp />} />
             <Route path="aboutus" element={<AboutUs />} />
+            <Route path="faq" element={<FAQ />} />
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
             <Route path="*" element={<Notfound />} />
