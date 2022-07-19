@@ -17,20 +17,26 @@ export const BannerContainer = styled.div`
 
 export const TabArea = styled.div`
   height: 5vw;
-  background-color: #f8f8fa;
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
+  @media only screen and (max-width: 1440px) {
+    height: 6vw;
+  }
 `;
 
 export const TabBox = styled.div`
   background-color: #ffffff;
-  box-shadow: 0px 4px 5px #00000044;
+  box-shadow: 0px 3px 5px #cececebe;
   height: 90px;
   width: 62.5vw;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  @media only screen and (max-width: 1440px) {
+    height: 70px;
+  }
 `;
 
 export const TabContent = styled.div`
@@ -40,10 +46,14 @@ export const TabContent = styled.div`
   height: 100%;
   align-items: center;
   font-size: 18px;
+  @media only screen and (max-width: 1440px) {
+    font-size: 16px;
+    margin: 0 15px;
+  }
 `;
 
 export const SgaemContainer = styled.div`
-  background-color: #f8f8fa;
+  background-color: #ffffff;
   padding-top: 3.645vw;
   padding-bottom: 3.645vw;
   display: flex;
@@ -68,6 +78,7 @@ export const SgaemSubTextContainer = styled.div`
   margin-bottom: 1.56vw;
   @media only screen and (max-width: 1440px) {
     font-size: 14px;
+    margin-bottom: 4vw;
   }
 `;
 
@@ -131,6 +142,11 @@ export const VisionTextDiv = styled.div`
   width: 16px;
   height: 40px;
   margin-right: -12px;
+  @media only screen and (max-width: 1440px) {
+    width: 10px;
+    height: 28px;
+    margin-right: -20px;
+  }
 `;
 
 export const VisionTextContainer = styled.div`
