@@ -55,13 +55,9 @@ const TopBar = () => {
               >
                 RECRUITING
               </TopBarButton>
-              <TopBarButton
-                onClick={() => {
-                  alert("FAQ");
-                }}
-              >
-                FAQ
-              </TopBarButton>
+              <StyledLink to="/faq">
+                <TopBarButton>FAQ</TopBarButton>
+              </StyledLink>
               <TopBarButton
                 onClick={() => {
                   alert("Contact us");
