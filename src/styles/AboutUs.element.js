@@ -386,7 +386,7 @@ export const ActivityContentArticleSubText = styled.p`
 export const TeamContainer = styled.div`
   background-color: #f1f1f5;
   padding-top: 3.645vw;
-  padding-bottom: 3.645vw;
+  padding-bottom: 6vw;
   display: flex;
   flex-direction: column;
   align-items: center;

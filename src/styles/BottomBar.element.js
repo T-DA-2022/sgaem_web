@@ -41,6 +41,7 @@ export const BottomBarIndex = styled.div`
 export const BottomBarLogo = styled.img`
   height: 60px;
   margin-right: 40px;
+  align-self: center;
 `;
 
 export const BottomBarBox = styled.div`
