@@ -14,6 +14,22 @@ export const BottomBarDivider = styled.div`
   flex-direction: row;
 `;
 
+export const BottomBarDividercolumn = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const BottomBarMaker = styled.div`
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+export const BottomBarMakerIndiv = styled.div`
+  font-size: 13px;
+`;
+
 export const BottomBarIndex = styled.div`
   width: 62.5%;
   align-items: center;
@@ -32,6 +48,7 @@ export const BottomBarBox = styled.div`
   width: max-content;
   border-top: 2px solid #ffffff;
   border-bottom: 2px solid #ffffff;
+  margin-bottom: 12px;
 `;
 
 export const BottomBarBoxText = styled.div`
