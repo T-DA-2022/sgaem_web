@@ -80,7 +80,11 @@ export const SgaemTmpBox = styled.div`
 `;
 
 export const SgaemTmpChevron = styled.div`
+  align-self: ${(props) => props.end || "flex-start"};
   font-size: 60px;
+  @media only screen and (max-width: 1440px) {
+    margin-bottom: ${(props) => (props.end ? "-12px" : "0px")};
+  }
 `;
 
 export const SgaemTextBox = styled.div`
@@ -100,6 +104,9 @@ export const SgaemTextLine = styled.div`
   display: flex;
   flex-direction: row;
   font-size: 20px;
+  @media only screen and (max-width: 1440px) {
+    font-size: 15px;
+  }
 `;
 
 export const SgaemTextBold = styled.span`

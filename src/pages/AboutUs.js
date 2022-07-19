@@ -115,7 +115,7 @@ const AboutUs = () => {
                 노력하고 있습니다.
               </SgaemTextLine>
             </SgaemTextBox>
-            <SgaemTmpChevron style={{ alignSelf: "flex-end" }}>
+            <SgaemTmpChevron end="flex-end">
               <TbChevronDownRight />
             </SgaemTmpChevron>
           </SgaemTmpBox>
