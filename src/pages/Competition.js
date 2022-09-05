@@ -13,9 +13,9 @@ import {
   CompProceedText,
   CompProceedTextContainer,
   CompProceedTextDiv,
-  CompRuleContainer,
-  CompRuleBox,
-  CompRuleDownloader,
+  // CompRuleContainer,
+  // CompRuleBox,
+  // CompRuleDownloader,
 } from "../styles/Competition.element";
 
 // import img_src_banner from "../assets/competition_banner.png";

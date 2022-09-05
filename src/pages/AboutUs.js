@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 
 import img_src_banner from "../assets/meeting_pic/recruit_banner.png";
 import img1_src from "../assets/4E.svg";
-import img_2014_src from "../assets/car_img_3.jpeg";
+// import img_2014_src from "../assets/car_img_3.jpeg";
 import img_act_bg from "../assets/tri_pattern_long.png";
 import img_src_2014 from "../assets/about_2014.png";
 import img_src_2015 from "../assets/about_2015.png";
