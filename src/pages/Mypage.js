@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "react-notion/src/styles.css";
-import { NotionRenderer } from "react-notion";
+
 import {
   ContainerTop,
   MyPageContainer,
@@ -25,13 +25,12 @@ import {
   TempDiv,
   ProjectContainer,
   ProjectBox,
-  ProjectIndiv,
-  ProjectTitle,
-  ProjectContent,
+  // ProjectIndiv,
+  // ProjectTitle,
+  // ProjectContent,
 } from "../styles/Mypage.element";
 
 const MyPage = () => {
-  const [response, setResponse] = useState({});
   const [userId, setUserId] = useState("");
   const [userData, setUserData] = useState({});
   const activeMemList = ["활동 부원", "비활동 부원", "졸업생"];

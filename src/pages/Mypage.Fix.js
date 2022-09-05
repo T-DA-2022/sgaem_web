@@ -17,7 +17,6 @@ import {
   ProfileImgBtn,
   ProfileNameText,
   ProfileIndiv,
-  ProfileTextArea,
   FormButton,
 } from "../styles/Mypage.Fix.element";
 
@@ -127,9 +126,9 @@ const FixMypage = () => {
     e.preventDefault();
     let valid = validate(userData);
     if (Object.keys(valid).length !== 0) {
-      Object.values(valid).map((data, index) => {
-        enqueueSnackbar(`${data}`, { variant: "warning" });
-      });
+      Object.values(valid).map((data, index) =>
+        enqueueSnackbar(`${data}`, { variant: "warning" })
+      );
     } else {
       axios
         .post("http://localhost:4000/auth/fixmypage", userData, {

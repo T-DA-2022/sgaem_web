@@ -1,21 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Accordion from "react-bootstrap/Accordion";
 import "../styles/FAQ.element.css";
 import {
-  FAQAnswerMark,
   FAQBackgroundContainer,
   FAQBackgroundText,
   FAQBackgroundTextContainer,
   FAQContainer,
-  FAQContentAnswer,
-  FAQContentBox,
   FAQContentContainer,
-  FAQContentQuestion,
-  FAQQuestionMark,
 } from "../styles/FAQ.element";
 
 import img_src_banner from "../assets/faq_banner.png";
-import img_bg_src from "../assets/car_img_1_crop_4.png";
+// import img_bg_src from "../assets/car_img_1_crop_4.png";
 import FaqList from "../dummy/FAQ";
 
 const FAQ = () => {
