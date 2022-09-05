@@ -14,22 +14,22 @@ import img_src_content from "../assets/meeting_pic/main_activity/content_making.
 import img_src_foreign from "../assets/meeting_pic/main_activity/foreign_cooperate.png";
 import img_src_networking from "../assets/meeting_pic/main_activity/networking.png";
 
-import NewsList from "../dummy/News";
+// import NewsList from "../dummy/News";
 
 // style import
 import {
   MainpageContainer,
   BackgroundContainer,
-  BackgroundTextContainer,
-  BackgroundText,
-  BackgroundSubText,
+  // BackgroundTextContainer,
+  // BackgroundText,
+  // BackgroundSubText,
   VisionContainer,
   ActivityContainer,
   NewsContainer,
   YoutubeContainer,
-  VisionTextContainer,
-  VisionSubTextContainer,
-  VisionContentContainer,
+  // VisionTextContainer,
+  // VisionSubTextContainer,
+  // VisionContentContainer,
   ActivityTextContainer,
   ActivitySubTextContainer,
   ActivityContentContainer,
@@ -49,7 +49,7 @@ import {
   ActivityArticleText,
   ActivityArticleSubText,
 } from "../styles/Mainpage_tmp.element";
-import { TbBluetooth } from "react-icons/tb";
+// import { TbBluetooth } from "react-icons/tb";
 
 const MainpageTmp = () => {
   const [youtubeLink1, setYoutubeLink1] = useState("");

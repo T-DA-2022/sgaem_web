@@ -7,8 +7,8 @@ import {
   RecruitBackgroundText,
   RecruitContentContainer,
   RecruitPosterContainer,
-  RecruitApplyContainer,
-  RecuritApplyBtn,
+  // RecruitApplyContainer,
+  // RecuritApplyBtn,
   RecruitApplyBtn,
 } from "../styles/Recruiting.element";
 

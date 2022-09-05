@@ -28,12 +28,11 @@ const ContactUs = () => {
     phone: "",
     message: "",
   });
-  const [error, setError] = useState({});
 
   const validate = (emailForm) => {
     let errors = {};
     const emailRegex =
-      /^(([^<>()\[\].,;:\s@"]+(\.[^<>()\[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i;
+      /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i;
     const phoneRegex = /^01(?:0|1|[6-9])-(?:\d{3}|\d{4})-\d{4}$/;
     if (!emailForm.name) {
       errors.name = "이름을 입력해주세요!";
@@ -52,7 +51,7 @@ const ContactUs = () => {
     if (!emailForm.message) {
       errors.message = "내용을 입력해주세요!";
     }
-    setError(errors);
+
     return errors;
   };
 
@@ -79,9 +78,9 @@ const ContactUs = () => {
 
     let valid = validate(emailForm);
     if (Object.keys(valid).length !== 0) {
-      Object.values(valid).map((data, index) => {
-        enqueueSnackbar(`${data}`, { variant: "warning" });
-      });
+      Object.values(valid).map((data, index) =>
+        enqueueSnackbar(`${data}`, { variant: "warning" })
+      );
       // console.log(valid);
       // console.log(emailForm.name);
     } else {

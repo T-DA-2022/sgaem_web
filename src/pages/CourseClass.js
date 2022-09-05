@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import YouTube from "react-youtube";
 import axios from "axios";
-import ProgressBar from "react-bootstrap/ProgressBar";
+// import ProgressBar from "react-bootstrap/ProgressBar";
 
 import {
   CCContainer,
@@ -15,8 +15,8 @@ import {
   MainContentContainer,
   VideoContainer,
   VideoDescContainer,
-  FakeLink,
-  MyYoutube,
+  // FakeLink,
+  // MyYoutube,
   VideoDescTitle,
   VideoDescMainText,
   VideoDescription,
@@ -39,13 +39,12 @@ const CourseClass = () => {
     title: "",
     description: "",
   });
-  const navigate = useNavigate();
-  const [selectedCourse, setSelectedCourse] = useState("");
+  // const navigate = useNavigate();
+
   var windowWidth = window.innerWidth;
 
   useEffect(() => {
     if (courseName === "basic") {
-      setSelectedCourse(process.env.REACT_APP_COURSE_BASIC);
       axios
         .get(
           `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${process.env.REACT_APP_COURSE_BASIC}&maxResults=100&key=${process.env.REACT_APP_API_KEY}`
@@ -58,7 +57,6 @@ const CourseClass = () => {
           console.log(err);
         });
     } else if (courseName === "broadcast") {
-      setSelectedCourse(process.env.REACT_APP_COURSE_BROADCAST);
       axios
         .get(
           `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${process.env.REACT_APP_COURSE_BROADCAST}&maxResults=100&key=${process.env.REACT_APP_API_KEY}`
@@ -71,7 +69,6 @@ const CourseClass = () => {
           console.log(err);
         });
     } else if (courseName === "competition") {
-      setSelectedCourse(process.env.REACT_APP_COURSE_COMPETITION);
       axios
         .get(
           `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${process.env.REACT_APP_COURSE_COMPETITION}&maxResults=100&key=${process.env.REACT_APP_API_KEY}`
@@ -84,7 +81,6 @@ const CourseClass = () => {
           console.log(err);
         });
     } else if (courseName === "content") {
-      setSelectedCourse(process.env.REACT_APP_COURSE_CONTENT);
       axios
         .get(
           `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${process.env.REACT_APP_COURSE_CONTENT}&maxResults=100&key=${process.env.REACT_APP_API_KEY}`
@@ -97,7 +93,6 @@ const CourseClass = () => {
           console.log(err);
         });
     } else if (courseName === "advanced") {
-      setSelectedCourse(process.env.REACT_APP_COURSE_ADVANCED);
       axios
         .get(
           `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${process.env.REACT_APP_COURSE_ADVANCED}&maxResults=100&key=${process.env.REACT_APP_API_KEY}`
@@ -111,11 +106,6 @@ const CourseClass = () => {
         });
     }
   }, [courseName, videoNum]);
-
-  const tmpLinker = (num, e) => {
-    e.preventDefault();
-    console.log(num);
-  };
 
   const tmpIndex = (data, index) => {
     let tmp = index === Number(videoNum);
