@@ -1,16 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useSnackbar } from "notistack";
 import axios from "axios";
 
 import {
-  FormCheckbox,
   FormContainer,
   FormInput,
   FormRadio,
   FormText,
   JoinText,
   RegisterContainer,
-  InformBox,
   FormDiv,
   FormButton,
 } from "../styles/Register.element";
@@ -20,7 +18,6 @@ const Register = () => {
   const [regCode, setRegCode] = useState("");
   const [showRegArea, setShowRegArea] = useState(false);
   const [pwcheck, setPwCheck] = useState("");
-  const [error, setError] = useState({});
 
   const RegChange = (e) => {
     setRegCode(e.target.value);
@@ -74,7 +71,7 @@ const Register = () => {
     } else if (!phoneRegex.test(userData.phone)) {
       errors.phone = "알맞지 않은 연락처 형식입니다! (010-1234-5678)";
     }
-    setError(errors);
+
     return errors;
   };
 
@@ -94,9 +91,9 @@ const Register = () => {
     if (userData.password === pwcheck) {
       let valid = validate(userData);
       if (Object.keys(valid).length !== 0) {
-        Object.values(valid).map((data, index) => {
-          enqueueSnackbar(`${data}`, { variant: "warning" });
-        });
+        Object.values(valid).map((data, index) =>
+          enqueueSnackbar(`${data}`, { variant: "warning" })
+        );
       } else {
         // console.log(userData);
         axios
