@@ -4,9 +4,12 @@ import styled from "styled-components";
 export const RegisterContainer = styled.div`
   background-color: #f9fafb;
   width: 100vw;
+  /* height: ${(props) => props.height}; */
+  min-height: calc(100vh - 230px);
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 5vw;
 `;
 
 export const JoinText = styled.div`
@@ -19,7 +22,7 @@ export const JoinText = styled.div`
   }
 `;
 
-export const FormContainer = styled.div`
+export const FormContainer = styled.form`
   /* background-color: green; */
   /* width: 400px; */
   margin-top: 3.8vw;
@@ -45,16 +48,14 @@ export const FormText = styled.div`
 `;
 
 export const FormInput = styled.input`
-  width: 448px;
-  height: 40px;
+  width: 24vw;
+  height: 2.5vw;
   border-radius: 10px;
   border: 1px solid #707070;
   padding: 4px 16px;
   margin-bottom: 30px;
   font-size: 16px;
   @media only screen and (max-width: 1440px) {
-    width: 326px;
-    height: 30px;
     margin-bottom: 20px;
   }
 `;
@@ -80,24 +81,22 @@ export const FormCheckbox = styled.div`
   margin-bottom: 30px;
 `;
 
-export const InformBox = styled.div`
-  background-color: #ffffff;
-  width: 100%;
-  height: 10vw;
-  border: 1px solid black;
-  margin: 10px 2px;
-`;
+export const InformBox = styled.div``;
 
 export const FormButton = styled.button`
   color: #ffffff;
   background-color: #4188fe;
-  width: 480px;
+  width: 24vw;
   height: 50px;
   border-radius: 12px;
   border: none;
   margin: 12px 0;
   @media only screen and (max-width: 1440px) {
-    width: 360px;
+    width: 24vw;
     height: 40px;
   }
+`;
+
+export const FormDiv = styled.div`
+  display: ${(props) => (props.view === true ? "contents" : "none")};
 `;

@@ -1,20 +1,28 @@
-import React from "react";
-// import img1 from "../assets/car_img_1_text_1.png";
-// import img1 from "../assets/car_img_1.jpeg";
-// import img1 from "../assets/car_img_1_crop_4.png";
-// import img2 from "../assets/car_img_2.jpeg";
-// import img3 from "../assets/car_img_3.jpeg";
-// import img4 from "../assets/car_img_4.jpeg";
+import React, { useEffect, useState } from "react";
+import YouTube from "react-youtube";
+import axios from "axios";
+import Carousel from "react-bootstrap/Carousel";
+
 import img1 from "../assets/main_banner_1.png";
-import img2 from "../assets/main_banner_2.png";
-import img3 from "../assets/main_banner_3.png";
+import img2 from "../assets/main_banner_recruit.png";
+import img3 from "../assets/main_banner_comp.png";
+// import img2 from "../assets/main_banner_2.png";
+// import img3 from "../assets/main_banner_3.png";
 import img_vis_src from "../assets/main_2nd.png";
+import img_src_act_comp from "../assets/meeting_pic/main_activity/comp_open.png";
+import img_src_content from "../assets/meeting_pic/main_activity/content_making.png";
+import img_src_foreign from "../assets/meeting_pic/main_activity/foreign_cooperate.png";
+import img_src_networking from "../assets/meeting_pic/main_activity/networking.png";
+
+import NewsList from "../dummy/News";
 
 // style import
 import {
   MainpageContainer,
   BackgroundContainer,
   BackgroundTextContainer,
+  BackgroundText,
+  BackgroundSubText,
   VisionContainer,
   ActivityContainer,
   NewsContainer,
@@ -41,19 +49,54 @@ import {
   ActivityArticleText,
   ActivityArticleSubText,
 } from "../styles/Mainpage_tmp.element";
+import { TbBluetooth } from "react-icons/tb";
 
 const MainpageTmp = () => {
+  const [youtubeLink1, setYoutubeLink1] = useState("");
+  const [youtubeLink2, setYoutubeLink2] = useState("");
+  var windowWidth = window.innerWidth;
+
+  useEffect(() => {
+    axios
+      .get(
+        `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCldf-sx1NRh0Tls03EpTySA&maxResults=2&type=video&order=date&key=${process.env.REACT_APP_API_KEY}`
+      )
+      .then((res) => {
+        setYoutubeLink1(res.data.items[0].id.videoId);
+        setYoutubeLink2(res.data.items[1].id.videoId);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
   return (
     <>
       <MainpageContainer>
-        <BackgroundContainer src={img1}>
-          <BackgroundTextContainer>
-            {/* <BackgroundText>WE MAKE THE RULES</BackgroundText>
+        <Carousel>
+          <Carousel.Item interval={10000}>
+            <BackgroundContainer src={img1}>
+              {/* <BackgroundTextContainer>
+            <BackgroundText>WE MAKE THE RULES</BackgroundText>
             <BackgroundSubText>
               SGAEM은 서강 e스포츠 문화를 선도합니다.
-            </BackgroundSubText> */}
-          </BackgroundTextContainer>
-        </BackgroundContainer>
+            </BackgroundSubText>
+          </BackgroundTextContainer> */}
+            </BackgroundContainer>
+          </Carousel.Item>
+          <Carousel.Item interval={10000}>
+            <BackgroundContainer
+              src={img2}
+              onClick={() => window.location.replace("/recruiting")}
+            />
+          </Carousel.Item>
+          <Carousel.Item interval={10000}>
+            <BackgroundContainer
+              src={img3}
+              onClick={() => window.location.replace("/competition")}
+            />
+          </Carousel.Item>
+        </Carousel>
         <VisionContainer src={img_vis_src}></VisionContainer>
         <ActivityContainer>
           <ActivityTextContainer>ACTIVITIY</ActivityTextContainer>
@@ -62,7 +105,7 @@ const MainpageTmp = () => {
           </ActivitySubTextContainer>
           <ActivityContentContainer>
             <ActivityContent>
-              <ActivityImg></ActivityImg>
+              <ActivityImg src={img_src_act_comp}></ActivityImg>
               <ActivityArticle>
                 <ActivityArticleText>대회 개최</ActivityArticleText>
                 <ActivityArticleSubText>
@@ -72,7 +115,7 @@ const MainpageTmp = () => {
               </ActivityArticle>
             </ActivityContent>
             <ActivityContent>
-              <ActivityImg></ActivityImg>
+              <ActivityImg src={img_src_content}></ActivityImg>
               <ActivityArticle>
                 <ActivityArticleText>콘텐츠 제작</ActivityArticleText>
                 <ActivityArticleSubText>
@@ -82,7 +125,7 @@ const MainpageTmp = () => {
               </ActivityArticle>
             </ActivityContent>
             <ActivityContent>
-              <ActivityImg></ActivityImg>
+              <ActivityImg src={img_src_foreign}></ActivityImg>
               <ActivityArticle>
                 <ActivityArticleText>대외 협업</ActivityArticleText>
                 <ActivityArticleSubText>
@@ -93,7 +136,7 @@ const MainpageTmp = () => {
               </ActivityArticle>
             </ActivityContent>
             <ActivityContent>
-              <ActivityImg></ActivityImg>
+              <ActivityImg src={img_src_networking}></ActivityImg>
               <ActivityArticle>
                 <ActivityArticleText>네트워킹</ActivityArticleText>
                 <ActivityArticleSubText>
@@ -124,8 +167,40 @@ const MainpageTmp = () => {
             스겜의 활동을 직접 확인하세요
           </YoutubeSubTextContainer>
           <YoutubeContentContainer>
-            <YoutubeContent></YoutubeContent>
-            <YoutubeContent></YoutubeContent>
+            <YoutubeContent>
+              <YouTube
+                videoId={youtubeLink1}
+                opts={{
+                  width: windowWidth * 0.33,
+                  height: windowWidth * 0.18,
+                  playerVars: {
+                    autoplay: 0,
+                    rel: 0,
+                    modestbranding: 1,
+                  },
+                }}
+                onEnd={(e) => {
+                  e.target.stopVideo(0);
+                }}
+              />
+            </YoutubeContent>
+            <YoutubeContent>
+              <YouTube
+                videoId={youtubeLink2}
+                opts={{
+                  width: windowWidth * 0.33,
+                  height: windowWidth * 0.18,
+                  playerVars: {
+                    autoplay: 0,
+                    rel: 0,
+                    modestbranding: 1,
+                  },
+                }}
+                onEnd={(e) => {
+                  e.target.stopVideo(0);
+                }}
+              />
+            </YoutubeContent>
           </YoutubeContentContainer>
         </YoutubeContainer>
       </MainpageContainer>

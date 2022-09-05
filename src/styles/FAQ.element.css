@@ -1,0 +1,7 @@
+.accordion-body {
+  text-align: left;
+}
+
+.accordion-button:focus {
+  outline: none;
+}

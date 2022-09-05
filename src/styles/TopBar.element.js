@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 export const TopBarContainer = styled.div`
   height: 80px;
   width: 100%;
-  background-color: #181830;
+  /* background-color: #181830; */
+  background-color: white;
   display: flex;
   justify-content: center;
   /* padding: 0 60px; */
@@ -67,7 +68,7 @@ export const TopBarButton = styled.span`
   justify-content: center;
   font-size: 16px;
   font-weight: bold;
-  color: #f8f8fa;
+  color: #191919;
   padding: 0px 4px;
   @media only screen and (max-width: 1440px) {
     font-size: 12px;
@@ -90,6 +91,6 @@ export const AuthButton = styled.span`
   justify-content: center;
   font-size: 16px;
   /* font-weight: bold; */
-  color: #f8f8fa;
+  color: #191919;
   padding: 0px 4px;
 `;

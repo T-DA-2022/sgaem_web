@@ -1,4 +1,5 @@
 import React from "react";
+import { useSnackbar } from "notistack";
 import { Link } from "react-router-dom";
 import {
   TopBarButton,
@@ -11,9 +12,10 @@ import {
   TopBarContentContainer,
   TopBarDivider,
 } from "../styles/TopBar.element";
-import Logosrc from "../assets/sgaem_logo_new.png";
+import Logosrc from "../assets/sgaem_logo_black.png";
 
 const TopBar = () => {
+  const { enqueueSnackbar } = useSnackbar();
   return (
     <>
       <TopBarContainer>
@@ -26,55 +28,56 @@ const TopBar = () => {
               <StyledLink to="/aboutus">
                 <TopBarButton>ABOUT US</TopBarButton>
               </StyledLink>
-
-              <TopBarButton
-                onClick={() => {
-                  alert("NEWS");
-                }}
-              >
-                NEWS
-              </TopBarButton>
-              <TopBarButton
-                onClick={() => {
-                  alert("COURSES");
-                }}
-              >
-                COURSES
-              </TopBarButton>
-              <TopBarButton
-                onClick={() => {
-                  alert("Competition");
-                }}
-              >
-                COMPETITION
-              </TopBarButton>
-              <TopBarButton
-                onClick={() => {
-                  alert("Recruiting");
-                }}
-              >
-                RECRUITING
-              </TopBarButton>
+              <StyledLink to="/news">
+                <TopBarButton>NEWS</TopBarButton>
+              </StyledLink>
+              <StyledLink to="/competition">
+                <TopBarButton>COMPETITION</TopBarButton>
+              </StyledLink>
+              <StyledLink to="/recruiting">
+                <TopBarButton>RECRUITING</TopBarButton>
+              </StyledLink>
+              <StyledLink to="/course">
+                <TopBarButton>COURSES</TopBarButton>
+              </StyledLink>
               <StyledLink to="/faq">
                 <TopBarButton>FAQ</TopBarButton>
               </StyledLink>
-              <TopBarButton
-                onClick={() => {
-                  alert("Contact us");
-                }}
-              >
-                CONTACT US
-              </TopBarButton>
+              <StyledLink to="/contactus">
+                <TopBarButton>CONTACT US</TopBarButton>
+              </StyledLink>
             </TopBarButtonContainer>
           </TopBarDivider>
-          <AuthContainer>
-            <StyledLink to="/login">
-              <AuthButton>로그인</AuthButton>
-            </StyledLink>
-            <StyledLink to="/register">
-              <AuthButton>회원가입</AuthButton>
-            </StyledLink>
-          </AuthContainer>
+          {!localStorage.user_id ? (
+            <AuthContainer>
+              <StyledLink to="/login">
+                <AuthButton>로그인</AuthButton>
+              </StyledLink>
+              <StyledLink to="/register">
+                <AuthButton>회원가입</AuthButton>
+              </StyledLink>
+            </AuthContainer>
+          ) : (
+            <AuthContainer>
+              <StyledLink to="/mypage">
+                <AuthButton>마이페이지</AuthButton>
+              </StyledLink>
+              <StyledLink
+                to="/logout"
+                onClick={() =>
+                  setTimeout(() =>
+                    enqueueSnackbar(
+                      "로그아웃 성공!",
+                      { variant: "success" },
+                      1500
+                    )
+                  )
+                }
+              >
+                <AuthButton>로그아웃</AuthButton>
+              </StyledLink>
+            </AuthContainer>
+          )}
         </TopBarContentContainer>
       </TopBarContainer>
     </>

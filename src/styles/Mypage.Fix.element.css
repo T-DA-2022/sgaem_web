@@ -1,0 +1,8 @@
+.dropdown-menu {
+  max-height: 10vw;
+  overflow-y: auto;
+}
+
+.dropdown-toggle {
+  margin-right: 1vw;
+}

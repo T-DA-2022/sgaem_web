@@ -6,13 +6,31 @@ export const AboutUsContainer = styled.div`
 `;
 
 export const BannerContainer = styled.div`
-  background-color: #f5f5f5;
+  /* background-color: #f5f5f5; */
+
   font-size: 56px;
-  height: 20vw;
+  position: relative;
+  height: 20.8vw;
   display: flex;
   width: 100vw;
   align-items: center;
   justify-content: center;
+  color: #ffffff;
+  background-image: url(${(props) => props.src});
+  background-size: cover;
+  ::before {
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0.3;
+  }
+  @media only screen and (max-width: 1440px) {
+    font-size: 44px;
+  }
 `;
 
 export const TabArea = styled.div`
@@ -43,12 +61,17 @@ export const TabContent = styled.div`
   /* background-color: pink; */
   display: flex;
   margin: 0 25px;
-  height: 100%;
+  height: 90px;
   align-items: center;
   font-size: 18px;
+  &:hover {
+    color: gray;
+    cursor: pointer;
+  }
   @media only screen and (max-width: 1440px) {
     font-size: 16px;
     margin: 0 15px;
+    height: 70px;
   }
 `;
 
@@ -93,7 +116,9 @@ export const SgaemTmpBox = styled.div`
 export const SgaemTmpChevron = styled.div`
   align-self: ${(props) => props.end || "flex-start"};
   font-size: 60px;
+  margin-top: ${(props) => (props.end ? "0px" : "-16px")};
   @media only screen and (max-width: 1440px) {
+    margin-top: ${(props) => (props.end ? "0px" : "-24px")};
     margin-bottom: ${(props) => (props.end ? "-12px" : "0px")};
   }
 `;
@@ -108,6 +133,8 @@ export const SgaemTextBox = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media only screen and (max-width: 1440px) {
+  }
 `;
 
 export const SgaemTextLine = styled.div`
@@ -116,7 +143,7 @@ export const SgaemTextLine = styled.div`
   flex-direction: row;
   font-size: 20px;
   @media only screen and (max-width: 1440px) {
-    font-size: 15px;
+    font-size: 14px;
   }
 `;
 
@@ -180,7 +207,7 @@ export const VisionIamge = styled.img`
 `;
 
 export const HistoryContainer = styled.div`
-  background-color: #ffffff;
+  background-color: #f8f8fa;
   padding-top: 3.645vw;
   padding-bottom: 3.645vw;
   display: flex;
@@ -255,6 +282,9 @@ export const HistoryTimeLineYear = styled.div`
   color: black;
   margin-bottom: 20px;
   font-weight: bold;
+  @media only screen and (max-width: 1440px) {
+    margin-bottom: 6px;
+  }
 `;
 
 export const HistoryTimeLineLine = styled.div`
@@ -262,6 +292,9 @@ export const HistoryTimeLineLine = styled.div`
   flex-direction: row;
   margin-bottom: 16px;
   align-items: center;
+  @media only screen and (max-width: 1440px) {
+    margin-bottom: 10px;
+  }
 `;
 
 export const HistoryTimeLineMonth = styled.div`
@@ -292,6 +325,9 @@ export const HistoryTimeLineYearRight = styled.div`
   margin-bottom: 20px;
   font-weight: bold;
   align-self: flex-end;
+  @media only screen and (max-width: 1440px) {
+    margin-bottom: 6px;
+  }
 `;
 
 export const ActivityContainer = styled.div`
@@ -420,11 +456,12 @@ export const TeamContentContainer = styled.div`
 `;
 
 export const TeamContentBox = styled.div`
-  background-color: pink;
+  background-color: #c0cfff;
   display: flex;
   width: 100%;
   flex-direction: row;
   margin-bottom: 20px;
+  align-items: center;
   @media only screen and (max-width: 1440px) {
     margin-bottom: 30px;
   }
@@ -432,7 +469,11 @@ export const TeamContentBox = styled.div`
 
 export const TeamContentBoxImg = styled.img`
   width: 50%;
-  height: 22.9vw;
+  height: 20vw;
+  object-fit: none;
+  @media only screen and (max-width: 1440px) {
+    object-fit: contain;
+  }
 `;
 
 export const TeamContentBoxArticle = styled.div`
@@ -440,9 +481,14 @@ export const TeamContentBoxArticle = styled.div`
   background-color: #ffffff;
   padding: 20px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 22vw;
 `;
 
 export const TeamContentBoxText = styled.div`
+  margin-top: 12px;
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 12px;

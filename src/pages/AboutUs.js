@@ -1,8 +1,28 @@
 import React from "react";
-// import img1_src from "../assets/vision_tmp.png";
+import { Link } from "react-scroll";
+
+import img_src_banner from "../assets/meeting_pic/recruit_banner.png";
 import img1_src from "../assets/4E.svg";
 import img_2014_src from "../assets/car_img_3.jpeg";
 import img_act_bg from "../assets/tri_pattern_long.png";
+import img_src_2014 from "../assets/about_2014.png";
+import img_src_2015 from "../assets/about_2015.png";
+import img_src_2016 from "../assets/about_2016.jpeg";
+import img_src_2017 from "../assets/about_2017.jpeg";
+import img_src_2018 from "../assets/meeting_pic/detail_history/2018.png";
+import img_src_2019 from "../assets/meeting_pic/detail_history/2019.png";
+import img_src_2020 from "../assets/about_2020.png";
+import img_src_2021 from "../assets/meeting_pic/detail_history/2021.png";
+import img_src_2022 from "../assets/meeting_pic/detail_history/2022.png";
+import img_src_comp from "../assets/meeting_pic/detail_activity/comp.png";
+import img_src_content from "../assets/meeting_pic/detail_activity/content.png";
+import img_src_foreign from "../assets/meeting_pic/detail_activity/foreign.png";
+import img_src_network from "../assets/meeting_pic/detail_activity/network.png";
+// import img_src_team_comp from "../assets/icon_team/icon_comp_bg.png";
+import img_src_team_comp from "../assets/icon_team/icon_comp_simp.png";
+import img_src_team_content from "../assets/icon_team/icon_content_simp.png";
+import img_src_team_broadcast from "../assets/icon_team/icon_broad_simp.png";
+
 import { TbChevronUpLeft, TbChevronDownRight } from "react-icons/tb";
 import {
   AboutUsContainer,
@@ -63,16 +83,24 @@ const AboutUs = () => {
   return (
     <>
       <AboutUsContainer>
-        <BannerContainer>ABOUT US</BannerContainer>
+        <BannerContainer src={img_src_banner}>ABOUT US</BannerContainer>
         <TabArea>
           <TabBox>
-            <TabContent>SGAEM</TabContent>
-            <TabContent>HISTORY</TabContent>
-            <TabContent>ACTIVITY</TabContent>
-            <TabContent>TEAM</TabContent>
+            <Link to="div_sgaem" spy={true} smooth={true}>
+              <TabContent>SGAEM</TabContent>
+            </Link>
+            <Link to="div_history" spy={true} smooth={true}>
+              <TabContent>HISTORY</TabContent>
+            </Link>
+            <Link to="div_activity" spy={true} smooth={true}>
+              <TabContent>ACTIVITY</TabContent>
+            </Link>
+            <Link to="div_team" spy={true} smooth={true}>
+              <TabContent>TEAM</TabContent>
+            </Link>
           </TabBox>
         </TabArea>
-        <SgaemContainer>
+        <SgaemContainer id="div_sgaem">
           <SgaemTextContainer>SGAEM</SgaemTextContainer>
           <SgaemSubTextContainer>
             스겜은 확실한 목표 아래에 뭉칩니다
@@ -120,7 +148,7 @@ const AboutUs = () => {
             </SgaemTmpChevron>
           </SgaemTmpBox>
         </SgaemContainer>
-        <HistoryContainer>
+        <HistoryContainer id="div_history">
           <HistoryTextContainer>HISTORY</HistoryTextContainer>
           <HistorySubTextContainer>
             스겜만의 특별한 활동을 경험해보세요
@@ -128,10 +156,11 @@ const AboutUs = () => {
           <HistoryTimeLineContainer>
             {/*************************** LEFTBOX **************************/}
             <HistoryTimeLineListLeft>
+              {/* ************************ 2014 *************************** */}
               <HistoryTimeLineBox>
                 <HistroyTimeLineImg
                   side="flex-end"
-                  src={img_2014_src}
+                  src={img_src_2014}
                 ></HistroyTimeLineImg>
               </HistoryTimeLineBox>
               <HistoryTimeLineBox side="flex-end">
@@ -165,10 +194,11 @@ const AboutUs = () => {
                   </HistoryTimeLineMonth>
                 </HistoryTimeLineLine>
               </HistoryTimeLineBox>
+              {/* ************************ 2016 *************************** */}
               <HistoryTimeLineBox>
                 <HistroyTimeLineImg
                   side="flex-end"
-                  src={img_2014_src}
+                  src={img_src_2016}
                 ></HistroyTimeLineImg>
               </HistoryTimeLineBox>
               <HistoryTimeLineBox side="flex-end">
@@ -194,10 +224,11 @@ const AboutUs = () => {
                   </HistoryTimeLineMonth>
                 </HistoryTimeLineLine>
               </HistoryTimeLineBox>
+              {/* ************************ 2018 *************************** */}
               <HistoryTimeLineBox>
                 <HistroyTimeLineImg
                   side="flex-end"
-                  src={img_2014_src}
+                  src={img_src_2018}
                 ></HistroyTimeLineImg>
               </HistoryTimeLineBox>
               <HistoryTimeLineBox side="flex-end">
@@ -233,10 +264,11 @@ const AboutUs = () => {
                   </HistoryTimeLineMonth>
                 </HistoryTimeLineLine>
               </HistoryTimeLineBox>
+              {/* ************************ 2020 *************************** */}
               <HistoryTimeLineBox>
                 <HistroyTimeLineImg
                   side="flex-end"
-                  src={img_2014_src}
+                  src={img_src_2020}
                 ></HistroyTimeLineImg>
               </HistoryTimeLineBox>
               <HistoryTimeLineBox side="flex-end">
@@ -258,10 +290,11 @@ const AboutUs = () => {
                   </HistoryTimeLineMonth>
                 </HistoryTimeLineLine>
               </HistoryTimeLineBox>
+              {/* ************************ 2022 *************************** */}
               <HistoryTimeLineBox>
                 <HistroyTimeLineImg
                   side="flex-end"
-                  src={img_2014_src}
+                  src={img_src_2022}
                 ></HistroyTimeLineImg>
               </HistoryTimeLineBox>
             </HistoryTimeLineListLeft>
@@ -282,8 +315,9 @@ const AboutUs = () => {
                   </HistoryTimeLineContent>
                 </HistoryTimeLineLine>
               </HistoryTimeLineBox>
+              {/* ************************ 2015 *************************** */}
               <HistoryTimeLineBox>
-                <HistroyTimeLineImg src={img_2014_src}></HistroyTimeLineImg>
+                <HistroyTimeLineImg src={img_src_2015}></HistroyTimeLineImg>
               </HistoryTimeLineBox>
               <HistoryTimeLineBox side="flex-start">
                 <HistoryTimeLineYear>2016</HistoryTimeLineYear>
@@ -300,8 +334,9 @@ const AboutUs = () => {
                   </HistoryTimeLineContent>
                 </HistoryTimeLineLine>
               </HistoryTimeLineBox>
+              {/* ************************ 2017 *************************** */}
               <HistoryTimeLineBox>
-                <HistroyTimeLineImg src={img_2014_src}></HistroyTimeLineImg>
+                <HistroyTimeLineImg src={img_src_2017}></HistroyTimeLineImg>
               </HistoryTimeLineBox>
               <HistoryTimeLineBox side="flex-start">
                 <HistoryTimeLineYear>2018</HistoryTimeLineYear>
@@ -322,8 +357,9 @@ const AboutUs = () => {
                   <HistoryTimeLineContent>2018 노고체전</HistoryTimeLineContent>
                 </HistoryTimeLineLine>
               </HistoryTimeLineBox>
+              {/* ************************ 2019 *************************** */}
               <HistoryTimeLineBox>
-                <HistroyTimeLineImg src={img_2014_src}></HistroyTimeLineImg>
+                <HistroyTimeLineImg src={img_src_2019}></HistroyTimeLineImg>
               </HistoryTimeLineBox>
               <HistoryTimeLineBox side="flex-start">
                 <HistoryTimeLineYear>2020</HistoryTimeLineYear>
@@ -340,8 +376,9 @@ const AboutUs = () => {
                   </HistoryTimeLineContent>
                 </HistoryTimeLineLine>
               </HistoryTimeLineBox>
+              {/* ************************ 2021 *************************** */}
               <HistoryTimeLineBox>
-                <HistroyTimeLineImg src={img_2014_src}></HistroyTimeLineImg>
+                <HistroyTimeLineImg src={img_src_2021}></HistroyTimeLineImg>
               </HistoryTimeLineBox>
               <HistoryTimeLineBox side="flex-start">
                 <HistoryTimeLineYear>2022</HistoryTimeLineYear>
@@ -361,7 +398,7 @@ const AboutUs = () => {
             </HistoryTimeLineListRight>
           </HistoryTimeLineContainer>
         </HistoryContainer>
-        <ActivityContainer src={img_act_bg}>
+        <ActivityContainer src={img_act_bg} id="div_activity">
           <ActivityTextContainer>ACTIVITY</ActivityTextContainer>
           <ActivitySubTextContainer>
             스겜의 최신 소식을 확인하세요
@@ -370,7 +407,7 @@ const AboutUs = () => {
             {/*************************** LEFTBOX **************************/}
             <ActivityContent>
               <ActivityContentBox>
-                <ActivityContentImg src={img_2014_src}></ActivityContentImg>
+                <ActivityContentImg src={img_src_comp}></ActivityContentImg>
                 <ActivityContentArticle>
                   <ActivityContentArticleMainText>
                     최고의 대학 e스포츠 대회를 <br />
@@ -404,7 +441,7 @@ const AboutUs = () => {
                 </ActivityContentArticle>
               </ActivityContentBox>
               <ActivityContentBox>
-                <ActivityContentImg src={img_2014_src}></ActivityContentImg>
+                <ActivityContentImg src={img_src_foreign}></ActivityContentImg>
                 <ActivityContentArticle>
                   <ActivityContentArticleMainText>
                     수준 높은 대외 프로그램을 통해 <br /> 성장합니다.
@@ -414,9 +451,9 @@ const AboutUs = () => {
                     진행하고 있습니다. 다음은 주요 협업 프로그램 내용입니다.
                   </ActivityContentArticleSubText>
                   <ActivityContentArticleSubText>
-                    키노빈스 (2015~2019) : 온,오프라인 대회 중계, 게임 산업
-                    설명회, 블리자드 데이, 서강e스포츠페스티벌, 동아리 회의 공간
-                    지원 등
+                    키노빈스(2015~2019) : 온,오프라인 대회 중계, 게임 산업
+                    설명회, 블리자드 데이, 서강 e스포츠 페스티벌, 동아리 회의
+                    공간 지원 등
                   </ActivityContentArticleSubText>
                   <ActivityContentArticleSubText>
                     유엔해비타트(2018) : 게임 인식 개선 프로그램 및 국회 발표
@@ -430,7 +467,7 @@ const AboutUs = () => {
                     KLEVV(2018) : 2018학년도 노고체전 콘텐츠 콜라보
                   </ActivityContentArticleSubText>
                   <ActivityContentArticleSubText>
-                    크래프톤(2019) : 펍지 인증 대학생 대회 개최
+                    크래프톤(2019) : PUBG 인증 대학생 대회 개최
                   </ActivityContentArticleSubText>
                   <ActivityContentArticleSubText>
                     한국이스포츠아카데미(2019) : 매드라이프의 고민
@@ -446,7 +483,7 @@ const AboutUs = () => {
             <ActivityContent>
               <div style={{ marginTop: "8.6vw" }} />
               <ActivityContentBox>
-                <ActivityContentImg src={img_2014_src}></ActivityContentImg>
+                <ActivityContentImg src={img_src_content}></ActivityContentImg>
                 <ActivityContentArticle>
                   <ActivityContentArticleMainText>
                     콘텐츠로 게임의 긍정적인 가치를 <br />
@@ -482,7 +519,7 @@ const AboutUs = () => {
                 </ActivityContentArticle>
               </ActivityContentBox>
               <ActivityContentBox>
-                <ActivityContentImg src={img_2014_src}></ActivityContentImg>
+                <ActivityContentImg src={img_src_network}></ActivityContentImg>
                 <ActivityContentArticle>
                   <ActivityContentArticleMainText>
                     스겜만의 게임, e스포츠 네트워크를 구축합니다.
@@ -520,14 +557,14 @@ const AboutUs = () => {
             </ActivityContent>
           </ActivityContentContainer>
         </ActivityContainer>
-        <TeamContainer>
+        <TeamContainer id="div_team">
           <TeamTextContainer>TEAM</TeamTextContainer>
           <TeamSubTextContainer>
             스겜의 활동을 직접 확인하세요!
           </TeamSubTextContainer>
           <TeamContentContainer>
             <TeamContentBox>
-              <TeamContentBoxImg src={img_2014_src}></TeamContentBoxImg>
+              <TeamContentBoxImg src={img_src_team_comp}></TeamContentBoxImg>
               <TeamContentBoxArticle>
                 <TeamContentBoxText>대회운영팀</TeamContentBoxText>
                 <TeamContentBoxSub>
@@ -573,10 +610,12 @@ const AboutUs = () => {
                   <br /> 제작하고 있습니다.
                 </TeamContentBoxSub>
               </TeamContentBoxArticle>
-              <TeamContentBoxImg src={img_2014_src}></TeamContentBoxImg>
+              <TeamContentBoxImg src={img_src_team_content}></TeamContentBoxImg>
             </TeamContentBox>
             <TeamContentBox>
-              <TeamContentBoxImg src={img_2014_src}></TeamContentBoxImg>
+              <TeamContentBoxImg
+                src={img_src_team_broadcast}
+              ></TeamContentBoxImg>
               <TeamContentBoxArticle>
                 <TeamContentBoxText>방송사업팀</TeamContentBoxText>
                 <TeamContentBoxSub>

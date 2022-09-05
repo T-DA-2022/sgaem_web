@@ -76,7 +76,11 @@ export const BottomBarButton = styled.div`
   border-radius: 100%;
   display: grid;
   justify-content: center;
+  margin-right: 5px;
   align-items: center;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 export const BottomBarButtonLogo = styled.img`
   margin: 0 2px;

@@ -19,6 +19,9 @@ export const BackgroundContainer = styled.div`
   display: flex;
   justify-content: center;
   background-position-y: 50%;
+  &:hover {
+    cursor: ${(props) => (props.onClick ? "pointer" : "auto")};
+  }
 `;
 
 export const BackgroundTextContainer = styled.div`
@@ -126,9 +129,11 @@ export const ActivityContent = styled.div`
   box-shadow: 0px 3px 5px 0px #b8b8b8;
 `;
 
-export const ActivityImg = styled.div`
-  background-color: pink;
+export const ActivityImg = styled.img`
   height: 67%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0px 0px;
 `;
 
 export const ActivityArticle = styled.div`
@@ -247,14 +252,14 @@ export const YoutubeSubTextContainer = styled.div`
 `;
 
 export const YoutubeContentContainer = styled.div`
-  background-color: blue;
+  /* background-color: blue; */
   display: flex;
   flex-direction: row;
 `;
 
 export const YoutubeContent = styled.div`
-  background-color: pink;
-  width: 30vw;
+  background-color: #343333;
+  width: 33vw;
   height: 18vw;
   margin: 0 10px;
 `;
