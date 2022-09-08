@@ -127,7 +127,7 @@ const Register = () => {
   };
 
   const onRegCodeCheck = (e) => {
-    if ("스겜체고" !== regCode) {
+    if (process.env.REACT_APP_REG_CODE !== regCode) {
       enqueueSnackbar("올바르지 않은 가입코드입니다. 관리자에게 문의해주세요", {
         variant: "warning",
       });
