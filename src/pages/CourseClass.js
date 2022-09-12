@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import YouTube from "react-youtube";
+import { useSnackbar } from "notistack";
+
 import axios from "axios";
 // import ProgressBar from "react-bootstrap/ProgressBar";
 
@@ -31,7 +33,13 @@ import {
 const CourseClass = () => {
   const courseName = useParams().courseName;
   const videoNum = useParams().videoNum;
+  const [userData, setUserData] = useState({});
   const [videoList, setVideoList] = useState([]);
+  const [videoBasic, setVideoBasic] = useState("");
+  const [videoBroadcast, setVideoBroadcast] = useState("");
+  const [videoCompetition, setVideoCompetition] = useState("");
+  const [videoContent, setVideoContent] = useState("");
+  const [videoAdvanced, setVideoAdvanced] = useState("");
   const [videoData, setVideoData] = useState({
     resourceId: {
       videoId: "",
@@ -41,8 +49,40 @@ const CourseClass = () => {
   });
   // const navigate = useNavigate();
 
-  var windowWidth = window.innerWidth;
+  // window.addEventListener("fetch", (event) => {
+  //   event.respondWith(
+  //     (async function () {
+  //       // Respond from the cache if we can
+  //       const cachedResponse = await caches.match(event.request);
+  //       if (cachedResponse) return cachedResponse;
+  //       // Else, use the preloaded response, if it's there
+  //       const response = await event.preloadResponse;
+  //       if (response) return response;
+  //       // Else try the network.
+  //       return fetch(event.request);
+  //     })()
+  //   );
+  // });
 
+  var windowWidth = window.innerWidth;
+  const { enqueueSnackbar } = useSnackbar();
+
+  useEffect(() => {
+    if (!localStorage.user_id) {
+      enqueueSnackbar("로그인 후 이용 가능합니다", { variant: "warning" });
+      setTimeout(() => {
+        window.location.replace("/mypage");
+      }, 1500);
+    } else {
+      axios
+        .get("http://localhost:4000/auth/mypage", localStorage.user_id, {
+          withCredentials: true,
+        })
+        .then((res) => {
+          setUserData(res.data.user);
+        });
+    }
+  }, [enqueueSnackbar]);
   useEffect(() => {
     if (courseName === "basic") {
       axios
@@ -52,6 +92,7 @@ const CourseClass = () => {
         .then((res) => {
           setVideoList(res.data.items);
           setVideoData(res.data.items[videoNum].snippet);
+          setVideoBasic(res.data.pageInfo.totalResults);
         })
         .catch((err) => {
           console.log(err);
@@ -64,6 +105,7 @@ const CourseClass = () => {
         .then((res) => {
           setVideoList(res.data.items);
           setVideoData(res.data.items[videoNum].snippet);
+          setVideoBroadcast(res.data.pageInfo.totalResults);
         })
         .catch((err) => {
           console.log(err);
@@ -76,6 +118,7 @@ const CourseClass = () => {
         .then((res) => {
           setVideoList(res.data.items);
           setVideoData(res.data.items[videoNum].snippet);
+          setVideoCompetition(res.data.pageInfo.totalResults);
         })
         .catch((err) => {
           console.log(err);
@@ -88,6 +131,7 @@ const CourseClass = () => {
         .then((res) => {
           setVideoList(res.data.items);
           setVideoData(res.data.items[videoNum].snippet);
+          setVideoContent(res.data.pageInfo.totalResults);
         })
         .catch((err) => {
           console.log(err);
@@ -100,6 +144,7 @@ const CourseClass = () => {
         .then((res) => {
           setVideoList(res.data.items);
           setVideoData(res.data.items[videoNum].snippet);
+          setVideoAdvanced(res.data.pageInfo.totalResults);
         })
         .catch((err) => {
           console.log(err);
@@ -108,18 +153,37 @@ const CourseClass = () => {
   }, [courseName, videoNum]);
 
   const tmpIndex = (data, index) => {
-    let tmp = index === Number(videoNum);
+    var listen_tmp;
+    if (courseName === "basic") {
+      listen_tmp = userData.courseBasic;
+    } else if (courseName === "broadcast") {
+      listen_tmp = userData.courseBroadcast;
+    } else if (courseName === "competition") {
+      listen_tmp = userData.courseCompetition;
+    } else if (courseName === "content") {
+      listen_tmp = userData.courseContent;
+    } else if (courseName === "advanced") {
+      listen_tmp = userData.courseAdvanced;
+    }
+
     let linkaddr = "/course/" + courseName + "/" + index.toString();
+    let tmp = index === Number(videoNum);
+    let listened = index + 1 <= listen_tmp;
+
     return (
-      <IndexClassDesc key={index} focus={tmp}>
-        <StyledLinktmp to={linkaddr} focus={tmp}>
+      <IndexClassDesc key={index} focus={tmp.toString()}>
+        <StyledLinktmp
+          to={linkaddr}
+          listened={listened.toString()}
+          focus={tmp.toString()}
+        >
           {data.snippet.title}
         </StyledLinktmp>
       </IndexClassDesc>
     );
   };
 
-  class MyYoutubePlayer extends React.Component {
+  const MyYoutubePlayer = class MyYoutubePlayer extends React.Component {
     render() {
       const opts = {
         width: windowWidth * 0.4166,
@@ -142,9 +206,67 @@ const CourseClass = () => {
     _onEnd = (e) => {
       e.target.stopVideo(0);
     };
-  }
-  const now = 5;
-  const percent = ((now / 7) * 100).toFixed(0);
+  };
+
+  const courseComplete = (e) => {
+    var tmp;
+    if (e.target.id === "courseBasic") {
+      tmp = userData.courseBasic;
+    } else if (e.target.id === "courseCompetition") {
+      tmp = userData.courseCompetition;
+    } else if (e.target.id === "courseContent") {
+      tmp = userData.courseContent;
+    } else if (e.target.id === "courseBroadcast") {
+      tmp = userData.courseBroadcast;
+    } else if (e.target.id === "courseAdvanced") {
+      tmp = userData.courseAdvanced;
+    }
+
+    tmp = tmp + 1;
+    console.log(tmp);
+
+    const updated = {
+      ...userData,
+      [e.target.id]: tmp,
+    };
+    axios
+      .post("http://localhost:4000/auth/fixmypage", updated, {
+        withCredentials: true,
+      })
+      .then((res) => {
+        if (res.data.statusCode === 401 || res.data.statusCode === 500) {
+          enqueueSnackbar("수정실패 관리자에게 문의하세요", {
+            variant: "error",
+          });
+        }
+        if (res.data.statusCode === 201) {
+          console.log(res);
+          enqueueSnackbar("수강정보 수정 성공!", {
+            variant: "success",
+          });
+          setTimeout(() => {
+            var limit;
+            if (e.target.id === "courseBasic") {
+              limit = videoBasic;
+            } else if (e.target.id === "courseCompetition") {
+              limit = videoCompetition;
+            } else if (e.target.id === "courseContent") {
+              limit = videoContent;
+            } else if (e.target.id === "courseBroadcast") {
+              limit = videoBroadcast;
+            } else if (e.target.id === "courseAdvanced") {
+              limit = videoAdvanced;
+            }
+            if (limit === tmp) {
+              window.location.reload();
+            } else {
+              window.location.replace(`/course/${courseName}/${tmp}`);
+            }
+            // console.log(res);
+          }, 1500);
+        }
+      });
+  };
 
   return (
     <CCContainer>
@@ -179,8 +301,58 @@ const CourseClass = () => {
         <IndexContainer>
           <IndexTabContainer>
             <IndexTabTitle>커리큘럼</IndexTabTitle>
-
-            <IndexTabBtn fin="1">수강완료</IndexTabBtn>
+            {courseName === "basic" ? (
+              Number(userData.courseBasic) - 1 >= Number(videoNum) ? (
+                <IndexTabBtn fin="1">수강완료</IndexTabBtn>
+              ) : (
+                <IndexTabBtn fin="0" onClick={courseComplete} id="courseBasic">
+                  수강완료
+                </IndexTabBtn>
+              )
+            ) : courseName === "broadcast" ? (
+              Number(userData.courseBroadcast) - 1 >= Number(videoNum) ? (
+                <IndexTabBtn fin="1">수강완료</IndexTabBtn>
+              ) : (
+                <IndexTabBtn
+                  fin="0"
+                  onClick={courseComplete}
+                  id="courseBroadcast"
+                >
+                  수강완료
+                </IndexTabBtn>
+              )
+            ) : courseName === "competition" ? (
+              Number(userData.courseCompetition) - 1 >= Number(videoNum) ? (
+                <IndexTabBtn fin="1">수강완료</IndexTabBtn>
+              ) : (
+                <IndexTabBtn
+                  fin="0"
+                  onClick={courseComplete}
+                  id="courseCompetition"
+                >
+                  수강완료
+                </IndexTabBtn>
+              )
+            ) : courseName === "content" ? (
+              Number(userData.courseContent) - 1 >= Number(videoNum) ? (
+                <IndexTabBtn fin="1">수강완료</IndexTabBtn>
+              ) : (
+                <IndexTabBtn
+                  fin="0"
+                  onClick={courseComplete}
+                  id="courseContent"
+                >
+                  수강완료
+                </IndexTabBtn>
+              )
+            ) : Number(userData.courseAdvanced) - 1 >= Number(videoNum) ? (
+              <IndexTabBtn fin="1">수강완료</IndexTabBtn>
+            ) : (
+              <IndexTabBtn fin="0" onClick={courseComplete} id="courseAdvanced">
+                수강완료
+              </IndexTabBtn>
+            )}
+            {/* <IndexTabBtn fin="1">수강완료</IndexTabBtn> */}
           </IndexTabContainer>
           {courseName === "basic" ? (
             <IndexClassName>기본 강의</IndexClassName>
@@ -193,18 +365,61 @@ const CourseClass = () => {
           ) : (
             <IndexClassName>심화 강의</IndexClassName>
           )}
+          {courseName === "basic" ? (
+            <MyProgressBar
+              max={videoBasic}
+              now={userData.courseBasic}
+              label={`${((userData.courseBasic / videoBasic) * 100).toFixed(
+                0
+              )}% 완료`}
+            ></MyProgressBar>
+          ) : courseName === "broadcast" ? (
+            <MyProgressBar
+              max={videoBroadcast}
+              now={userData.courseBroadcast}
+              label={`${(
+                (userData.courseBroadcast / videoBroadcast) *
+                100
+              ).toFixed(0)}% 완료`}
+            ></MyProgressBar>
+          ) : courseName === "competition" ? (
+            <MyProgressBar
+              max={videoCompetition}
+              now={userData.courseCompetition}
+              label={`${(
+                (userData.courseCompetition / videoCompetition) *
+                100
+              ).toFixed(0)}% 완료`}
+            ></MyProgressBar>
+          ) : courseName === "content" ? (
+            <MyProgressBar
+              max={videoContent}
+              now={userData.courseContent}
+              label={`${((userData.courseContent / videoContent) * 100).toFixed(
+                0
+              )}% 완료`}
+            ></MyProgressBar>
+          ) : (
+            <MyProgressBar
+              max={videoAdvanced}
+              now={userData.courseAdvanced}
+              label={`${(
+                (userData.courseAdvanced / videoAdvanced) *
+                100
+              ).toFixed(0)}% 완료`}
+            ></MyProgressBar>
+          )}
 
-          <MyProgressBar max={7} now={now} label={`${percent}% 완료`} />
           <IndexClassName>#0 강의 설명</IndexClassName>
           {courseName === "basic" ? (
-            <IndexClassDesc key="1" focus={true}>
+            <IndexClassDesc key="1" focus={true.toString()}>
               우리는 누구이며, 어떤 일을 하며, 무엇을 위하여 SGAEM을 할까요?
               <br />
               그리고, 여러분은 SGAEM에서 어떠한 역할을 하게 될까요? <br />
               SGAEM의 일원이 된 여러분들을 위하여 준비하였습니다.
             </IndexClassDesc>
           ) : courseName === "broadcast" ? (
-            <IndexClassDesc key="1" focus={true}>
+            <IndexClassDesc key="1" focus={true.toString()}>
               SGAEM의 미래.
               <br />
               대회의 중계로 시작하여 지금은 SGAEM의 또 다른 얼굴이 된
@@ -214,7 +429,7 @@ const CourseClass = () => {
               수강하세요!
             </IndexClassDesc>
           ) : courseName === "competition" ? (
-            <IndexClassDesc key="1" focus={true}>
+            <IndexClassDesc key="1" focus={true.toString()}>
               SGAEM의 심장.
               <br />
               대회운영팀은 교내외 이스포츠 대회의 개최부터 종료까지 직접
@@ -225,7 +440,7 @@ const CourseClass = () => {
               바로 이 코스를 수강하세요!
             </IndexClassDesc>
           ) : courseName === "content" ? (
-            <IndexClassDesc key="1" focus={true}>
+            <IndexClassDesc key="1" focus={true.toString()}>
               SGAEM의 예술가.
               <br />
               SGAEM의 가족을 맞이하는 리크루팅부터 대표 활동인 대회 주최까지,
@@ -234,7 +449,7 @@ const CourseClass = () => {
               바로 이 코스를 수강하세요!
             </IndexClassDesc>
           ) : (
-            <IndexClassDesc key="1" focus={true}>
+            <IndexClassDesc key="1" focus={true.toString()}>
               "로마는 하루 아침에 이루어지지 않았다."
               <br /> SGAEM에 들어와서 아직 이루지 못한 나의 꿈, 내가 하고 싶은
               일. 이러한 것들을 이루기 위하여 여러분은 ‘어떠한’ 역할이 되어

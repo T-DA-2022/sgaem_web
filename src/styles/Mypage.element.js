@@ -58,6 +58,9 @@ export const ProfileBox = styled.div`
   @media only screen and (max-width: 1440px) {
     border-radius: 30px;
   }
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const ProfileImg = styled.div`
@@ -126,6 +129,9 @@ export const ProcessBox = styled.div`
   @media only screen and (max-width: 1440px) {
     border-radius: 30px;
   }
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const ProcessTextDiv = styled.div`
@@ -135,9 +141,6 @@ export const ProcessTextDiv = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-left: 3vw;
-  &:hover {
-    cursor: pointer;
-  }
 `;
 
 export const ProcessDot = styled.div`

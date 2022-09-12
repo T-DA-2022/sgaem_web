@@ -199,27 +199,48 @@ export const NewsSubTextContainer = styled.div`
 `;
 
 export const NewsContentContainer = styled.div`
-  background-color: blue;
+  /* background-color: blue; */
   display: flex;
   flex-direction: row;
 `;
 
 export const NewsContent = styled.div`
-  background-color: pink;
+  /* background-color: pink; */
   width: 30vw;
   height: 30vw;
   margin: 0 10px;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 2px 5px 0 #c7c7c7;
 `;
 export const NewsImg = styled.div`
-  background-color: green;
+  background-color: #e4e4e4;
+  background-image: url(${(props) => props.src});
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   height: 76%;
 `;
 
 export const NewsText = styled.div`
-  background-color: orange;
+  /* background-color: orange; */
   height: 24%;
+  text-align: left;
+  padding: 0.5vw 1vw;
+`;
+export const NewsMainText = styled.div`
+  font-size: 24px;
+
+  @media only screen and (max-width: 1440px) {
+    font-size: 20px;
+  }
+`;
+export const NewsSubText = styled.div`
+  font-size: 16px;
+  color: #707070;
+  @media only screen and (max-width: 1440px) {
+    font-size: 12px;
+  }
 `;
 
 export const YoutubeContainer = styled.div`

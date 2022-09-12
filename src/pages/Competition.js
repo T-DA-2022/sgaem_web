@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { useSnackbar } from "notistack";
+
 import {
   CompApplyBtn,
   CompBackgroundContainer,
@@ -22,11 +25,41 @@ import {
 // import img_src_banner from "../assets/comp_banner_new.png";
 import img_src_banner from "../assets/comp_test.jpeg";
 // import img_src_poster from "../assets/competition_poster_tmp.png";
-import img_src_poster from "../assets/comp_poster_recent.png";
+// import img_src_poster from "../assets/comp_poster_recent.png";
 import { TbCircle1, TbCircle2, TbCircle3, TbCircle4 } from "react-icons/tb";
 import { FcNext } from "react-icons/fc";
 
 const Competition = () => {
+  const [compData, setCompData] = useState({
+    imageSrc: {
+      data: "",
+    },
+  });
+  useEffect(() => {
+    axios
+      .get("http://localhost:4000/comp/recent", {
+        withCredentials: true,
+      })
+      .then((res) => {
+        console.log(res.data.compData[0]);
+        setCompData(res.data.compData[0]);
+      });
+  }, []);
+  const { enqueueSnackbar } = useSnackbar();
+
+  const CompApplyHandler = () => {
+    if (
+      Date.parse(compData.startdate) <= Date.now() &&
+      Date.parse(compData.enddate) >= Date.now()
+    ) {
+      window.open(`${compData.link}`, "_blank");
+    } else {
+      enqueueSnackbar("참가신청 기간이 아닙니다. 스겜에 문의해주세요!", {
+        variant: "error",
+      });
+    }
+  };
+
   return (
     <CompContainer>
       <CompBackgroundContainer src={img_src_banner}>
@@ -35,8 +68,12 @@ const Competition = () => {
         </CompBackgroundTextContainer>
       </CompBackgroundContainer>
       <CompContentContainer>
-        <CompPosterContainer src={img_src_poster}></CompPosterContainer>
-        <CompApplyBtn>신청하기</CompApplyBtn>
+        {/* <CompPosterContainer src={img_src_poster}></CompPosterContainer> */}
+        <CompPosterContainer
+          // src={`data:image/png;base64,main_albacup-comp-1662970732120.png`}
+          src={compData.imageSrc.data}
+        ></CompPosterContainer>
+        <CompApplyBtn onClick={CompApplyHandler}>신청하기</CompApplyBtn>
         <CompProceedContainer>
           <CompProceedTextContainer>
             <CompProceedTextDiv />

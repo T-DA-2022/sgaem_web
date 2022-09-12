@@ -1,9 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
-import img_src_banner from "../assets/news_banner.png";
-import img_src_news1 from "../assets/car_img_1.jpeg";
-
-import NewsList from "../dummy/News";
+// import NewsList from "../dummy/News";
 
 import {
   NewsContainer,
@@ -21,7 +19,52 @@ import {
   NewsContentLine,
 } from "../styles/News.element.js";
 
+import img_src_banner from "../assets/news_banner.png";
+import img_src_news1 from "../assets/car_img_1.jpeg";
+
 const News = () => {
+  const [newsList, setNewsList] = useState([
+    {
+      imageSrc: {
+        data: "",
+      },
+    },
+  ]);
+  const [selectType, setSelectType] = useState("sgaem");
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:4000/news/recent/sgaem", {
+        withCredentials: true,
+      })
+      .then((res) => {
+        console.log(res.data.newsData);
+        setNewsList(res.data.newsData);
+      });
+  }, []);
+
+  const SgaemNewsHandler = () => {
+    axios
+      .get("http://localhost:4000/news/recent/sgaem", {
+        withCredentials: true,
+      })
+      .then((res) => {
+        console.log(res.data.newsData);
+        setNewsList(res.data.newsData);
+      });
+  };
+
+  const CompNewsHandler = () => {
+    axios
+      .get("http://localhost:4000/news/recent/comp", {
+        withCredentials: true,
+      })
+      .then((res) => {
+        console.log(res.data.newsData);
+        setNewsList(res.data.newsData);
+      });
+  };
+
   return (
     <NewsContainer>
       <NewsBackgroundContainer src={img_src_banner}>
@@ -31,15 +74,19 @@ const News = () => {
       </NewsBackgroundContainer>
       <NewsContentContainer>
         <NewsContentTab>
-          <NewsContentTabBtn>SGAEM 소식</NewsContentTabBtn>
-          <NewsContentTabBtn>대회 소식</NewsContentTabBtn>
+          <NewsContentTabBtn onClick={SgaemNewsHandler}>
+            SGAEM 소식
+          </NewsContentTabBtn>
+          <NewsContentTabBtn onClick={CompNewsHandler}>
+            대회 소식
+          </NewsContentTabBtn>
         </NewsContentTab>
 
         {/* <NewsContentImg src={img_src_news1} /> */}
-        {NewsList.map((data, index) => (
-          <>
+        {newsList.map((data, index) => (
+          <div key={index}>
             <NewsContent>
-              <NewsContentImg src={img_src_news1} />
+              <NewsContentImg src={data.imageSrc.data} />
               <NewsContentArticle>
                 <NewsContentArticleMainText>
                   {data.headline}
@@ -50,7 +97,7 @@ const News = () => {
               </NewsContentArticle>
             </NewsContent>
             <NewsContentLine />
-          </>
+          </div>
         ))}
       </NewsContentContainer>
     </NewsContainer>

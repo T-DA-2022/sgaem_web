@@ -49,7 +49,13 @@ export const StyledLinktmp = styled(Link)`
   text-decoration: none;
   display: flex;
   align-items: center;
-  color: ${(props) => (props.focus === true ? "#575555" : "#B8B0B0")};
+  color: ${(props) =>
+    props.listened === "true"
+      ? "#4ebe47"
+      : props.focus === "true"
+      ? "#575555"
+      : "#B8B0B0"};
+  /* color: ${(props) => (props.focus === "true" ? "#575555" : "#B8B0B0")}; */
   /* color: black; */
   &:focus,
   &:visited,
@@ -209,7 +215,13 @@ export const IndexClassDesc = styled.div`
   line-height: 1.6;
   margin-bottom: 1vw;
   font-weight: 500;
-  color: ${(props) => (props.focus === true ? "#575555" : "#B8B0B0")};
+  /* color: ${(props) => (props.focus === "true" ? "#575555" : "#B8B0B0")}; */
+  color: ${(props) =>
+    props.listened === "true"
+      ? "#4ebe47"
+      : props.focus === "true"
+      ? "#575555"
+      : "#B8B0B0"};
   @media only screen and (max-width: 1440px) {
     font-size: 14px;
   }

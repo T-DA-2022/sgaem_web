@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import img1 from "../assets/car_img_1_crop_4.png";
 // import img1 from "../assets/car_img_1_text_1.png";
 // import img1 from "../assets/car_img_1.jpeg";
-import img1 from "../assets/car_img_1_crop_4.png";
 // import img2 from "../assets/car_img_2.jpeg";
 // import img3 from "../assets/car_img_3.jpeg";
 // import img4 from "../assets/car_img_4.jpeg";
@@ -42,6 +43,17 @@ import {
 } from "../styles/Mainpage.element";
 
 const Mainpage = () => {
+  const [newsList, setNewsList] = useState([]);
+  useEffect(() => {
+    axios
+      .get("http://localhost:4000/news/recent", {
+        withCredentials: true,
+      })
+      .then((res) => {
+        console.log(res.data.newsData);
+        setNewsList(res.data.newsData);
+      });
+  }, []);
   return (
     <>
       <MainpageContainer>

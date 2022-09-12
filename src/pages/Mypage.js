@@ -33,14 +33,80 @@ import {
 const MyPage = () => {
   const [userId, setUserId] = useState("");
   const [userData, setUserData] = useState({});
+  const [videoBasic, setVideoBasic] = useState("");
+  const [videoBroadcast, setVideoBroadcast] = useState("");
+  const [videoCompetition, setVideoCompetition] = useState("");
+  const [videoContent, setVideoContent] = useState("");
+  const [videoAdvanced, setVideoAdvanced] = useState("");
   const activeMemList = ["활동 부원", "비활동 부원", "졸업생"];
   const activeRoleList = ["대회운영팀", "콘텐츠팀", "방송사업팀"];
   useEffect(() => {
     if (!localStorage.user_id) {
       console.log("잘못된 접근");
       window.location.replace("/");
+    } else {
+      axios
+        .get(
+          `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${process.env.REACT_APP_COURSE_BASIC}&maxResults=100&key=${process.env.REACT_APP_API_KEY}`
+        )
+        .then((res) => {
+          // console.log(res.data.pageInfo.totalResults);
+          setVideoBasic(res.data.pageInfo.totalResults);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+      axios
+        .get(
+          `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${process.env.REACT_APP_COURSE_BROADCAST}&maxResults=100&key=${process.env.REACT_APP_API_KEY}`
+        )
+        .then((res) => {
+          // console.log(res.data.pageInfo.totalResults);
+
+          setVideoBroadcast(res.data.pageInfo.totalResults);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+      axios
+        .get(
+          `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${process.env.REACT_APP_COURSE_COMPETITION}&maxResults=100&key=${process.env.REACT_APP_API_KEY}`
+        )
+        .then((res) => {
+          // console.log(res.data.pageInfo.totalResults);
+
+          setVideoCompetition(res.data.pageInfo.totalResults);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+      axios
+        .get(
+          `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${process.env.REACT_APP_COURSE_CONTENT}&maxResults=100&key=${process.env.REACT_APP_API_KEY}`
+        )
+        .then((res) => {
+          // console.log(res.data.pageInfo.totalResults);
+
+          setVideoContent(res.data.pageInfo.totalResults);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+      axios
+        .get(
+          `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${process.env.REACT_APP_COURSE_ADVANCED}&maxResults=100&key=${process.env.REACT_APP_API_KEY}`
+        )
+        .then((res) => {
+          // console.log(res.data.pageInfo.totalResults);
+
+          setVideoAdvanced(res.data.pageInfo.totalResults);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     }
-  });
+  }, []);
+
   useEffect(() => {
     setUserId(localStorage.user_id);
     axios
@@ -54,8 +120,6 @@ const MyPage = () => {
       });
   }, [userId]);
 
-  const now = 5;
-  const percent = ((now / 7) * 100).toFixed(0);
   return (
     <MyPageContainer>
       <ContainerTop>
@@ -99,70 +163,79 @@ const MyPage = () => {
             <TitleBar />
             <TitleText>진행중인 교육</TitleText>
           </TitleDiv>
-          <ProcessBox>
-            <ProcessTextDiv
-              onClick={() => window.location.replace("/course/basic/0")}
-            >
+          <ProcessBox
+            onClick={() => {
+              window.location.replace("/course");
+            }}
+          >
+            <ProcessTextDiv>
               <TempDiv>
                 <ProcessDot />
                 <ProcessText>스겜 기본 교육</ProcessText>
               </TempDiv>
               <MyProcessBar
-                max={7}
-                now={now}
-                label={`${percent}% 완료`}
+                max={videoBasic}
+                now={userData.courseBasic}
+                label={`${((userData.courseBasic / videoBasic) * 100).toFixed(
+                  0
+                )}% 완료`}
               ></MyProcessBar>
             </ProcessTextDiv>
-            <ProcessTextDiv
-              onClick={() => window.location.replace("/course/competition/0")}
-            >
-              <TempDiv>
-                <ProcessDot />
-                <ProcessText>대회운영팀 교육</ProcessText>
-              </TempDiv>
-              <MyProcessBar
-                max={7}
-                now={now}
-                label={`${percent}% 완료`}
-              ></MyProcessBar>
-            </ProcessTextDiv>
-            <ProcessTextDiv
-              onClick={() => window.location.replace("/course/content/0")}
-            >
-              <TempDiv>
-                <ProcessDot />
-                <ProcessText>콘텐츠팀 교육</ProcessText>
-              </TempDiv>
-              <MyProcessBar
-                max={7}
-                now={now}
-                label={`${percent}% 완료`}
-              ></MyProcessBar>
-            </ProcessTextDiv>
-            <ProcessTextDiv
-              onClick={() => window.location.replace("/course/broadcast/0")}
-            >
+            <ProcessTextDiv>
               <TempDiv>
                 <ProcessDot />
                 <ProcessText>방송사업팀 교육</ProcessText>
               </TempDiv>
               <MyProcessBar
-                max={7}
-                now={now}
-                label={`${percent}% 완료`}
+                max={videoBroadcast}
+                now={userData.courseBroadcast}
+                label={`${(
+                  (userData.courseBroadcast / videoBroadcast) *
+                  100
+                ).toFixed(0)}% 완료`}
               ></MyProcessBar>
             </ProcessTextDiv>
-            <ProcessTextDiv
-              onClick={() => window.location.replace("/course/advance/0")}
-            >
+            <ProcessTextDiv>
+              <TempDiv>
+                <ProcessDot />
+                <ProcessText>대회운영팀 교육</ProcessText>
+              </TempDiv>
+              <MyProcessBar
+                max={videoCompetition}
+                now={userData.courseCompetition}
+                label={`${(
+                  (userData.courseCompetition / videoCompetition) *
+                  100
+                ).toFixed(0)}% 완료`}
+              ></MyProcessBar>
+            </ProcessTextDiv>
+            <ProcessTextDiv>
+              <TempDiv>
+                <ProcessDot />
+                <ProcessText>콘텐츠팀 교육</ProcessText>
+              </TempDiv>
+              <MyProcessBar
+                max={videoContent}
+                now={userData.courseContent}
+                label={`${(
+                  (userData.courseContent / videoContent) *
+                  100
+                ).toFixed(0)}% 완료`}
+              ></MyProcessBar>
+            </ProcessTextDiv>
+
+            <ProcessTextDiv>
               <TempDiv>
                 <ProcessDot />
                 <ProcessText>스겜 심화 교육</ProcessText>
               </TempDiv>
               <MyProcessBar
-                max={7}
-                now={now}
-                label={`${percent}% 완료`}
+                max={videoAdvanced}
+                now={userData.courseAdvanced}
+                label={`${(
+                  (userData.courseAdvanced / videoAdvanced) *
+                  100
+                ).toFixed(0)}% 완료`}
               ></MyProcessBar>
             </ProcessTextDiv>
           </ProcessBox>

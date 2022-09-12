@@ -33,7 +33,7 @@ const FixMypage = () => {
     if (!localStorage.user_id) {
       console.log("잘못된 접근");
     }
-  });
+  }, []);
   useEffect(() => {
     setUserId(localStorage.user_id);
 

@@ -48,12 +48,22 @@ import {
   NewsText,
   ActivityArticleText,
   ActivityArticleSubText,
+  NewsMainText,
+  NewsSubText,
 } from "../styles/Mainpage_tmp.element";
 // import { TbBluetooth } from "react-icons/tb";
 
 const MainpageTmp = () => {
   const [youtubeLink1, setYoutubeLink1] = useState("");
   const [youtubeLink2, setYoutubeLink2] = useState("");
+  const [newsList, setNewsList] = useState([
+    {
+      imageSrc: {
+        data: "",
+      },
+    },
+  ]);
+
   var windowWidth = window.innerWidth;
 
   useEffect(() => {
@@ -67,6 +77,14 @@ const MainpageTmp = () => {
       })
       .catch((err) => {
         console.log(err);
+      });
+    axios
+      .get("http://localhost:4000/news/recent", {
+        withCredentials: true,
+      })
+      .then((res) => {
+        console.log(res.data.newsData);
+        setNewsList(res.data.newsData);
       });
   }, []);
 
@@ -153,12 +171,15 @@ const MainpageTmp = () => {
             스겜의 최신 소식을 확인하세요
           </NewsSubTextContainer>
           <NewsContentContainer>
-            <NewsContent>
-              <NewsImg></NewsImg>
-              <NewsText></NewsText>
-            </NewsContent>
-            <NewsContent></NewsContent>
-            <NewsContent></NewsContent>
+            {newsList.map((data, index) => (
+              <NewsContent key={index}>
+                <NewsImg src={data.imageSrc.data}></NewsImg>
+                <NewsText>
+                  <NewsMainText>{data.headline}</NewsMainText>
+                  <NewsSubText>{data.content}</NewsSubText>
+                </NewsText>
+              </NewsContent>
+            ))}
           </NewsContentContainer>
         </NewsContainer>
         <YoutubeContainer>

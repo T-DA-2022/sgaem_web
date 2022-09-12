@@ -65,6 +65,9 @@ export const NewsContentTabBtn = styled.div`
   @media only screen and (max-width: 1440px) {
     font-size: 15px;
   }
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const NewsContent = styled.div`
