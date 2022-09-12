@@ -97,7 +97,7 @@ const Register = () => {
       } else {
         // console.log(userData);
         axios
-          .post("http://localhost:4000/auth/join", userData, {
+          .post("https://sgaem-web.herokuapp.com/auth/join", userData, {
             withCredentials: true,
           })
           .then((res) => {

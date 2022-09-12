@@ -110,7 +110,7 @@ const MyPage = () => {
   useEffect(() => {
     setUserId(localStorage.user_id);
     axios
-      .get("http://localhost:4000/auth/mypage", userId, {
+      .get("https://sgaem-web.herokuapp.com/auth/mypage", userId, {
         withCredentials: true,
       })
       .then((res) => {

@@ -37,7 +37,7 @@ const Competition = () => {
   });
   useEffect(() => {
     axios
-      .get("http://localhost:4000/comp/recent", {
+      .get("https://sgaem-web.herokuapp.com/comp/recent", {
         withCredentials: true,
       })
       .then((res) => {

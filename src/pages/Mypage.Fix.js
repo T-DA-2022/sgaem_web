@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 import axios from "axios";
 import { useSnackbar } from "notistack";
 import Dropdown from "react-bootstrap/Dropdown";
@@ -38,7 +39,7 @@ const FixMypage = () => {
     setUserId(localStorage.user_id);
 
     axios
-      .get("http://localhost:4000/auth/mypage", userId, {
+      .get("https://sgaem-web.herokuapp.com/auth/mypage", userId, {
         withCredentials: true,
       })
       .then((res) => {
@@ -131,7 +132,7 @@ const FixMypage = () => {
       );
     } else {
       axios
-        .post("http://localhost:4000/auth/fixmypage", userData, {
+        .post("https://sgaem-web.herokuapp.com/auth/fixmypage", userData, {
           withCredentials: true,
         })
         .then((res) => {

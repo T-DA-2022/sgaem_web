@@ -75,9 +75,13 @@ const CourseClass = () => {
       }, 1500);
     } else {
       axios
-        .get("http://localhost:4000/auth/mypage", localStorage.user_id, {
-          withCredentials: true,
-        })
+        .get(
+          "https://sgaem-web.herokuapp.com/auth/mypage",
+          localStorage.user_id,
+          {
+            withCredentials: true,
+          }
+        )
         .then((res) => {
           setUserData(res.data.user);
         });
@@ -230,7 +234,7 @@ const CourseClass = () => {
       [e.target.id]: tmp,
     };
     axios
-      .post("http://localhost:4000/auth/fixmypage", updated, {
+      .post("https://sgaem-web.herokuapp.com/auth/fixmypage", updated, {
         withCredentials: true,
       })
       .then((res) => {

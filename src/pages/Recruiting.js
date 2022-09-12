@@ -25,7 +25,7 @@ const Recruiting = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/recruit/recent", {
+      .get("https://sgaem-web.herokuapp.com/recruit/recent", {
         withCredentials: true,
       })
       .then((res) => {

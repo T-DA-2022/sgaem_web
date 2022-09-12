@@ -46,7 +46,7 @@ const Mainpage = () => {
   const [newsList, setNewsList] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:4000/news/recent", {
+      .get("https://sgaem-web.herokuapp.com/news/recent", {
         withCredentials: true,
       })
       .then((res) => {
