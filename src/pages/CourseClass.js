@@ -71,7 +71,7 @@ const CourseClass = () => {
     if (!localStorage.user_id) {
       enqueueSnackbar("로그인 후 이용 가능합니다", { variant: "warning" });
       setTimeout(() => {
-        window.location.replace("/mypage");
+        window.location.replace("/");
       }, 1500);
     } else {
       axios
