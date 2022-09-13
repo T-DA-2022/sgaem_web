@@ -20,7 +20,7 @@ export const CCTopBar = styled.div`
 
 export const CCTopBarBtnContainer = styled.div`
   /* background-color: green; */
-  width: 20%;
+  width: 23%;
   height: 100%;
   font-size: 16px;
   display: flex;

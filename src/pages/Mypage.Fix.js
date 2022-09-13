@@ -39,7 +39,7 @@ const FixMypage = () => {
     setUserId(localStorage.user_id);
 
     axios
-      .get("https://sgaem-web.herokuapp.com/auth/mypage", userId, {
+      .get(`${process.env.REACT_APP_BACKEND_ADDRESS}/auth/mypage`, userId, {
         withCredentials: true,
       })
       .then((res) => {
@@ -132,9 +132,13 @@ const FixMypage = () => {
       );
     } else {
       axios
-        .post("https://sgaem-web.herokuapp.com/auth/fixmypage", userData, {
-          withCredentials: true,
-        })
+        .post(
+          `${process.env.REACT_APP_BACKEND_ADDRESS}/auth/fixmypage`,
+          userData,
+          {
+            withCredentials: true,
+          }
+        )
         .then((res) => {
           console.log("@@@fix result@@@");
           console.log(res);

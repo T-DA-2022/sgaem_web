@@ -3,7 +3,7 @@ import axios from "axios";
 
 const LogoutPage = ({ history }) => {
   axios
-    .get("https://sgaem-web.herokuapp.com/auth/logout", {
+    .get(`${process.env.REACT_APP_BACKEND_ADDRESS}/auth/logout`, {
       withCredentials: true,
     })
     .then((res) => {

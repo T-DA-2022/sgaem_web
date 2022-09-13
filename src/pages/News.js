@@ -34,7 +34,7 @@ const News = () => {
 
   useEffect(() => {
     axios
-      .get("https://sgaem-web.herokuapp.com/news/recent/sgaem", {
+      .get(`${process.env.REACT_APP_BACKEND_ADDRESS}/news/recent/sgaem`, {
         withCredentials: true,
       })
       .then((res) => {
@@ -45,7 +45,7 @@ const News = () => {
 
   const SgaemNewsHandler = () => {
     axios
-      .get("https://sgaem-web.herokuapp.com/news/recent/sgaem", {
+      .get(`${process.env.REACT_APP_BACKEND_ADDRESS}/news/recent/sgaem`, {
         withCredentials: true,
       })
       .then((res) => {
@@ -56,7 +56,7 @@ const News = () => {
 
   const CompNewsHandler = () => {
     axios
-      .get("https://sgaem-web.herokuapp.com/news/recent/comp", {
+      .get(`${process.env.REACT_APP_BACKEND_ADDRESS}/news/recent/comp`, {
         withCredentials: true,
       })
       .then((res) => {

@@ -315,7 +315,7 @@ export const HistoryTimeLineContent = styled.div`
   color: #707070;
   font-size: 20px;
   @media only screen and (max-width: 1440px) {
-    font-size: 16px;
+    font-size: 15px;
   }
 `;
 

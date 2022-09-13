@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
+
 import img1 from "../assets/car_img_1_crop_4.png";
 // import img1 from "../assets/car_img_1_text_1.png";
 // import img1 from "../assets/car_img_1.jpeg";
@@ -43,17 +43,6 @@ import {
 } from "../styles/Mainpage.element";
 
 const Mainpage = () => {
-  const [newsList, setNewsList] = useState([]);
-  useEffect(() => {
-    axios
-      .get("https://sgaem-web.herokuapp.com/news/recent", {
-        withCredentials: true,
-      })
-      .then((res) => {
-        console.log(res.data.newsData);
-        setNewsList(res.data.newsData);
-      });
-  }, []);
   return (
     <>
       <MainpageContainer>

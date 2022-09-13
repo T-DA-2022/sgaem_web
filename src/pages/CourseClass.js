@@ -76,7 +76,7 @@ const CourseClass = () => {
     } else {
       axios
         .get(
-          "https://sgaem-web.herokuapp.com/auth/mypage",
+          `${process.env.REACT_APP_BACKEND_ADDRESS}/auth/mypage`,
           localStorage.user_id,
           {
             withCredentials: true,
@@ -234,9 +234,13 @@ const CourseClass = () => {
       [e.target.id]: tmp,
     };
     axios
-      .post("https://sgaem-web.herokuapp.com/auth/fixmypage", updated, {
-        withCredentials: true,
-      })
+      .post(
+        `${process.env.REACT_APP_BACKEND_ADDRESS}/auth/fixmypage`,
+        updated,
+        {
+          withCredentials: true,
+        }
+      )
       .then((res) => {
         if (res.data.statusCode === 401 || res.data.statusCode === 500) {
           enqueueSnackbar("수정실패 관리자에게 문의하세요", {

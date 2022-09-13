@@ -97,9 +97,13 @@ const Register = () => {
       } else {
         // console.log(userData);
         axios
-          .post("https://sgaem-web.herokuapp.com/auth/join", userData, {
-            withCredentials: true,
-          })
+          .post(
+            `${process.env.REACT_APP_BACKEND_ADDRESS}/auth/join`,
+            userData,
+            {
+              withCredentials: true,
+            }
+          )
           .then((res) => {
             console.log("@@@register result@@@");
             console.log(res);

@@ -161,7 +161,6 @@ export const ActivityArticleSubText = styled.div`
   color: #707070;
   font-size: 16px;
   text-align: left;
-  font-family: "Noto Sans";
   line-height: 26px;
   @media only screen and (max-width: 1440px) {
     font-size: 12px;
@@ -230,9 +229,10 @@ export const NewsText = styled.div`
 `;
 export const NewsMainText = styled.div`
   font-size: 24px;
+  margin-bottom: 0.5vw;
 
   @media only screen and (max-width: 1440px) {
-    font-size: 20px;
+    font-size: 18px;
   }
 `;
 export const NewsSubText = styled.div`

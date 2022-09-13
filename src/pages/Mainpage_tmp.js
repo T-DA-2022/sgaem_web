@@ -58,6 +58,7 @@ const MainpageTmp = () => {
   const [youtubeLink2, setYoutubeLink2] = useState("");
   const [newsList, setNewsList] = useState([
     {
+      content: "",
       imageSrc: {
         data: "",
       },
@@ -72,6 +73,7 @@ const MainpageTmp = () => {
         `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCldf-sx1NRh0Tls03EpTySA&maxResults=2&type=video&order=date&key=${process.env.REACT_APP_API_KEY}`
       )
       .then((res) => {
+        console.log(res.data.items);
         setYoutubeLink1(res.data.items[0].id.videoId);
         setYoutubeLink2(res.data.items[1].id.videoId);
       })
@@ -79,7 +81,7 @@ const MainpageTmp = () => {
         console.log(err);
       });
     axios
-      .get("https://sgaem-web.herokuapp.com/news/recent", {
+      .get(`${process.env.REACT_APP_BACKEND_ADDRESS}/news/recent`, {
         withCredentials: true,
       })
       .then((res) => {
@@ -176,7 +178,13 @@ const MainpageTmp = () => {
                 <NewsImg src={data.imageSrc.data}></NewsImg>
                 <NewsText>
                   <NewsMainText>{data.headline}</NewsMainText>
-                  <NewsSubText>{data.content}</NewsSubText>
+                  {data.content.length >= 130 ? (
+                    <NewsSubText>
+                      {data.content.substr(0, 130) + "..."}
+                    </NewsSubText>
+                  ) : (
+                    <NewsSubText>{data.content}</NewsSubText>
+                  )}
                 </NewsText>
               </NewsContent>
             ))}
