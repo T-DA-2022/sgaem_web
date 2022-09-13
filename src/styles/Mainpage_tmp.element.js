@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const MainpageContainer = styled.div`
   text-align: center;
   height: auto;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   display: flex;
   flex-direction: column;
   align-items: center;
