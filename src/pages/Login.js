@@ -31,14 +31,14 @@ const Login = () => {
 
   const onSubmitForm = (e) => {
     e.preventDefault();
-    console.log(userData);
+    // console.log(userData);
     axios
       .post(`${process.env.REACT_APP_BACKEND_ADDRESS}/auth/login`, userData, {
         withCredentials: true,
       })
       .then((res) => {
-        console.log("@@@login result@@@");
-        console.log(res);
+        // console.log("@@@login result@@@");
+        // console.log(res);
         if (res.data.statusCode === 401) {
           enqueueSnackbar("사용자를 찾을 수 없습니다", {
             variant: "error",

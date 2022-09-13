@@ -41,7 +41,7 @@ const Competition = () => {
         withCredentials: true,
       })
       .then((res) => {
-        console.log(res.data.compData[0]);
+        // console.log(res.data.compData[0]);
         setCompData(res.data.compData[0]);
       });
   }, []);

@@ -30,7 +30,6 @@ const News = () => {
       },
     },
   ]);
-  const [selectType, setSelectType] = useState("sgaem");
 
   useEffect(() => {
     axios
@@ -38,7 +37,7 @@ const News = () => {
         withCredentials: true,
       })
       .then((res) => {
-        console.log(res.data.newsData);
+        // console.log(res.data.newsData);
         setNewsList(res.data.newsData);
       });
   }, []);
@@ -49,7 +48,7 @@ const News = () => {
         withCredentials: true,
       })
       .then((res) => {
-        console.log(res.data.newsData);
+        // console.log(res.data.newsData);
         setNewsList(res.data.newsData);
       });
   };
@@ -60,7 +59,7 @@ const News = () => {
         withCredentials: true,
       })
       .then((res) => {
-        console.log(res.data.newsData);
+        // console.log(res.data.newsData);
         setNewsList(res.data.newsData);
       });
   };

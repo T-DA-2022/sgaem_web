@@ -22,6 +22,7 @@ import {
 } from "../styles/Mypage.Fix.element";
 
 const FixMypage = () => {
+  const { enqueueSnackbar } = useSnackbar();
   const [userId, setUserId] = useState("");
   const [userData, setUserData] = useState({});
   const generationList = [
@@ -30,9 +31,13 @@ const FixMypage = () => {
   ];
   const activeMemList = ["활동 부원", "비활동 부원", "졸업생"];
   const activeRoleList = ["대회운영팀", "콘텐츠팀", "방송사업팀"];
+
   useEffect(() => {
     if (!localStorage.user_id) {
-      console.log("잘못된 접근");
+      enqueueSnackbar("로그인 후 이용 가능합니다", { variant: "warning" });
+      setTimeout(() => {
+        window.location.replace("/");
+      }, 1500);
     }
   }, []);
   useEffect(() => {
@@ -104,7 +109,6 @@ const FixMypage = () => {
     });
   };
 
-  const { enqueueSnackbar } = useSnackbar();
   const validate = (userData) => {
     let errors = {};
     const phoneRegex = /^01(?:0|1|[6-9])-(?:\d{3}|\d{4})-\d{4}$/;

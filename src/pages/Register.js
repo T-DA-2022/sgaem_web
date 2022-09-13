@@ -105,15 +105,15 @@ const Register = () => {
             }
           )
           .then((res) => {
-            console.log("@@@register result@@@");
-            console.log(res);
+            // console.log("@@@register result@@@");
+            // console.log(res);
             if (res.data.statusCode === 401) {
               enqueueSnackbar("이미 등록된 사용자입니다", {
                 variant: "error",
               });
             }
             if (res.data.statusCode === 201) {
-              console.log(res);
+              // console.log(res);
               enqueueSnackbar("회원가입 성공!", {
                 variant: "success",
               });

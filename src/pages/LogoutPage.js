@@ -8,7 +8,7 @@ const LogoutPage = ({ history }) => {
     })
     .then((res) => {
       localStorage.clear();
-      console.log(localStorage);
+      // console.log(localStorage);
       window.location.replace("/");
     });
   return <div />;

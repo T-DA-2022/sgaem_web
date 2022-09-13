@@ -29,7 +29,7 @@ const Recruiting = () => {
         withCredentials: true,
       })
       .then((res) => {
-        console.log(res.data.recruitData[0]);
+        // console.log(res.data.recruitData[0]);
         setRecruitData(res.data.recruitData[0]);
       });
   }, []);

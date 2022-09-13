@@ -160,7 +160,7 @@ export const ActivityArticleText = styled.div`
 `;
 export const ActivityArticleSubText = styled.div`
   color: #707070;
-  font-size: 16px;
+  font-size: 15px;
   text-align: left;
   line-height: 26px;
   @media only screen and (max-width: 1440px) {

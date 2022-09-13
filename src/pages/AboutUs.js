@@ -476,6 +476,9 @@ const AboutUs = () => {
                   <ActivityContentArticleSubText>
                     DRX(2020) : DRX Academy와 함께 하는 LOL CS 챌린지 참가
                   </ActivityContentArticleSubText>
+                  <ActivityContentArticleSubText>
+                    농심 레드포스(2022) : 2022학년도 알바트로스 컵 후원 유치
+                  </ActivityContentArticleSubText>
                 </ActivityContentArticle>
               </ActivityContentBox>
             </ActivityContent>

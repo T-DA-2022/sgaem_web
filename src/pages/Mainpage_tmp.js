@@ -73,7 +73,7 @@ const MainpageTmp = () => {
         `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCldf-sx1NRh0Tls03EpTySA&maxResults=2&type=video&order=date&key=${process.env.REACT_APP_API_KEY}`
       )
       .then((res) => {
-        console.log(res.data.items);
+        // console.log(res.data.items);
         setYoutubeLink1(res.data.items[0].id.videoId);
         setYoutubeLink2(res.data.items[1].id.videoId);
       })
@@ -85,7 +85,7 @@ const MainpageTmp = () => {
         withCredentials: true,
       })
       .then((res) => {
-        console.log(res.data.newsData);
+        // console.log(res.data.newsData);
         setNewsList(res.data.newsData);
       });
   }, []);

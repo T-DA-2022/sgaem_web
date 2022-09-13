@@ -227,7 +227,7 @@ const CourseClass = () => {
     }
 
     tmp = tmp + 1;
-    console.log(tmp);
+    // console.log(tmp);
 
     const updated = {
       ...userData,
@@ -248,7 +248,7 @@ const CourseClass = () => {
           });
         }
         if (res.data.statusCode === 201) {
-          console.log(res);
+          // console.log(res);
           enqueueSnackbar("수강정보 수정 성공!", {
             variant: "success",
           });

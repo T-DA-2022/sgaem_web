@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useSnackbar } from "notistack";
 import "react-notion/src/styles.css";
 
 import {
@@ -40,10 +41,13 @@ const MyPage = () => {
   const [videoAdvanced, setVideoAdvanced] = useState("");
   const activeMemList = ["활동 부원", "비활동 부원", "졸업생"];
   const activeRoleList = ["대회운영팀", "콘텐츠팀", "방송사업팀"];
+  const { enqueueSnackbar } = useSnackbar();
   useEffect(() => {
     if (!localStorage.user_id) {
-      console.log("잘못된 접근");
-      window.location.replace("/");
+      enqueueSnackbar("로그인 후 이용 가능합니다", { variant: "warning" });
+      setTimeout(() => {
+        window.location.replace("/");
+      }, 1500);
     } else {
       axios
         .get(
@@ -114,8 +118,8 @@ const MyPage = () => {
         withCredentials: true,
       })
       .then((res) => {
-        console.log("@@@mypage result@@@");
-        console.log(res.data.user);
+        // console.log("@@@mypage result@@@");
+        // console.log(res.data.user);
         setUserData(res.data.user);
       });
   }, [userId]);

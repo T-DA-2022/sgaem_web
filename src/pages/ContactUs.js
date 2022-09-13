@@ -84,7 +84,7 @@ const ContactUs = () => {
       // console.log(valid);
       // console.log(emailForm.name);
     } else {
-      console.log(emailForm);
+      // console.log(emailForm);
 
       // /* 배포시 주석 풀기 (월 200회 제한)
       send(
