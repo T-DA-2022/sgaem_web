@@ -32,8 +32,14 @@ import {
 } from "../styles/Mypage.element";
 
 const MyPage = () => {
-  const [userId, setUserId] = useState("");
-  const [userData, setUserData] = useState({});
+  const [userId, setUserId] = useState({});
+  const [userData, setUserData] = useState({
+    generation: "",
+    name: "",
+    goal: "",
+    activeMem: 0,
+    activeRole: 0,
+  });
   const [videoBasic, setVideoBasic] = useState("");
   const [videoBroadcast, setVideoBroadcast] = useState("");
   const [videoCompetition, setVideoCompetition] = useState("");
@@ -44,10 +50,7 @@ const MyPage = () => {
   const { enqueueSnackbar } = useSnackbar();
   useEffect(() => {
     if (!localStorage.user_id) {
-      enqueueSnackbar("로그인 후 이용 가능합니다", { variant: "warning" });
-      setTimeout(() => {
-        window.location.replace("/");
-      }, 1500);
+      window.location.replace("/unknown");
     } else {
       axios
         .get(
@@ -112,17 +115,25 @@ const MyPage = () => {
   }, []);
 
   useEffect(() => {
-    setUserId(localStorage.user_id);
+    setUserId(localStorage);
+    console.log(localStorage.user_id);
+
     axios
-      .get(`${process.env.REACT_APP_BACKEND_ADDRESS}/auth/mypage`, userId, {
-        withCredentials: true,
-      })
+      .post(
+        `${process.env.REACT_APP_BACKEND_ADDRESS}/auth/mypage`,
+        // `http://localhost:4000/auth/mypage`,
+        localStorage,
+        {
+          withCredentials: true,
+        }
+      )
       .then((res) => {
         // console.log("@@@mypage result@@@");
-        // console.log(res.data.user);
+        console.log(res.data.user);
         setUserData(res.data.user);
+        // window.location.reload();
       });
-  }, [userId]);
+  }, []);
 
   return (
     <MyPageContainer>

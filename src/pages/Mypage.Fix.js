@@ -34,19 +34,19 @@ const FixMypage = () => {
 
   useEffect(() => {
     if (!localStorage.user_id) {
-      enqueueSnackbar("로그인 후 이용 가능합니다", { variant: "warning" });
-      setTimeout(() => {
-        window.location.replace("/");
-      }, 1500);
+      window.location.replace("/unknown");
     }
   }, []);
   useEffect(() => {
-    setUserId(localStorage.user_id);
-
     axios
-      .get(`${process.env.REACT_APP_BACKEND_ADDRESS}/auth/mypage`, userId, {
-        withCredentials: true,
-      })
+      .post(
+        `${process.env.REACT_APP_BACKEND_ADDRESS}/auth/mypage`,
+        // "http://localhost:4000/auth/mypage",
+        localStorage,
+        {
+          withCredentials: true,
+        }
+      )
       .then((res) => {
         console.log("@@@fix my page result@@@");
         setUserData(res.data.user);

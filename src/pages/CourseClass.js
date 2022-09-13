@@ -75,7 +75,7 @@ const CourseClass = () => {
       }, 1500);
     } else {
       axios
-        .get(
+        .post(
           `${process.env.REACT_APP_BACKEND_ADDRESS}/auth/mypage`,
           localStorage.user_id,
           {

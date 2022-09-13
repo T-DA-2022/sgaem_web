@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 
 import img_pnf_src from "../assets/page_not_found_cat.png";
 
 const Notfound = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      window.location.replace("/");
+    }, 1500);
+  });
   return (
     <PNFContainer onClick={() => window.location.replace("/")}>
       <PNFText>pagenotfound</PNFText>
