@@ -115,6 +115,7 @@ export const ActivityContentContainer = styled.div`
   width: 63.5vw;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 `;
 
 export const ActivityContent = styled.div`
@@ -218,14 +219,14 @@ export const NewsImg = styled.div`
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  height: 76%;
+  height: 72%;
 `;
 
 export const NewsText = styled.div`
   /* background-color: orange; */
-  height: 24%;
+  height: 28%;
   text-align: left;
-  padding: 0.5vw 1vw;
+  padding: 1vw 1vw;
 `;
 export const NewsMainText = styled.div`
   font-size: 24px;
