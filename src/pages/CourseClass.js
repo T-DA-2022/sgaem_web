@@ -77,7 +77,7 @@ const CourseClass = () => {
       axios
         .post(
           `${process.env.REACT_APP_BACKEND_ADDRESS}/auth/mypage`,
-          localStorage.user_id,
+          localStorage,
           {
             withCredentials: true,
           }
