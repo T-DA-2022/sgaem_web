@@ -1,4 +1,14 @@
 import React from "react";
+
+//assets import
+import SgaemLogoSrc from "../assets/sgaem_logo_new.png";
+import IGLogoSrc from "../assets/ig_logo.png";
+import FBLogoSrc from "../assets/fb_logo_tp.png";
+import YTLogoSrc from "../assets/yt_logo_tp.png";
+import TWLogoSrc from "../assets/tw_logo_tp.png";
+import { MdMail } from "react-icons/md";
+
+//style import
 import {
   BottomBarBox,
   BottomBarBoxText,
@@ -13,12 +23,6 @@ import {
   BottomBarMaker,
   BottomBarMakerIndiv,
 } from "../styles/BottomBar.element";
-import SgaemLogoSrc from "../assets/sgaem_logo_new.png";
-import IGLogoSrc from "../assets/ig_logo.png";
-import FBLogoSrc from "../assets/fb_logo_tp.png";
-import YTLogoSrc from "../assets/yt_logo_tp.png";
-import TWLogoSrc from "../assets/tw_logo_tp.png";
-import { MdMail } from "react-icons/md";
 
 const BottomBar = () => {
   return (

@@ -4,7 +4,6 @@ import YouTube from "react-youtube";
 import { useSnackbar } from "notistack";
 
 import axios from "axios";
-// import ProgressBar from "react-bootstrap/ProgressBar";
 
 import {
   CCContainer,
@@ -68,24 +67,17 @@ const CourseClass = () => {
   const { enqueueSnackbar } = useSnackbar();
 
   useEffect(() => {
-    if (!localStorage.user_id) {
-      enqueueSnackbar("로그인 후 이용 가능합니다", { variant: "warning" });
-      setTimeout(() => {
-        window.location.replace("/");
-      }, 1500);
-    } else {
-      axios
-        .post(
-          `${process.env.REACT_APP_BACKEND_ADDRESS}/auth/mypage`,
-          localStorage,
-          {
-            withCredentials: true,
-          }
-        )
-        .then((res) => {
-          setUserData(res.data.user);
-        });
-    }
+    axios
+      .post(
+        `${process.env.REACT_APP_BACKEND_ADDRESS}/auth/mypage`,
+        localStorage,
+        {
+          withCredentials: true,
+        }
+      )
+      .then((res) => {
+        setUserData(res.data.user);
+      });
   }, [enqueueSnackbar]);
   useEffect(() => {
     if (courseName === "basic") {
@@ -99,7 +91,19 @@ const CourseClass = () => {
           setVideoBasic(res.data.pageInfo.totalResults);
         })
         .catch((err) => {
-          console.log(err);
+          axios
+            .get(
+              `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${process.env.REACT_APP_COURSE_BASIC}&maxResults=100&key=${process.env.REACT_APP_API_KEY2}`
+            )
+            .then((res) => {
+              setVideoList(res.data.items);
+              setVideoData(res.data.items[videoNum].snippet);
+              setVideoBasic(res.data.pageInfo.totalResults);
+            })
+            .catch((error) => {
+              console.log(err);
+              console.log(error);
+            });
         });
     } else if (courseName === "broadcast") {
       axios
@@ -112,7 +116,19 @@ const CourseClass = () => {
           setVideoBroadcast(res.data.pageInfo.totalResults);
         })
         .catch((err) => {
-          console.log(err);
+          axios
+            .get(
+              `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${process.env.REACT_APP_COURSE_BROADCAST}&maxResults=100&key=${process.env.REACT_APP_API_KEY2}`
+            )
+            .then((res) => {
+              setVideoList(res.data.items);
+              setVideoData(res.data.items[videoNum].snippet);
+              setVideoBroadcast(res.data.pageInfo.totalResults);
+            })
+            .catch((error) => {
+              console.log(err);
+              console.log(error);
+            });
         });
     } else if (courseName === "competition") {
       axios
@@ -125,7 +141,19 @@ const CourseClass = () => {
           setVideoCompetition(res.data.pageInfo.totalResults);
         })
         .catch((err) => {
-          console.log(err);
+          axios
+            .get(
+              `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${process.env.REACT_APP_COURSE_COMPETITION}&maxResults=100&key=${process.env.REACT_APP_API_KEY2}`
+            )
+            .then((res) => {
+              setVideoList(res.data.items);
+              setVideoData(res.data.items[videoNum].snippet);
+              setVideoCompetition(res.data.pageInfo.totalResults);
+            })
+            .catch((error) => {
+              console.log(err);
+              console.log(error);
+            });
         });
     } else if (courseName === "content") {
       axios
@@ -138,7 +166,19 @@ const CourseClass = () => {
           setVideoContent(res.data.pageInfo.totalResults);
         })
         .catch((err) => {
-          console.log(err);
+          axios
+            .get(
+              `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${process.env.REACT_APP_COURSE_CONTENT}&maxResults=100&key=${process.env.REACT_APP_API_KEY2}`
+            )
+            .then((res) => {
+              setVideoList(res.data.items);
+              setVideoData(res.data.items[videoNum].snippet);
+              setVideoContent(res.data.pageInfo.totalResults);
+            })
+            .catch((error) => {
+              console.log(err);
+              console.log(error);
+            });
         });
     } else if (courseName === "advanced") {
       axios
@@ -151,7 +191,19 @@ const CourseClass = () => {
           setVideoAdvanced(res.data.pageInfo.totalResults);
         })
         .catch((err) => {
-          console.log(err);
+          axios
+            .get(
+              `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${process.env.REACT_APP_COURSE_ADVANCED}&maxResults=100&key=${process.env.REACT_APP_API_KEY2}`
+            )
+            .then((res) => {
+              setVideoList(res.data.items);
+              setVideoData(res.data.items[videoNum].snippet);
+              setVideoAdvanced(res.data.pageInfo.totalResults);
+            })
+            .catch((error) => {
+              console.log(err);
+              console.log(error);
+            });
         });
     }
   }, [courseName, videoNum]);

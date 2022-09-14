@@ -112,3 +112,18 @@ export const StyledLink = styled(Link)`
     text-decoration: none;
   }
 `;
+
+export const FakeStyledLink = styled.div`
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:focus,
+  &:hover,
+  &:visited,
+  &:link,
+  &:active {
+    text-decoration: none;
+  }
+`;

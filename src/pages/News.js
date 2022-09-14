@@ -20,7 +20,7 @@ import {
 } from "../styles/News.element.js";
 
 import img_src_banner from "../assets/news_banner.png";
-import img_src_news1 from "../assets/car_img_1.jpeg";
+// import img_src_news1 from "../assets/car_img_1.jpeg";
 
 const News = () => {
   const [newsList, setNewsList] = useState([

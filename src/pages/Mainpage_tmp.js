@@ -6,15 +6,12 @@ import Carousel from "react-bootstrap/Carousel";
 import img1 from "../assets/main_banner_1.png";
 import img2 from "../assets/main_banner_recruit.png";
 import img3 from "../assets/main_banner_comp.png";
-// import img2 from "../assets/main_banner_2.png";
-// import img3 from "../assets/main_banner_3.png";
+
 import img_vis_src from "../assets/main_2nd.png";
 import img_src_act_comp from "../assets/meeting_pic/main_activity/comp_open.png";
 import img_src_content from "../assets/meeting_pic/main_activity/content_making.png";
 import img_src_foreign from "../assets/meeting_pic/main_activity/foreign_cooperate.png";
 import img_src_networking from "../assets/meeting_pic/main_activity/networking.png";
-
-// import NewsList from "../dummy/News";
 
 // style import
 import {
@@ -78,7 +75,18 @@ const MainpageTmp = () => {
         setYoutubeLink2(res.data.items[1].id.videoId);
       })
       .catch((err) => {
-        console.log(err);
+        axios
+          .get(
+            `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCldf-sx1NRh0Tls03EpTySA&maxResults=2&type=video&order=date&key=${process.env.REACT_APP_API_KEY2}`
+          )
+          .then((res) => {
+            setYoutubeLink1(res.data.items[0].id.videoId);
+            setYoutubeLink2(res.data.items[1].id.videoId);
+          })
+          .catch((error) => {
+            console.log(err);
+            console.log(error);
+          });
       });
     axios
       .get(`${process.env.REACT_APP_BACKEND_ADDRESS}/news/recent`, {

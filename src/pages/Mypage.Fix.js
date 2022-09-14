@@ -23,7 +23,7 @@ import {
 
 const FixMypage = () => {
   const { enqueueSnackbar } = useSnackbar();
-  const [userId, setUserId] = useState("");
+
   const [userData, setUserData] = useState({});
   const generationList = [
     0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
@@ -52,7 +52,7 @@ const FixMypage = () => {
         setUserData(res.data.user);
         console.log(res.data);
       });
-  }, [userId]);
+  }, []);
   const getDropdown = (data, index) => {
     return (
       <Dropdown.Item tabIndex={index} name="generation" onClick={changeHandler}>

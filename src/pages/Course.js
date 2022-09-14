@@ -1,4 +1,5 @@
 import React from "react";
+import { useSnackbar } from "notistack";
 
 import img_src_banner from "../assets/course_banner.png";
 import img_src_icon_basic from "../assets/icon_course/icon_basic.png";
@@ -19,9 +20,17 @@ import {
   CourseContainer,
   CourseContentContainer,
   StyledLink,
+  FakeStyledLink,
 } from "../styles/Course.element";
 
 const Course = () => {
+  const isLogedIn = localStorage.user_id ? 1 : 0;
+  const { enqueueSnackbar } = useSnackbar();
+
+  const NotLoginHandler = () => {
+    enqueueSnackbar("로그인 후 이용 가능합니다", { variant: "warning" });
+  };
+
   return (
     <CourseContainer>
       <CourseBackgroundContainer src={img_src_banner}>
@@ -33,36 +42,71 @@ const Course = () => {
         <CategoryTextContatiner>Category</CategoryTextContatiner>
         <CategoryContentContainer>
           <CategoryContent>
-            <StyledLink to="basic/0">
-              <CategoryIcon src={img_src_icon_basic}></CategoryIcon>
-              <CategoryText>기본</CategoryText>
-            </StyledLink>
+            {isLogedIn ? (
+              <StyledLink to="basic/0">
+                <CategoryIcon src={img_src_icon_basic}></CategoryIcon>
+                <CategoryText>기본</CategoryText>
+              </StyledLink>
+            ) : (
+              <FakeStyledLink onClick={NotLoginHandler}>
+                <CategoryIcon src={img_src_icon_basic}></CategoryIcon>
+                <CategoryText>기본</CategoryText>
+              </FakeStyledLink>
+            )}
           </CategoryContent>
 
           <CategoryContent>
-            <StyledLink to="broadcast/0">
-              <CategoryIcon src={img_src_icon_broad}></CategoryIcon>
-              <CategoryText>방송사업</CategoryText>
-            </StyledLink>
+            {isLogedIn ? (
+              <StyledLink to="broadcast/0">
+                <CategoryIcon src={img_src_icon_broad}></CategoryIcon>
+                <CategoryText>방송사업</CategoryText>
+              </StyledLink>
+            ) : (
+              <FakeStyledLink onClick={NotLoginHandler}>
+                <CategoryIcon src={img_src_icon_broad}></CategoryIcon>
+                <CategoryText>방송사업</CategoryText>
+              </FakeStyledLink>
+            )}
           </CategoryContent>
 
           <CategoryContent>
-            <StyledLink to="competition/0">
-              <CategoryIcon src={img_src_icon_comp}></CategoryIcon>
-              <CategoryText>대회운영</CategoryText>
-            </StyledLink>
+            {isLogedIn ? (
+              <StyledLink to="competition/0">
+                <CategoryIcon src={img_src_icon_comp}></CategoryIcon>
+                <CategoryText>대회운영</CategoryText>
+              </StyledLink>
+            ) : (
+              <FakeStyledLink onClick={NotLoginHandler}>
+                <CategoryIcon src={img_src_icon_comp}></CategoryIcon>
+                <CategoryText>대회운영</CategoryText>
+              </FakeStyledLink>
+            )}
           </CategoryContent>
           <CategoryContent>
-            <StyledLink to="content/0">
-              <CategoryIcon src={img_src_icon_content}></CategoryIcon>
-              <CategoryText>콘텐츠</CategoryText>
-            </StyledLink>
+            {isLogedIn ? (
+              <StyledLink to="content/0">
+                <CategoryIcon src={img_src_icon_content}></CategoryIcon>
+                <CategoryText>콘텐츠</CategoryText>
+              </StyledLink>
+            ) : (
+              <FakeStyledLink onClick={NotLoginHandler}>
+                <CategoryIcon src={img_src_icon_content}></CategoryIcon>
+                <CategoryText>콘텐츠</CategoryText>
+              </FakeStyledLink>
+            )}
           </CategoryContent>
           <CategoryContent>
-            <StyledLink to="advanced/0">
-              <CategoryIcon src={img_src_icon_advance}></CategoryIcon>
-              <CategoryText>심화</CategoryText>
-            </StyledLink>
+            {isLogedIn ? (
+              <StyledLink to="advanced/0">
+                <CategoryIcon src={img_src_icon_advance}></CategoryIcon>
+                <CategoryText>심화</CategoryText>
+              </StyledLink>
+            ) : (
+              <FakeStyledLink onClick={NotLoginHandler}>
+                <CategoryIcon src={img_src_icon_advance}></CategoryIcon>
+                <CategoryText>심화</CategoryText>
+              </FakeStyledLink>
+            )}
           </CategoryContent>
         </CategoryContentContainer>
       </CourseContentContainer>

@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-scroll";
 
+//assets import
 import img_src_banner from "../assets/meeting_pic/recruit_banner.png";
 import img1_src from "../assets/4E.svg";
-// import img_2014_src from "../assets/car_img_3.jpeg";
 import img_act_bg from "../assets/tri_pattern_long.png";
 import img_src_2014 from "../assets/about_2014.png";
 import img_src_2015 from "../assets/about_2015.png";
@@ -18,12 +18,12 @@ import img_src_comp from "../assets/meeting_pic/detail_activity/comp.png";
 import img_src_content from "../assets/meeting_pic/detail_activity/content.png";
 import img_src_foreign from "../assets/meeting_pic/detail_activity/foreign.png";
 import img_src_network from "../assets/meeting_pic/detail_activity/network.png";
-// import img_src_team_comp from "../assets/icon_team/icon_comp_bg.png";
 import img_src_team_comp from "../assets/icon_team/icon_comp_simp.png";
 import img_src_team_content from "../assets/icon_team/icon_content_simp.png";
 import img_src_team_broadcast from "../assets/icon_team/icon_broad_simp.png";
-
 import { TbChevronUpLeft, TbChevronDownRight } from "react-icons/tb";
+
+//style import
 import {
   AboutUsContainer,
   BannerContainer,

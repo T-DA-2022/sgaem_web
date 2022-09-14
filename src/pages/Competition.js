@@ -2,6 +2,12 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useSnackbar } from "notistack";
 
+//assets import
+import img_src_banner from "../assets/comp_test.jpeg";
+import { TbCircle1, TbCircle2, TbCircle3, TbCircle4 } from "react-icons/tb";
+import { FcNext } from "react-icons/fc";
+
+//style import
 import {
   CompApplyBtn,
   CompBackgroundContainer,
@@ -16,18 +22,7 @@ import {
   CompProceedText,
   CompProceedTextContainer,
   CompProceedTextDiv,
-  // CompRuleContainer,
-  // CompRuleBox,
-  // CompRuleDownloader,
 } from "../styles/Competition.element";
-
-// import img_src_banner from "../assets/competition_banner.png";
-// import img_src_banner from "../assets/comp_banner_new.png";
-import img_src_banner from "../assets/comp_test.jpeg";
-// import img_src_poster from "../assets/competition_poster_tmp.png";
-// import img_src_poster from "../assets/comp_poster_recent.png";
-import { TbCircle1, TbCircle2, TbCircle3, TbCircle4 } from "react-icons/tb";
-import { FcNext } from "react-icons/fc";
 
 const Competition = () => {
   const [compData, setCompData] = useState({

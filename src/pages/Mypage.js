@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useSnackbar } from "notistack";
+
 import "react-notion/src/styles.css";
 
 import {
@@ -32,7 +32,6 @@ import {
 } from "../styles/Mypage.element";
 
 const MyPage = () => {
-  const [userId, setUserId] = useState({});
   const [userData, setUserData] = useState({
     generation: "",
     name: "",
@@ -47,7 +46,7 @@ const MyPage = () => {
   const [videoAdvanced, setVideoAdvanced] = useState("");
   const activeMemList = ["활동 부원", "비활동 부원", "졸업생"];
   const activeRoleList = ["대회운영팀", "콘텐츠팀", "방송사업팀"];
-  const { enqueueSnackbar } = useSnackbar();
+
   useEffect(() => {
     if (!localStorage.user_id) {
       window.location.replace("/unknown");
@@ -115,7 +114,6 @@ const MyPage = () => {
   }, []);
 
   useEffect(() => {
-    setUserId(localStorage);
     console.log(localStorage.user_id);
 
     axios

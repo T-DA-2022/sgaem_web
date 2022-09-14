@@ -15,7 +15,7 @@ import {
 } from "../styles/Recruiting.element";
 
 import img_src_banner from "../assets/recruiting_banner.png";
-import img_src_poster from "../assets/recruit_poster_recent.png";
+// import img_src_poster from "../assets/recruit_poster_recent.png";
 const Recruiting = () => {
   const [recruitData, setRecruitData] = useState({
     imageSrc: {
