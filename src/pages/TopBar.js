@@ -65,13 +65,7 @@ const TopBar = () => {
               <StyledLink
                 to="/logout"
                 onClick={() =>
-                  setTimeout(() =>
-                    enqueueSnackbar(
-                      "로그아웃 성공!",
-                      { variant: "success" },
-                      1500
-                    )
-                  )
+                  enqueueSnackbar("로그아웃 성공!", { variant: "success" })
                 }
               >
                 <AuthButton>로그아웃</AuthButton>

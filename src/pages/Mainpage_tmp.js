@@ -3,15 +3,19 @@ import YouTube from "react-youtube";
 import axios from "axios";
 import Carousel from "react-bootstrap/Carousel";
 
-import img1 from "../assets/main_banner_1.png";
+// import img1 from "../assets/main_banner_1.png";
+import img1 from "../assets/main_banner_1_final.png";
 import img2 from "../assets/main_banner_recruit.png";
 import img3 from "../assets/main_banner_comp.png";
 
 import img_vis_src from "../assets/main_2nd.png";
-import img_src_act_comp from "../assets/meeting_pic/main_activity/comp_open.png";
+// import img_src_act_comp from "../assets/meeting_pic/main_activity/comp_open.png";
 import img_src_content from "../assets/meeting_pic/main_activity/content_making.png";
-import img_src_foreign from "../assets/meeting_pic/main_activity/foreign_cooperate.png";
+// import img_src_foreign from "../assets/meeting_pic/main_activity/foreign_cooperate.png";
 import img_src_networking from "../assets/meeting_pic/main_activity/networking.png";
+
+import img_src_main_act_1 from "../assets/main_activity_2.png";
+import img_src_main_act_3 from "../assets/main_activity_1.png";
 
 // style import
 import {
@@ -133,7 +137,7 @@ const MainpageTmp = () => {
           </ActivitySubTextContainer>
           <ActivityContentContainer>
             <ActivityContent>
-              <ActivityImg src={img_src_act_comp}></ActivityImg>
+              <ActivityImg src={img_src_main_act_1}></ActivityImg>
               <ActivityArticle>
                 <ActivityArticleText>대회 개최</ActivityArticleText>
                 <ActivityArticleSubText>
@@ -153,7 +157,7 @@ const MainpageTmp = () => {
               </ActivityArticle>
             </ActivityContent>
             <ActivityContent>
-              <ActivityImg src={img_src_foreign}></ActivityImg>
+              <ActivityImg src={img_src_main_act_3}></ActivityImg>
               <ActivityArticle>
                 <ActivityArticleText>대외 협업</ActivityArticleText>
                 <ActivityArticleSubText>

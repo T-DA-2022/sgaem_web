@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-const LogoutPage = ({ history }) => {
+const LogoutPage = () => {
   axios
     .get(`${process.env.REACT_APP_BACKEND_ADDRESS}/auth/logout`, {
       withCredentials: true,
