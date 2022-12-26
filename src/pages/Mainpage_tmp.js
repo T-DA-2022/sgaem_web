@@ -67,6 +67,7 @@ const MainpageTmp = () => {
   ]);
 
   var windowWidth = window.innerWidth;
+  var Interval_Car = 5000;
 
   useEffect(() => {
     axios
@@ -106,7 +107,7 @@ const MainpageTmp = () => {
     <>
       <MainpageContainer>
         <Carousel>
-          <Carousel.Item interval={10000}>
+          <Carousel.Item interval={Interval_Car}>
             <BackgroundContainer src={img1}>
               {/* <BackgroundTextContainer>
             <BackgroundText>WE MAKE THE RULES</BackgroundText>
@@ -116,13 +117,13 @@ const MainpageTmp = () => {
           </BackgroundTextContainer> */}
             </BackgroundContainer>
           </Carousel.Item>
-          <Carousel.Item interval={10000}>
+          <Carousel.Item interval={Interval_Car}>
             <BackgroundContainer
               src={img2}
               onClick={() => window.location.replace("/recruiting")}
             />
           </Carousel.Item>
-          <Carousel.Item interval={10000}>
+          <Carousel.Item interval={Interval_Car}>
             <BackgroundContainer
               src={img3}
               onClick={() => window.location.replace("/competition")}
