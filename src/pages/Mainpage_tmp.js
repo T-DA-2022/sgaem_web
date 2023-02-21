@@ -5,7 +5,8 @@ import Carousel from "react-bootstrap/Carousel";
 
 // import img1 from "../assets/main_banner_1.png";
 import img1 from "../assets/main_banner_1_final.png";
-import img2 from "../assets/main_banner_recruit.png";
+// import img2 from "../assets/main_banner_recruit.png";
+import img2 from "../assets/main_banner_recruit_2023_03.png";
 import img3 from "../assets/main_banner_comp.png";
 
 import img_vis_src from "../assets/main_2nd.png";
