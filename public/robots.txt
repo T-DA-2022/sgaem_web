@@ -1,3 +1,8 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Disallow: /course/basic
+Disallow: /course/broadcast
+Disallow: /course/competition
+Disallow: /course/content
+Disallow: /course/advanced
+Allow: /
+Sitemap: https://www.sgaem.kr/sitemap.xml
