@@ -28,6 +28,22 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <script>
+      (function (j, ennifer) {
+        j["dmndata"] = [];
+        j["jenniferFront"] = function (args) {
+          window.dmndata.push(args);
+        };
+        j["dmnaid"] = ennifer;
+        j["dmnatime"] = new Date();
+        j["dmnanocookie"] = false;
+        j["dmnajennifer"] = "JENNIFER_FRONT@INTG";
+      })(window, "a52c7ece");
+    </script>
+    <script
+      async
+      src="https://d-collect.jennifersoft.com/a52c7ece/demian.js"
+    ></script>
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -53,20 +69,4 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
-  <script>
-    (function (j, ennifer) {
-      j["dmndata"] = [];
-      j["jenniferFront"] = function (args) {
-        window.dmndata.push(args);
-      };
-      j["dmnaid"] = ennifer;
-      j["dmnatime"] = new Date();
-      j["dmnanocookie"] = false;
-      j["dmnajennifer"] = "JENNIFER_FRONT@INTG";
-    })(window, "a52c7ece");
-  </script>
-  <script
-    async
-    src="https://d-collect.jennifersoft.com/a52c7ece/demian.js"
-  ></script>
 </html>
